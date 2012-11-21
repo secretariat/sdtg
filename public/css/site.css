@@ -9,7 +9,7 @@ body {
 }
 
 .page-footer {
-    background: url("../images/footer.gif") repeat-x scroll left top transparent;
+    background: url("/images/footer.gif") repeat-x scroll left top transparent;
 }
 
 .hr {
