@@ -749,7 +749,7 @@ table {
  * Icons.less
  */
 [class*=icon-] {
-  background-image: url("../images/icons.png");
+  background-image: image-url("icons.png");
   background-repeat: no-repeat;
   display: inline-block;
   float: left;
