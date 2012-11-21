@@ -1,14 +1,208 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head>
-  <title>Sdtg</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
+    <title>Донтрансгарант и Компания</title>
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+
+    <link href="/css/modern.css" rel="stylesheet">
+    <link href="/css/modern-responsive.css" rel="stylesheet">
+    <link href="/css/site.css" rel="stylesheet" type="text/css">
+    <link href="/js/google-code-prettify/prettify.css" rel="stylesheet" type="text/css">
+    <script src="/js/jquery-1.8.2.min.js"></script>
 </head>
-<body>
+<body class="modern-ui">
+    <div class="page secondary">
+        <div class="grid" style="margin: 0;">
+            <div class="row">
+                <div class="span4 offset8">&nbspпр-т. Московский, 16-Б, корп.5, 2-й этаж</div>
+            </div>
+            <div class="row">
+                <div class="place-right">
+                    <i class="icon-contact"></i>+38 044 500 92 68<br>
+                    <i class="icon-documents-1"></i>+38 044 581 08 68<br>
+                    <i class="icon-vibrate-1"></i>+38 067 332 10 40
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="navigation-bar">
+        <div class="page secondary" style="background: none repeat scroll 0 0 #464646;">
+            <div class="navigation-bar-inner" style="padding: 5px 0px 2px;">
+                <div class="brand">
+                    <a href="/"><%= image_tag "globe.jpg", :width => "25px" %></a>
+                    <a href="/"><span class="name">ДОНТРАНСГАРАНТ <sup class="fg-color-yellow tertiary-info-secondary-text"> и компания</sup></span></a>
+                </div>
+                <ul>
+                    <li><a href="/">О нас</a></li>
+                    <li data-role="dropdown" class="sub-menu"  style="padding:0;">
+                        <a href="#">Услуги</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="global.php">Индивидуальная фин. гарантия</a></li>
+                            <li><a href="layout.php">Многоразовая фин. гарантия</a></li>
+                            <li><a href="grid.php">Генеральная фин. гарантия</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/">Дополнительная информация</a></li>
+                    <li><a href="/">Контакты</a></li>
+                      <li class="place-right" ><a href="/" class="fg-color-orange" style="padding:5px;">Зона партнеров</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+        
+    <div class="page secondary">
+        <div style="display: none; position: fixed; height: 100px; width: 100px; padding: 10px; z-index: 10000;" class="bottom-right bg-color-darken fg-color-white">
+        <!-- Screen size: -->
+        <!-- <div id="sizeX">0</div> -->
+        <!-- <div id="sizeY">0</div> -->
+        </div>
+            <div class="top-shadow">
+                <div class="carousel" style="height: 400px;" data-role="carousel" data-param-effect="fade" data-param-direction="left" data-param-period="3000" data-param-markers="off">
+                    <div class="slides">
+                        <div class="slide image" id="slide11">
+                            <%= image_tag "1.jpg" %>
+                            <div class="description">
+                                <center>
+                                <b>Мы всегда готовы к сотрудничеству на комфортных для Вас условиях.</b>
+                            </center>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="page-region">
+                <div class="grid">
+                    <div class="row">
+                        <div class="span6">
+                            <ul class="replies" style="margin-left:0">
+                                <li class="bg-color-greenDark"  style="width:100%;">
+                                   <%= image_tag "shield-user.png" %>
+                                    <div class="reply">
+                                        <div class="long-text">Гарантии</div>
+                                        <div class="text">Гарантии таможенным органам относительно<br>обязательной доставки товаров в таможенный орган<br> назначения оформляются на подакцизные и другие грузы в<br> режимах транзита или импорта.</div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="span6">
+                            <ul class="replies"  style="margin-left:0">
+                                <li class="bg-color-blueDark" style="width:100%;">
+                                    <%= image_tag "armor.png" %>
+                                    <div class="reply">
+                                        <div class="long-text">Наши представители<div>
+                                        <div class="text">Мы имеем представителей в пунктах пропуска через государственную границу Украины, которые выдают гарантийные документы и подтверждают завершение транзита.</div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
 
-<%= yield %>
+                    <div class="row">
+                        <div class="span7">
+                            <ul data-role="accordion" class="accordion"  style="margin-left:0">
+                                <li class="active">
+                                    <a href="#">Коротко о нас</a>
+                                    <div>
+                                        <h4>Коммандитное товарищество «Донтрансгарант и компания»</h4>
+                                         - независимый финансовый посредник, уполномоченный Государственной таможенной службой Украины на предоставление финансовых гарантий таможенным органам во время перемещения товаров через таможенную территорию Украины.
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#">Услуги</a>
+                                    <div style="display: none;">
+                                        <h3>frame 2</h3>
+                                        Curabitur porta condimentum sem sed commodo. Praesent vestibulum, libero eget lacinia pretium, metus augue dapibus odio, nec placerat mauris justo non ante.
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#">Преимущества работы с нами</a>
+                                    <div>
+                                        <h3>frame 3</h3>
+                                        Maecenas adipiscing nulla sed sem molestie quis pulvinar lectus convallis. Nam tortor arcu, gravida nec tristique sit amet, pretium sagittis eros. Curabitur at nisi ut ligula ornare euismod.
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="span5 place-left" style="padding-left:15px;">
+                            <%= image_tag "auto_banner.jpg", :class => "image-collection", :style => "border: 2px solid #464646;"%>
+<%= image_tag "railroad.jpg", :class => "image-collection", :style => "border: 2px solid #464646;"%>
+<%= image_tag "tpp.jpg", :class => "image-collection", :style => "border: 2px solid #464646;"%>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <center><button class="big">Определение стоимости фин. гарантий<i class="icon-checkmark"></i></button></center>
+                    </div>
 
+                    <!-- <div class="row">
+                        <div class="span5">
+                        <h3>Расчитать стоимость гарантий</h3>
+                        <form>
+                            <div class="input-control text">
+                                <input type="text" placeholder="Наименование товара">
+                            </div>
+                            <div class="input-control text">
+                                <input type="text" placeholder="Код УКТВЭД">
+                            </div>
+                            <div class="input-control text disabled">
+                                <input type="text span1" placeholder="Кол-во">
+                            </div>
+                            <div class="input-control text disabled">
+                                <input type="text" value="Стоимость">
+                            </div>
+                            <input type="submit" value="Отправить"/>
+                        </form>
+                        </div>
+                    </div> -->
+
+                    <div class="row">
+                        <div class="span10">
+                            <div class="span3">
+                            
+                               <h3> <br>Наши партнеры:</h3>
+                            </div>
+                        <div class="span5 offset1"><%= image_tag "partners.jpg",  :height => "60px;" %></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>
+<div class="page-footer">
+    <br/>
+    <div class="row">
+        <div class="span12" style="margin:auto;">
+            <div class="span3 place-left fg-color-blueDark"><b>О нас и наших партнерах</b></div>
+            <div class="span3 place-left fg-color-blueDark" align="left">
+                <b>Услуги</b><br>
+                    <a href="layout.php" class="tertiary-secondary-text">Индивидуальная фин. гарантия</a>
+                    <a href="layout.php" class="tertiary-secondary-text">Многоразовая фин. гарантия</a>
+                    <a href="layout.php" class="tertiary-secondary-text">Генеральная фин. гарантия</a>
+            </div>
+            <div class="span3 place-left fg-color-blueDark"><b>Доп информация</b></div>
+            <div class="span2 place-right fg-color-greenDark"><b>Зона партнеров</b></div>
+            <br><br><br><br><br>
+            <hr>
+            <div class="place-left">
+                <p class="tertiary-secondary-text">Командитное товоарищество  <b>ДОНТРАНСГАРАНТ и компания &copy; </b>2012</p>
+            </div>
+            <div class="place-right">
+                <p class="tertiary-secondary-text" align="left"><b><u>КОНТАКТЫ:</u></b><br>
+                04073, Украина г. Киев<br>
+                    пр-т. Московский, 16-Б, корп.5, 2-й этаж<br>
+                    <span class="icon-contact"></span>+38 044 500 92 68<br>
+                    <span class="icon-documents-1"></span>+38 044 581 08 68<br>
+                    <span class="icon-vibrate-1"></span>+38 067 332 10 40<br>
+                    <span class="icon-mail"></span><a href="mailto:dtg@dtg.kiev.ua" class="tertiary-secondary-text">dtg@dtg.kiev.ua</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/dropdown.js"></script>
+<script src="js/carousel.js"></script>
+<script src="js/accordion.js"></script>
 </body>
 </html>

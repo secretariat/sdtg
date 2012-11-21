@@ -12,7 +12,7 @@ development:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: sdtg_development
+  database: dtg_dev
   pool: 5
   username: root
   password:
