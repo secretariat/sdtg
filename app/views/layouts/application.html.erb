@@ -135,7 +135,13 @@
                     </div>
                     <br>
                     <div class="row">
-                        <center><button class="big">Определение стоимости фин. гарантий<i class="icon-checkmark"></i></button></center>
+                        <center>
+                            <%= button_to "Hello" %>
+                            <button class="big">
+                                <%= link_to "Определение стоимости фин. гарантий", :controller => "zapros", :action => "new" %>
+                                <i class="icon-checkmark"></i>
+                            </button>
+                        </center>
                     </div>
                     <div class="row">
                         <div class="span10">
