@@ -136,12 +136,11 @@
                     <br>
                     <div class="row">
                         <center>
-                            <%= button_to "Hello" %>
-                            <button class="big">
-                                <%= link_to "Определение стоимости фин. гарантий", :controller => "zapros", :action => "new" %>
-                                <i class="icon-checkmark"></i>
-                            </button>
+                            <%= link_to "Определение стоимости фин. гарантий", 
+                                {:controller => "zapros", :action => "new"}, 
+                                :class =>"command-button"%>
                         </center>
+                        <br>
                     </div>
                     <div class="row">
                         <div class="span10">
