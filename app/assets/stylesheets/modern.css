@@ -763,12 +763,12 @@ table {
   margin-right: 0;
 }
 [class*=icon-].white {
-  background-image: url("/assets/icons-white.png") !important;
+  background-image: url("icons-white.png") !important;
 }
 button:active [class*=icon-],
 .button:active [class*=icon-],
 .tool-button:active [class*=icon-] {
-  background-image: url("/assets/icons-white.png");
+  background-image: url("icons-white.png");
 }
 .icon-about {
   background-position: 0 0;
