@@ -1,4 +1,6 @@
 Sdtg::Application.routes.draw do
+  get "zapros/new"
+
   root :to => 'page#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.
