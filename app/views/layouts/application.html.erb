@@ -3,7 +3,7 @@
 <head>
     <title>Донтрансгарант и Компания</title>
     <%= stylesheet_link_tag    "application", :media => "all" %>
-    <%= javascript_include_tag "application" %>
+   
     <%= csrf_meta_tags %>
 
     <link href="/css/modern.css" rel="stylesheet">
@@ -32,7 +32,7 @@
             </div>
         </div>
     </div>
-    <div class="navigation-bar">
+   <!--  <div class="navigation-bar">
         <div class="page secondary" style="background: none repeat scroll 0 0 #464646;">
             <div class="navigation-bar-inner" style="padding: 5px 0px 2px;">
                 <div class="brand">
@@ -56,6 +56,28 @@
                 </ul>
             </div>
         </div>
+    </div> -->
+   <div class="navigation-bar">
+            <div class="navigation-bar-inner" style="padding: 5px 0px 2px;">
+                <div class="brand">
+                    &nbsp;<%= image_tag "globe_w3.png", :width => "23px" %>
+                    <a href="/"><span class="name">ДОНТРАНСГАРАНТ <sup class="fg-color-yellow tertiary-info-secondary-text"> и компания</sup></span></a>
+                </div>
+                <ul style="overflow: visible;">
+                    <li><a href="/">О нас</a></li>
+                    <li style="padding:0;" class="sub-menu" data-role="dropdown">
+                        <a href="#">Услуги</a>
+                        <ul class="dropdown-menu" style="display: none;">
+                            <li><a href="global.php">Индивидуальная фин. гарантия</a></li>
+                            <li><a href="layout.php">Многоразовая фин. гарантия</a></li>
+                            <li><a href="grid.php">Генеральная фин. гарантия</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/">Дополнительная информация</a></li>
+                    <li><a href="/">Контакты</a></li>
+                      <li class="place-right"><a style="padding:5px;" class="fg-color-orange" href="/">Зона партнеров</a></li>
+                </ul>
+            </div>
     </div>
         
     <div class="page secondary">
