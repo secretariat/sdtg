@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 Sdtg::Application.routes.draw do
   get "zapros/new"
 
