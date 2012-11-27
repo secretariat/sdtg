@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>Донтрансгарант и Компания</title>
+    <%= stylesheet_link_tag "application", :media => "all" %>
+    <%= csrf_meta_tags %>
+    <script src="/js/jquery-1.8.2.min.js"></script>
+</head>
+<body class="modern-ui">
+    <div class="page secondary">
+        <div class="grid" style="margin: 0;">
+            <div class="row">
+                <div class="span2 offset5"><%= image_tag "logo.png", :width => "150px"%></div>
+                <div class="span5">
+                    <div class="row">
+                        <div class="place-right">
+                        пр-т. Московский, 16-Б, корп.5, 2-й этаж
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="place-right">
+                            <i class="icon-contact"></i>+38 044 500 92 68<br>
+                            <i class="icon-documents-1"></i>+38 044 581 08 68<br>
+                            <i class="icon-vibrate-1"></i>+38 067 332 10 40
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <div class="navigation-bar">
+        <div class="navigation-bar-inner" style="padding: 5px 0px 2px;">
+            <div class="brand">
+                &nbsp;<%= image_tag "globe_w3.png", :width => "23px" %>
+                <a href="/"><span class="name">ДОНТРАНСГАРАНТ <sup class="fg-color-yellow tertiary-info-secondary-text"> и компания</sup></span></a>
+            </div>
+            <ul style="overflow: visible;">
+                <li><a href="/">О нас</a></li>
+                <li style="padding:0;" class="sub-menu" data-role="dropdown">
+                    <a href="#">Услуги</a>
+                    <ul class="dropdown-menu" style="display: none;">
+                        <li><a href="global.php">Индивидуальная фин. гарантия</a></li>
+                        <li><a href="layout.php">Многоразовая фин. гарантия</a></li>
+                        <li><a href="grid.php">Генеральная фин. гарантия</a></li>
+                    </ul>
+                </li>
+                <li><a href="/">Дополнительная информация</a></li>
+                <li><a href="/">Контакты</a></li>
+                  <li class="place-right"><a style="padding:5px;" class="fg-color-orange" href="/">Зона партнеров</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<%= yield %>
+
+<div class="page-footer">
+    <br/>
+    <div class="row">
+        <div class="span12" style="margin:auto;">
+            <div class="span3 place-left fg-color-blueDark"><b>О нас и наших партнерах</b></div>
+            <div class="span3 place-left fg-color-blueDark" align="left">
+                <b>Услуги</b><br>
+                    <a href="layout.php" class="tertiary-secondary-text">Индивидуальная фин. гарантия</a>
+                    <a href="layout.php" class="tertiary-secondary-text">Многоразовая фин. гарантия</a>
+                    <a href="layout.php" class="tertiary-secondary-text">Генеральная фин. гарантия</a>
+            </div>
+            <div class="span3 place-left fg-color-blueDark"><b>Доп информация</b></div>
+            <div class="span2 place-right fg-color-greenDark"><b>Зона партнеров</b></div>
+            <br><br><br><br><br>
+            <hr>
+            <div class="place-left">
+                <p class="tertiary-secondary-text">Командитное товоарищество  <b>ДОНТРАНСГАРАНТ и компания &copy; </b>2012</p>
+            </div>
+            <div class="place-right">
+                <p class="tertiary-secondary-text" align="left"><b><u>КОНТАКТЫ:</u></b><br>
+                04073, Украина г. Киев<br>
+                    пр-т. Московский, 16-Б, корп.5, 2-й этаж<br>
+                    <span class="icon-contact"></span>+38 044 500 92 68<br>
+                    <span class="icon-documents-1"></span>+38 044 581 08 68<br>
+                    <span class="icon-vibrate-1"></span>+38 067 332 10 40<br>
+                    <span class="icon-mail"></span><a href="mailto:dtg@dtg.kiev.ua" class="tertiary-secondary-text">dtg@dtg.kiev.ua</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/js/dropdown.js"></script>
+<script src="/js/carousel.js"></script>
+<script src="/js/accordion.js"></script>
+</body>
+</html>
