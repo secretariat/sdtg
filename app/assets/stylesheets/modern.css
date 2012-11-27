@@ -6264,12 +6264,12 @@ pre code {
 .carousel .markers li a {
   width: 32px;
   height: 6px;
-  background-color: red;
+  background-color: green;
   display: block;
   float: left;
 }
 .carousel .markers li.active a {
-  background-color: #1e1e1e;
+  background-color: #2b5797;
 }
 /*
  * Metro UI CSS
