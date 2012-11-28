@@ -38,9 +38,9 @@
                 <li style="padding:0;" class="sub-menu" data-role="dropdown">
                     <a href="#">Услуги</a>
                     <ul class="dropdown-menu" style="display: none;">
-                        <li><a href="global.php">Индивидуальная фин. гарантия</a></li>
-                        <li><a href="layout.php">Многоразовая фин. гарантия</a></li>
-                        <li><a href="grid.php">Генеральная фин. гарантия</a></li>
+                        <li><a href="/page/singleg">Индивидуальная фин. гарантия</a></li>
+                        <li><a href="/page/multig">Многоразовая фин. гарантия</a></li>
+                        <li><a href="/page/geng">Генеральная фин. гарантия</a></li>
                     </ul>
                 </li>
                 <li><a href="/">Дополнительная информация</a></li>
@@ -51,7 +51,18 @@
     </div>
 </div>
 
-<%= yield %>
+<div class="page secondary with-sidebar">
+    <div style="display: none; position: fixed; height: 100px; width: 100px; padding: 10px; z-index: 10000;" class="bottom-right bg-color-darken fg-color-white">
+    </div>
+    <div class="page-sidebar">
+        <ul style="overflow: visible;">
+            <li class="sticker sticker-color-orange"><a href="/page/singleg">Индивидуальная гарантия</a></li>
+            <li class="sticker sticker-color-orangeDark"><a href="/page/multig">Многоразовая гарантия</a></li>
+            <li class="sticker sticker-color-green"><a href="/page/geng">Генеральная гарантия</a></li>
+        </ul>
+    </div>
+    <%= yield %>    
+</div> 
 
 <div class="page-footer">
     <br/>

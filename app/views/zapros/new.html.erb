@@ -49,7 +49,7 @@
 				 	</div>
 
 					<div class="row">
-						<div class="span3"><h4>Вид транспорта*:</div>
+						<div class="span3"><h4>Вид транспорта*:</h4></div>
 						<div class="input-control select span5">
 					 		<%= f.select :code, {"авто" => 1,
 																 "ж/д" => 2,
@@ -62,12 +62,27 @@
 				 	</div>
 
 					<div class="row">
-						<div class="span3"><h4>Количество товара*:</div>
+						<div class="span3"><h4>Количество товара*:</h4></div>
 						<div class="input-control text span5">
 					 		<%= f.text_field :koltov %>
 					 		<span class="helper"></span>
 					 	</div>
 				 	</div>
+				 	<div class="row">
+						<div class="span5">*основные еденицы измерения:</h4></div>
+						<div class="input-control text span3">
+					 		<%= f.text_field :koltov %>
+					 		<span class="helper"></span>
+					 	</div>
+				 	</div>
+				 	<div class="row">
+						<div class="span5">*дополнительные еденицы измерения:</div>
+						<div class="input-control text span3">
+					 		<%= f.text_field :koltov %>
+					 		<span class="helper"></span>
+					 	</div>
+				 	</div>
+
 					<div class="span"><h4>для поля "Кол-во товара" необходимо уточнить что к чему - я не понял!!!</div>
 
 					<div class="row">
@@ -84,7 +99,7 @@
 						</div>
 					</div>
 					<div class="row">
-						<div class="span3"><h4>Стоимость товара*:</div>
+						<div class="span3"><h4>Стоимость товара*:</h4></div>
 						<div class="input-control select span5">
 					 		<%= f.select :code, {"USD" => 1,
 															 "EURO" => 2,
@@ -104,7 +119,7 @@
 					</div>
 				
 					<div class="row">
-						<h4>Частота перевозок и объемы(в месяц, в квартал):
+						<h4>Частота перевозок и объемы(в месяц, в квартал):</h4>
 						<div class="input-control text span10">
 					 		<%= f.text_field :chastota %>
 					 		<span class="helper"></span>
@@ -112,12 +127,12 @@
 					</div>
 			 		
 			 		<div class="row">
-						<div class="span2" style="width: 150px;"><h4>Контактное лицо*:</div>
+						<div class="span2" style="width: 150px;"><h4>Контактное лицо*:</h4></div>
 						<div class="input-control text span3" style="margin-right: 50px;">
 					 		<%= f.text_field :fio %>
 					 		<span class="helper"></span>
 					 	</div>
-					 	<div class="span1" style="width: 100px;"><h4>Должность*: </div>
+					 	<div class="span1" style="width: 100px;"><h4>Должность*:</h4></div>
 						<div class="input-control text span3" >
 					 		<%= f.text_field :rank %>
 					 		<span class="helper"></span>
@@ -125,12 +140,12 @@
 				 	</div>
 
 				 	<div class="row">
-						<div class="span2" style="width: 150px;"><h4>Телефон*:</div>
+						<div class="span2" style="width: 150px;"><h4>Телефон*:</h4></div>
 						<div class="input-control text span3" style="margin-right: 50px;">
 					 		<%= f.text_field :phone %>
 					 		<span class="helper"></span>
 					 	</div>
-					 	<div class="span1" style="width: 100px;"><h4>Email*:</div>
+					 	<div class="span1" style="width: 100px;"><h4>Email*:</h4></div>
 						<div class="input-control text span3">
 					 		<%= f.text_field :email %>
 					 		<span class="helper"></span>

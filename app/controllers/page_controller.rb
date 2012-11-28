@@ -5,6 +5,25 @@ class PageController < ApplicationController
 	
 	def about
 		render :layout => 'secondary'
+	end
 
+	def partners
+		render :layout => 'secondary'
+	end
+
+	def services
+		render :layout => 'secondary'
+	end
+
+	def singleg
+		render :layout => 'secondary'
+	end
+
+	def multig
+		render :layout => 'secondary'
+	end
+
+	def geng
+		render :layout => 'secondary'
 	end
 end
