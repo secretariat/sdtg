@@ -26,4 +26,8 @@ class PageController < ApplicationController
 	def geng
 		render :layout => 'secondary'
 	end
+
+	def present
+		render :layout => 'secondary'
+	end
 end
