@@ -29,14 +29,14 @@
         <div class="navigation-bar-inner" style="padding: 5px 0px 2px; margin: auto; width: 950px;">
             <div class="brand">
                 &nbsp;<%= image_tag "globe_w3.png", :width => "23px" %>
-                <a href="/"><span class="name">ДОНТРАНСГАРАНТ <sup class="fg-color-yellow tertiary-info-secondary-text"> и компания</sup></span></a>
+                <a href="/"><span class="name">ДОНТРАНСГАРАНТ<sup class="fg-color-yellow tertiary-info-secondary-text"> и компания</sup></span></a>
             </div>
             <ul style="overflow: visible;">
-                <li><a href="/">О нас</a></li>
+                <li><a href="/page/about">О нас</a></li>
                 <li><a href="/page/services">Услуги</a></li>
-                <li><a href="/">Дополнительная информация</a></li>
-                <li><a href="/">Контакты</a></li>
-                  <li class="place-right"><a style="padding:5px;" class="fg-color-orange" href="/">Зона партнеров</a></li>
+                <li><a href="/page/dopinfo">Дополнительная информация</a></li>
+                <li><a href="/page/contacts">Контакты</a></li>
+                  <li class="place-right"><a href="/page/partners" style="padding:5px;" class="fg-color-orange">Зона партнеров</a></li>
             </ul>
         </div>
     </div>
@@ -44,13 +44,6 @@
 
 <div class="page secondary with-sidebar">
     <div style="display: none; position: fixed; height: 100px; width: 100px; padding: 10px; z-index: 10000;" class="bottom-right bg-color-darken fg-color-white">
-    </div>
-    <div class="page-sidebar" style="width:220px;">
-        <ul style="overflow: visible;">
-            <li class="sticker sticker-color-orange"><a href="/page/singleg">Индивидуальная гарантия</a></li>
-            <li class="sticker sticker-color-orangeDark"><a href="/page/multig">Многоразовая гарантия</a></li>
-            <li class="sticker sticker-color-green"><a href="/page/geng">Генеральная гарантия</a></li>
-        </ul>
     </div>
     <%= yield %>    
 </div> 

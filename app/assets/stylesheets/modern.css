@@ -3922,7 +3922,8 @@ table.bordered tbody tr:last-child td {
 .navigation-bar {
   width: 100%;
   min-height: 40px;
-  background: #464646;
+  /*background: #464646;*/
+  background: #0056a2;
   z-index: 10000;
 }
 .navigation-bar .navigation-bar-inner {
