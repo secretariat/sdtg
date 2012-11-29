@@ -1,47 +1,175 @@
 <center>
-	<%= image_tag "logo.png" %><br/>
-	Дата: <%= Time.now %>
+	<%#= image_tag "logo.png" %>
 	<h3>
-		Запрос<br/>на определение стоимости финансовой гарантии
+		<strong>
+			Запрос<br/>на определение стоимости финансовой гарантии<br>
+		</strong>
 	</h3>
 </center>
-<div class="row">
-	<%= form_for( @zapros, :url => {:action => 'create'}) do |f| %>
 
-		Наименование товара*: <%= f.text_field :naim %><br/>
+<fieldset class="span11 offset3">
+	<center><h4>Дата: <%= Time.now %></h4>(* - поля обязательные для заполнения)</center>
+	<br/>
+	<div class="row">
+		<div class="span11">
+			<%= form_for( @zapros, :url => {:action => 'create'}) do |f| %>
+				
+				<div class="grid">
+					<div class="row">
+						<div class="span3"><h4>Наименование товара*:</h4></div>
+						<div class="input-control text span5">
+					 		<%= f.text_field :naim %>
+					 		<span class="helper"></span>
+					 	</div>
+					</div>
 
-		Код товара:
-		<%= f.select :code, {"УКТ ВЭД" => 1, "ГНГ" => 2, "ЕТ СНГ" => 3} %><br/>
+					<div class="row">
+						<div class="span3"><h4>Код товара*:</div>
+					 	<div class="input-control select span5">
+					 		<%= f.select :code, {"УКТ ВЭД" => 1, "ГНГ" => 2, "ЕТ СНГ" => 3} %>
+					 		<span class="helper"></span>
+					 	</div>
+				 	</div>
+				
+					<div class="row">
+						<div class="span3"><h4>Таможенный режим*:</h4></div>
+				
+						<div class="input-control select span5">
+					 		<%= f.select( :code, {"транзит" => 1,
+																 "импорт" => 2,
+																 "временный ввоз" => 3,
+																 "экспорт" => 4,
+																 "реэкспорт" => 5,
+																 "переработка на территории Украины" => 6,
+																 "переработка за пределами территории Украины" => 7,
+																 "другое" => 8
+																}, :class => "input-control select") %>
+					 		<span class="helper"></span>
+					 	</div>
+				 	</div>
 
-		Таможенный режим:
-		<%= f.select( :code, {"транзит" => 1,
-												 "импорт" => 2,
-												 "временный ввоз" => 3,
-												 "экспорт" => 4,
-												 "реэкспорт" => 5,
-												 "переработка на территории Украины" => 6,
-												 "переработка за пределами территории Украины" => 7,
-												 "другое" => 8
-												}, :class => "input-control select") %><br/>
-		Вид транспорта:
-		<%= f.select :code, {"авто" => 1,
-												 "ж/д" => 2,
-												 "водный" => 3,
-												 "авиа" => 4,
-												 "трубопроводный" => 5,
-												} %><br/>
-		Количество товара:<br/>
+					<div class="row">
+						<div class="span3"><h4>Вид транспорта*:</h4></div>
+						<div class="input-control select span5">
+					 		<%= f.select :code, {"авто" => 1,
+																 "ж/д" => 2,
+																 "водный" => 3,
+																 "авиа" => 4,
+																 "трубопроводный" => 5,
+																} %>
+					 		<span class="helper"></span>
+					 	</div>
+				 	</div>
 
+					<div class="row">
+						<div class="span3"><h4>Количество товара*:</h4></div>
+						<div class="input-control text span5">
+					 		<%= f.text_field :koltov %>
+					 		<span class="helper"></span>
+					 	</div>
+				 	</div>
+				 	<div class="row">
+						<div class="span5">*основные еденицы измерения:</h4></div>
+						<div class="input-control text span3">
+					 		<%= f.text_field :koltov %>
+					 		<span class="helper"></span>
+					 	</div>
+				 	</div>
+				 	<div class="row">
+						<div class="span5">*дополнительные еденицы измерения:</div>
+						<div class="input-control text span3">
+					 		<%= f.text_field :koltov %>
+					 		<span class="helper"></span>
+					 	</div>
+				 	</div>
 
-		Стоимость товара:
-		<%= f.select :code, {"USD" => 1,
-											 "EURO" => 2,
-											 "UAH" => 3,
-											 "другая валюта" => 4,
-											} %><br/>
+					<div class="span"><h4>для поля "Кол-во товара" необходимо уточнить что к чему - я не понял!!!</div>
 
-		Маршрут движения:<br/>
+					<div class="row">
+						<div class="span8 offset1">
+							<ul>
+								<li>Для крепких спиртных напитков – количество бутылок, емкость, процентное содержание спирта.</li>
+								<li>Для алкоголя -  количество бутылок, емкость.</li>
+								<li>Для автомобилей – марка, дата выпуска, объем двигателя.</li>
+								<li>Табачные изделия – сигары, сигареты – количество штук.</li>
+								<li>Табак – кг.</li>
+								<li>Нефтепродукты – фактурная стоимость.</li>
+								<li>Другие товары – количественные характеристики (кг, тонны, шт и т.д.)</li>
+							</ul>
+						</div>
+					</div>
+					<div class="row">
+						<div class="span3"><h4>Стоимость товара*:</h4></div>
+						<div class="input-control select span5">
+					 		<%= f.select :code, {"USD" => 1,
+															 "EURO" => 2,
+															 "UAH" => 3,
+															 "другая валюта" => 4,
+															} %>
+					 		<span class="helper"></span>
+					 	</div>
+				 	</div>
 
-		Частота перевозок:<br/>
-	<% end  %>
-</div>
+					<div class="row">
+						<h4>Маршрут движения (таможенный орган отправления Украины - таможенный орган назначения Украины):</h4>
+						<div class="input-control text span10">
+					 		<%= f.text_field :path_ryhy %>
+					 		<span class="helper"></span>
+					 	</div>
+					</div>
+				
+					<div class="row">
+						<h4>Частота перевозок и объемы(в месяц, в квартал):</h4>
+						<div class="input-control text span10">
+					 		<%= f.text_field :chastota %>
+					 		<span class="helper"></span>
+					 	</div>
+					</div>
+			 		
+			 		<div class="row">
+						<div class="span2" style="width: 150px;"><h4>Контактное лицо*:</h4></div>
+						<div class="input-control text span3" style="margin-right: 50px;">
+					 		<%= f.text_field :fio %>
+					 		<span class="helper"></span>
+					 	</div>
+					 	<div class="span1" style="width: 100px;"><h4>Должность*:</h4></div>
+						<div class="input-control text span3" >
+					 		<%= f.text_field :rank %>
+					 		<span class="helper"></span>
+					 	</div>
+				 	</div>
+
+				 	<div class="row">
+						<div class="span2" style="width: 150px;"><h4>Телефон*:</h4></div>
+						<div class="input-control text span3" style="margin-right: 50px;">
+					 		<%= f.text_field :phone %>
+					 		<span class="helper"></span>
+					 	</div>
+					 	<div class="span1" style="width: 100px;"><h4>Email*:</h4></div>
+						<div class="input-control text span3">
+					 		<%= f.text_field :email %>
+					 		<span class="helper"></span>
+					 	</div>
+				 	</div>
+
+			 	</div>
+			
+
+			<h4>Прикрепить файл</h4>
+			<%= file_field_tag 'upload' %>
+			( .doc, docx, txt, xls, xlsx, pdf, jpg )
+			<br/>
+			<br/>
+			<br/>
+			<div class="place-right" style="margin-right: 70px;">
+				<button class="default">Отправить</button>
+				<button>Отмена</button>
+			</div>
+			
+			<% end  %>
+		</div>
+	</div>
+</fieldset>
+<br/>
+<br/>
+<br/>
