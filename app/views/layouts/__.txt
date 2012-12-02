@@ -1,0 +1,7 @@
+   <div class="span5 place-left" style="padding-left:15px;">
+                            <%= image_tag "auto_banner.jpg", :class => "image-collection", :style => "border: 2px solid #464646;"%>
+<%= image_tag "railroad.jpg", :class => "image-collection", :style => "border: 2px solid #464646;"%>
+<%= image_tag "tpp.jpg", :class => "image-collection", :style => "border: 2px solid #464646;"%>
+                        </div>                    
+                        
+                        
