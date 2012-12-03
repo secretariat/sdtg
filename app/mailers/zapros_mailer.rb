@@ -1,6 +1,6 @@
 # -*- encoding : utf-8 -*-
 class ZaprosMailer < ActionMailer::Base
-  default to: "mixey.viti@gmail.com"
+  default to: "mixey.viti@bigmir.net"
   # default to: "garant@dtg.kiev.ua"
   # default from: "mixey.viti@gmail.com"
 
