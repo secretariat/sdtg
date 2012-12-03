@@ -7,41 +7,46 @@
     <script src="/js/jquery-1.8.2.min.js"></script>
 </head>
 <body class="modern-ui">
-    <div class="page secondary">
+    <div class="page">
         <div class="grid" style="margin: 0;">
             <div class="row">
-                <div class="row">
-                    <div class="place-right">
-                    г. Киев, просп. Московский 16-Б, корп.5, 2 этаж
+                <div class="span12">
+                    <div class="span5">
+                        <%= image_tag "banner_up.gif" %>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="place-right">
-                        <i class="icon-contact"></i>+38 044 500 92 68<br>
-                        <i class="icon-documents-1"></i>+38 044 581 08 68<br>
-                        <i class="icon-vibrate-1"></i>+38 067 332 10 40
+                    <div class="span7">
+                        <div class="row">
+                            <div class="place-right">
+                            г. Киев, просп. Московский 16-Б, корп.5, 2 этаж
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="place-right">
+                                <i class="icon-contact"></i>+38 044 500 92 68<br>
+                                <i class="icon-documents-1"></i>+38 044 581 08 68<br>
+                                <i class="icon-vibrate-1"></i>+38 067 332 10 40
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="navigation-bar">
-        <div class="navigation-bar-inner" style="padding: 5px 0px 2px; margin: auto; width: 1070px;">
-            <div class="brand">
-                &nbsp;<%= image_tag "globe_w3.png", :width => "23px" %>
-                <a href="/"><span class="name">ДОНТРАНСГАРАНТ <sup class="fg-color-yellow tertiary-info-secondary-text"> и компания</sup></span></a>
+    
+        <div class="navigation-bar">
+            <div class="navigation-bar-inner" style="padding: 5px 0px 2px; margin: auto;">
+                    <%= image_tag "dtg.png", :style => "float: left;"%>
+                <ul style="overflow: visible;">
+                    <li><a href="/page/about">О нас и наших партнерах</a></li>
+                    <li><a href="/page/services">Услуги</a></li>
+                    <li><a href="/page/dopinfo">Дополнительная информация</a></li>
+                    <li><a href="/page/contacts">Контакты</a></li>
+                      <li class="place-right"><a href="/page/partners" style="padding:5px;" class="fg-color-orange">Зона партнеров</a></li>
+                </ul>
             </div>
-            <ul style="overflow: visible;">
-                <li><a href="/page/about">О нас и наших партнерах</a></li>
-                <li><a href="/page/services">Услуги</a></li>
-                <li><a href="/page/dopinfo">Дополнительная информация</a></li>
-                <li><a href="/page/contacts">Контакты</a></li>
-                  <li class="place-right"><a href="/page/partners" style="padding:5px;" class="fg-color-orange">Зона партнеров</a></li>
-            </ul>
         </div>
+    
     </div>
-    </div>
-</div>
+    
 
 <%= yield %>
 

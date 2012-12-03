@@ -31,10 +31,6 @@ class PageController < ApplicationController
 		render :layout => 'secondary'
 	end
 
-	def partners
-		render :layout => 'secondary'
-	end
-
 	def represent
 		render :layout => 'secondary'
 	end
