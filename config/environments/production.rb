@@ -1,6 +1,17 @@
 # -*- encoding : utf-8 -*-
 Sdtg::Application.configure do
+  
   # Settings specified here will take precedence over those in config/application.rb
+  config.action_mailer.smtp_settings = {
+    :address              => "mail.citrusdev.com.ua",
+    :port                 => 25,
+    :domain               => "mail.citrusdev.com.ua",
+    :user_name            => 'info@citrusdev.com.ua',
+    :password             => 'info123!@#',
+    :authentication       => 'login',
+    :openssl_verify_mode  => 'none'
+    # :enable_starttls_auto => true
+  }
 
   # Code is not reloaded between requests
   config.cache_classes = true

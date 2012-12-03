@@ -13,13 +13,23 @@
 
 ActiveRecord::Schema.define(:version => 20121126213427) do
 
+  create_table "transports", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "zapros", :force => true do |t|
     t.string   "naim"
     t.string   "code"
     t.string   "tamrez"
     t.string   "typetran"
     t.string   "koltov"
+    t.string   "base_ed"
+    t.string   "dop_ed"
     t.string   "stoim"
+    t.string   "ed"
+    t.string   "total"
     t.string   "path_ryhy"
     t.string   "chastota"
     t.string   "fio"
@@ -27,8 +37,11 @@ ActiveRecord::Schema.define(:version => 20121126213427) do
     t.string   "phone"
     t.string   "email"
     t.string   "fpath"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.string   "att"
+    t.string   "att_file_name"
+    t.text     "dopinfo"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
   end
 
 end

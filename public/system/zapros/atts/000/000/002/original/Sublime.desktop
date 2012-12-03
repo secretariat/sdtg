@@ -1,0 +1,11 @@
+#!/usr/bin/env xdg-open
+
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Icon[ru_RU]=gnome-panel-launcher
+Name[ru_RU]=Sublime
+Exec="/home/mixey/INSTALL/Sublime Text 2/sublime_text"
+Name=Sublime
+Icon=/home/mixey/INSTALL/Sublime Text 2/Icon/32x32/sublime_text.png
