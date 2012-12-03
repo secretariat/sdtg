@@ -27,7 +27,11 @@ class PageController < ApplicationController
 		render :layout => 'secondary'
 	end
 
-	def present
+	def presentation
+		render :layout => 'secondary'
+	end
+
+	def represent
 		render :layout => 'secondary'
 	end
 end
