@@ -1,14 +1,13 @@
 <center>
-	<%#= image_tag "logo.png" %>
+	<%= image_tag "logo.png" %>
+	<h5><%= Time.now %></h5>
 	<h2>
-		<!-- <strong> -->
-			Запрос<br>на определение стоимости финансовой гарантии
-		<!-- </strong> -->
+		Запрос<br>на определение стоимости финансовой гарантии
 	</h2>
 </center>
 
 <fieldset class="span11 offset3">
-	<center><h5>Дата: <%= Time.now %></h5>(* - поля обязательные для заполнения)</center>
+	
 	<br/>
 	<div class="row">
 		<div class="span11">
@@ -62,28 +61,27 @@
 				 	</div>
 				 	<div class="row">
 						<div class="span5">1) Основные еденицы измерения:</h4></div>
-						<div class="input-control text span2">
+						<div class="input-control text span3">
 					 		<%= f.text_field :koltov %>
 					 	</div>
+				 	</div>
+
+					<div class="row">
 						<div class="span5">2) Дополнительные еденицы измерения:</div>
-						<div class="input-control text span2">
+						<div class="input-control text span3">
 					 		<%= f.text_field :koltov %>
 					 	</div>
 				 	</div>
 
 					<div class="row">
 							<ul>
-								<li>Для крепких спиртных напитков – количество бутылок, емкость, процентное содержание спирта.</li>
-								<li>Для алкоголя -  количество бутылок, емкость.</li>
-								<li>Для автомобилей – марка, дата выпуска, объем двигателя.</li>
-								<li>Табачные изделия – сигары, сигареты – количество штук.</li>
-								<li>Табак – кг.</li>
-								<li>Нефтепродукты – фактурная стоимость.</li>
-								<li>Другие товары – количественные характеристики (кг, тонны, шт и т.д.)</li>
+								<h4><li>Для алкоголя -  количество бутылок, емкость.</li></h4>
+								<h4><li>Для автомобилей – марка, дата выпуска, объем двигателя.</li></h4>
+								<h4><li>Табачные изделия – сигары, сигареты – количество штук.</li></h4>
 							</ul>
 					</div>
 					<div class="row">
-						<div class="span2"><h5>Стоимость товара*:</h5></div>
+						<div class="span3"><h5>Стоимость товара*:</h5></div>
 						<div class="input-control select span2">
 					 		<%= f.select :code, {"USD" => 1,
 															 "EURO" => 2,
@@ -152,15 +150,14 @@
 			<br/>
 			<div class="row">
 				<h5>Дополнительная информация, коментарии:</h5>
-				<center>
-				<div class="span8">
+				<div class="span10">
 					<div class="input-control textarea">
 						<textarea>
 						</textarea>
 					</div>
 				</div>
-			</center>
 			</div>
+			<center>(* - поля обязательные для заполнения)</center>
 			<br/>
 			<br/>
 
