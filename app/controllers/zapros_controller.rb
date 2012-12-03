@@ -24,11 +24,15 @@ class ZaprosController < ApplicationController
 	def create
 		@zapros = Zapros.new( params[:zapros] )
 		if @zapros.save then
-			flash[:notice] = "Заявка создана успешно"
-			# redirect_to( :controller => 'user', :action => 'index')
+			fname = @zapros.att_file_name
+			fpath = @zapros.att.url
+			ZaprosMailer.send_zapros( @zapros, fpath, fname ).deliver
+			# ZaprosMailer.send_zapros( @zapros ).deliver
+			flash[:notice] = "Запрос отправлен успешно"
+			redirect_to(:controller => 'page', :action => 'index')
 		else
-			flash[:notice] = "Ошибка при создании Заявки"
-			redirect_to(:controller => 'user', :action => 'new')
+			flash[:notice] = "Ошибка при отправке Запроса"
+			# redirect_to(:controller => 'user', :action => 'new')
 		end 
 
 	end

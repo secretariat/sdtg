@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <center>
+      <h3>Запрос на определение стоимости финансовой гарантии от <%= @zapros.created_at %></h3>
+    </center>
+    <b>Наименование товара:</b> <%= @zapros.naim %><br/>
+    <b>Код товара:</b> <%= @zapros.code %><br/>
+    <b>Таможенный режим:</b> <%= @zapros.tamrez %><br/>
+    <b>Вид транспорта:</b> <%= @zapros.typetran %><br/>
+    <b>Количество товара:</b> <%= @zapros.koltov %><br/>
+    <b>основные единицы измерения:</b> <%= @zapros.base_ed %><br/>
+    <b>дополнительные единицы измерения:</b> <%= @zapros.dop_ed %><br/>
+    <b>Стоимость товара:</b> <%= @zapros.dop_ed %><br/>
+    <b>за еденицу товара:</b> <%= @zapros.dop_ed %><br/>
+    <b>всего:</b> <%= @zapros.total %><br/>
+    <b>Маршрут движения (таможенный орган отправления Украины - таможенный орган назначения Украины):</b><%= @zapros.path_ryhy %><br/>
+    <b>Частота перевозок и объемы(в месяц, в квартал):</b> <%= @zapros.chastota %><br/>
+    <b>Контактное лицо:</b><%= @zapros.fio %><br/>
+    <b>Должность:</b><%= @zapros.rank %><br/>
+    <b>Телефон:</b><%= @zapros.phone %><br/>
+    <b>Email:</b><%= @zapros.email %><br/>
+    <b>Дополнительная информация:</b> <%= @zapros.dopinfo %><br/>
+  </body>
+</html>

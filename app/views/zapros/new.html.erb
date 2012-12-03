@@ -1,4 +1,5 @@
 <center>
+	<br/>
 	<%= image_tag "logo.png" %>
 	<h5><%= Time.now %></h5>
 	<h2>
@@ -11,7 +12,7 @@
 	<br/>
 	<div class="row">
 		<div class="span11">
-			<%= form_for( @zapros, :url => {:action => 'create'}) do |f| %>
+			<%= form_for( @zapros, :url => {:action => 'create'}, :multipart => true) do |f| %>
 				
 				<div class="grid">
 					<div class="row">
@@ -24,7 +25,7 @@
 					<div class="row">
 						<div class="span3"><h5>Код товара*:</h5></div>
 					 	<div class="input-control select span5">
-					 		<%= f.select :code, {"УКТ ВЭД" => 1, "ГНГ" => 2, "ЕТ СНГ" => 3} %>
+					 		<%= f.select(:code, {"УКТ ВЭД" => "УКТ ВЭД", "ГНГ" => "ГНГ", "ЕТ СНГ" => "ЕТ СНГ"} ) %>
 					 	</div>
 				 	</div>
 				
@@ -32,14 +33,14 @@
 						<div class="span3"><h5>Таможенный режим*:</h5></div>
 				
 						<div class="input-control select span5">
-					 		<%= f.select( :code, {"транзит" => 1,
-																 "импорт" => 2,
-																 "временный ввоз" => 3,
-																 "экспорт" => 4,
-																 "реэкспорт" => 5,
-																 "переработка на территории Украины" => 6,
-																 "переработка за пределами территории Украины" => 7,
-																 "другое" => 8
+					 		<%= f.select( :tamrez, {"транзит" => "транзит",
+																 "импорт" => "импорт",
+																 "временный ввоз" => "временный ввоз",
+																 "экспорт" => "экспорт",
+																 "реэкспорт" => "реэкспорт",
+																 "переработка на территории Украины" => "переработка на территории Украины",
+																 "переработка за пределами территории Украины" => "переработка за пределами территории Украины",
+																 "другое" => "другое"
 																}, :class => "input-control select") %>
 					 	</div>
 				 	</div>
@@ -47,29 +48,32 @@
 					<div class="row">
 						<div class="span3"><h5>Вид транспорта*:</h5></div>
 						<div class="input-control select span5">
-					 		<%= f.select :code, {"авто" => 1,
-																 "ж/д" => 2,
-																 "водный" => 3,
-																 "авиа" => 4,
-																 "трубопроводный" => 5,
+					 		<%= f.select :typetran, {"авто" => "авто",
+																 "ж/д" => "ж/д",
+																 "водный" => "водный",
+																 "авиа" => "авиа",
+																 "трубопроводный" => "трубопроводный",
 																} %>
 					 	</div>
 				 	</div>
 
 					<div class="row">
-						<div class="span3"><h5>Количество товара*:</h5></div>
+						<div class="span5"><h5>Количество товара*:</h5></div>
+						<div class="input-control text span3">
+					 		<%= f.text_field :koltov %>
+					 	</div>
 				 	</div>
 				 	<div class="row">
 						<div class="span5">1) Основные еденицы измерения:</h4></div>
 						<div class="input-control text span3">
-					 		<%= f.text_field :koltov %>
+					 		<%= f.text_field :base_ed %>
 					 	</div>
 				 	</div>
 
 					<div class="row">
 						<div class="span5">2) Дополнительные еденицы измерения:</div>
 						<div class="input-control text span3">
-					 		<%= f.text_field :koltov %>
+					 		<%= f.text_field :dop_ed %>
 					 	</div>
 				 	</div>
 
@@ -93,13 +97,13 @@
 					 	<div class="row">
 						 	<div class="span3">1) За еденицу товара:</div>
 						 	<div class="input-control text span2">
-						 		<%= f.text_field :path_ryhy %>
+						 		<%= f.text_field :ed %>
 						 	</div>
 					 	</div>
 					 	<div class="row">
 						 	<div class="span3">2) Всего:</div>
 						 	<div class="input-control text span2">
-						 		<%= f.text_field :path_ryhy %>
+						 		<%= f.text_field :total %>
 						 	</div>
 					 	</div>
 				 	
@@ -144,7 +148,7 @@
 			
 
 			<h5>Прикрепить файл</h5>
-			<%= file_field_tag 'upload' %>
+			<%= f.file_field :att %>
 			( .doc, docx, txt, xls, xlsx, pdf, jpg )
 			<br/>
 			<br/>
@@ -152,8 +156,7 @@
 				<h5>Дополнительная информация, коментарии:</h5>
 				<div class="span10">
 					<div class="input-control textarea">
-						<textarea>
-						</textarea>
+						<%= f.text_area :dopinfo, :rows => "5" %>
 					</div>
 				</div>
 			</div>
@@ -162,10 +165,9 @@
 			<br/>
 
 			<div class="place-right" style="margin-right: 70px;">
-				<button class="default">Отправить</button>
+				<%= submit_tag "Отправить", class: "default" %>
 				<button>Отмена</button>
 			</div>
-			
 			<% end  %>
 		</div>
 	</div>
