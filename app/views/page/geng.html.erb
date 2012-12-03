@@ -19,9 +19,9 @@
             <br>
             <div class="row">
                 <center>
-                    <div class="button">
-                        Отправить запрос на определение стоимости финансовых гарантий
-                    </div>
+                    <%= link_to "Отправить запрос на определение стоимости финансовых гарантий", 
+                        {:controller => "zapros", :action => "new"}, :class=>"button"
+                        %>
                 </center>
                 <br>
             </div>
