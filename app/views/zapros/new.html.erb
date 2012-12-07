@@ -1,8 +1,8 @@
 <div class="row">
 	<div class="span11 offset3">
 		<br/>
-		<%= image_tag "logo.png", :width => 105, :height => 70 %><br/>
-		<%= Time.now %>
+		<%= image_tag "logo.png", :width => 115, :height => 80 %>
+		<h5><%= Time.now %></h5>
 		<center>
 			<h2>
 				Запрос<br>на определение стоимости финансовой гарантии
@@ -11,7 +11,25 @@
 	</div>
 </div>
 <fieldset class="span11 offset3">
-	
+<!-- <div class="page secondary">
+<br>
+<div class="grid">
+<div class="row">
+	<div class="span2">
+		<%#= image_tag "logo.png", :style => "height:60px"%>
+	</div>
+	<div class="span7">
+<center>
+	<h5><%#= Time.now %></h5>
+	<h2>
+		Запрос<br>на определение стоимости финансовой гарантии
+	</h2>
+</center>
+	</div>
+</div>
+<fieldset>
+ -->
+
 	<br/>
 	<div class="row">
 		<div class="span11">
@@ -148,8 +166,6 @@
 				 	</div>
 
 			 	</div>
-			
-
 			<h5>Прикрепить файл</h5>
 			<%= f.file_field :att %>
 			( .doc, docx, txt, xls, xlsx, pdf, jpg )
@@ -178,3 +194,5 @@
 <br/>
 <br/>
 <br/>
+</div>
+</div>
