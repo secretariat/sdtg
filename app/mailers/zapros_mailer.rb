@@ -14,10 +14,10 @@ class ZaprosMailer < ActionMailer::Base
       attachments[fname] = { :content => fcontent }
     end
 
-    attachments["zapros_#{zapros.id}.pdf"] = { type: "application/pdf", :content => pdf.render }
+    attachments["zapros_#{zapros.id}.pdf"] = { :mime_type => "application/pdf", :content => pdf.render }
     
     @zapros = zapros
-    mail(:from => @zapros.email, :subject =>"Запрос на определение стоимости финансовой гарантии")
+    mail( :from => @zapros.email, :subject =>"Запрос на определение стоимости финансовой гарантии")
    	if( fd ) then
       fd.close
     end
