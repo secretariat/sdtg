@@ -1,12 +1,15 @@
-<center>
-	<br/>
-	<%= image_tag "logo.png" %>
-	<h5><%= Time.now %></h5>
-	<h2>
-		Запрос<br>на определение стоимости финансовой гарантии
-	</h2>
-</center>
-
+<div class="row">
+	<div class="span11 offset3">
+		<br/>
+		<%= image_tag "logo.png", :width => 105, :height => 70 %><br/>
+		<%= Time.now %>
+		<center>
+			<h2>
+				Запрос<br>на определение стоимости финансовой гарантии
+			</h2>
+		</center>
+	</div>
+</div>
 <fieldset class="span11 offset3">
 	
 	<br/>
@@ -25,7 +28,7 @@
 					<div class="row">
 						<div class="span3"><h5>Код товара*:</h5></div>
 					 	<div class="input-control select span5">
-					 		<%= f.select(:code, {"УКТ ВЭД" => "УКТ ВЭД", "ГНГ" => "ГНГ", "ЕТ СНГ" => "ЕТ СНГ"} ) %>
+					 		<%= f.select( :code, {"УКТ ВЭД" => "УКТ ВЭД", "ГНГ" => "ГНГ", "ЕТ СНГ" => "ЕТ СНГ"}, :class => "input-control select") %>
 					 	</div>
 				 	</div>
 				
@@ -48,12 +51,12 @@
 					<div class="row">
 						<div class="span3"><h5>Вид транспорта*:</h5></div>
 						<div class="input-control select span5">
-					 		<%= f.select :typetran, {"авто" => "авто",
+					 		<%= f.select(:typetran, {"авто" => "авто",
 																 "ж/д" => "ж/д",
 																 "водный" => "водный",
 																 "авиа" => "авиа",
 																 "трубопроводный" => "трубопроводный",
-																} %>
+																}, :class => "input-control select" )%>
 					 	</div>
 				 	</div>
 
@@ -87,11 +90,11 @@
 					<div class="row">
 						<div class="span3"><h5>Стоимость товара*:</h5></div>
 						<div class="input-control select span2">
-					 		<%= f.select :code, {"USD" => 1,
-															 "EURO" => 2,
-															 "UAH" => 3,
-															 "другая валюта" => 4,
-															} %>
+					 		<%= f.select(:stoim, {"USD" => "USD",
+															 "EURO" => "EURO",
+															 "UAH" => "UAH",
+															 "другая валюта" => "другая валюта",
+															}, :class => "input-control select")%>
 					 	</div>
 				  </div>
 					 	<div class="row">
