@@ -9,6 +9,7 @@ gem 'thin'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'mysql2'
+gem 'prawn'
 gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 gem "letter_opener", :group => :development
 
