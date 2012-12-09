@@ -3099,9 +3099,9 @@ button.mini,
 button.big,
 .button.big,
 .tool-button.big {
-  min-height: 48px;
-  height: 48px;
-  font-size: 1.2em;
+  min-height: 30px;
+  height: 30px;
+  font-size: 12pt;
 }
 button.big [class*=icon-],
 .button.big [class*=icon-],

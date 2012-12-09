@@ -13,4 +13,6 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
-/pablic/system
+
+# Ignore all uploaded files
+/public/system
