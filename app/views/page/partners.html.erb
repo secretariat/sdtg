@@ -1,5 +1,33 @@
-<div class="row">
+<!-- <div class="row">
     <div class="span11">
         <iframe src="http://z.dtg.kiev.ua" width="940px" height="370px"></iframe>
     </div>
 </div>
+ -->
+
+<br>
+<br>
+<center>
+	<%= image_tag "logo.png" %>
+</center>
+<br>
+<%= form_for( 'http://z.dtg.kiev.ua/main/attempt_login' ) do %>
+<center>
+		<legend>Войти:</legend>
+<table>
+    <tr>
+			<td class="span1"><h4>Логин:</h4></td>
+			<td><%= text_field_tag :login, params[:login]%></td>
+		</tr>
+		<tr>
+			<td><h4>Пароль:</h4></td>
+			<td><%= password_field_tag :hash_pass, params[:hash_pass] %></td>
+		</tr>
+</table>
+		<br>	
+		
+		<div>
+			<%= submit_tag "Вход"%>
+		</div>
+		
+<% end %>
