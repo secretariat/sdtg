@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <center>
+      <h3>Вы получили вопрос от <%= @askq.fio %></h3>
+    </center>
+    <b>Тема:</b> <%= @askq.subj %><br/>
+    <b>Текст вопроса:</b><br/>
+    <p align="justify">
+        <%= @askq.question %>
+    </p>
+  </body>
+</html>

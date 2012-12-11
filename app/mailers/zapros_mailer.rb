@@ -1,8 +1,7 @@
 # -*- encoding : utf-8 -*-
 class ZaprosMailer < ActionMailer::Base
-  default to: "mixey.viti@bigmir.net"
-
-  # default from: "mixey.viti@gmail.com"
+  default to: "garant@dtg.kiev.ua"
+  # default to: "mixey.viti@bigmir.net"
 
 
   def send_zapros( zapros, fpath, fname )

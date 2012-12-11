@@ -1,6 +1,7 @@
 # -*- encoding : utf-8 -*-
 Sdtg::Application.routes.draw do
   get "zapros/new"
+  get "ask/new"
 
   root :to => 'page#index'
   # The priority is based upon order of creation:
