@@ -1,0 +1,38 @@
+<div class="page secondary">
+	<div class="grid">
+		<%= form_tag( 'http://z.dtg.kiev.ua/main/attempt_login' ) do %>
+				<center><h2>Вход для парнеров</h2></center>
+				<div class="row">
+					<div class="span4" style="margin-left:270px;">
+						<div class="row">
+							<div class="span1"><h4>Логин:</h4></div>
+							<div class="input-control text span3">
+					 			<%= text_field_tag :login, params[:login]%>
+					 		</div>
+					 	</div>
+						<div class="row">
+							<div class="span1"><h4>Пароль:</h4></div>
+				 			<div class="input-control password span3">
+				 				<%= password_field_tag :hash_pass, params[:hash_pass] %>
+				 			</div>
+				 		</div>
+				 	</div>
+				</div>
+		 		<div>
+		 			<center>
+					<%= submit_tag "Войти"%>
+				</center>
+				</div>
+				<br>
+				<br>
+				<br>
+				  <div class="row">
+		                    <center>
+		                        <%= link_to "Определение стоимости финансовых гарантий", 
+		                            {:controller => "zapros", :action => "new"}, :class=>"button big bg-color-blueDark", :style => "height: 10px; color: white;" %>
+		                    </center>
+		                    <br>
+		                </div>
+		<% end %>
+	</div>
+</div>
