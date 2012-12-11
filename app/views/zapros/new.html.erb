@@ -1,179 +1,181 @@
-<div class="row">
-	<div class="span11 offset3">
-		<br/>
-		<%= image_tag "logo.png", :width => 115, :height => 80 %>
-		<h5><%= Time.now %></h5>
-		<center>
-			<h2>
-				Запрос<br>на определение стоимости финансовой гарантии
-			</h2>
-		</center>
-	</div>
-</div>
-<fieldset class="span11 offset3">
-	<br/>
-	<div class="row">
-		<div class="span11">
-			<%= form_for( @zapros, :url => {:action => 'create'}, :multipart => true) do |f| %>
-				
-				<div class="grid">
-					<div class="row">
-						<div class="span3"><h5>Наименование товара*:</h5></div>
-						<div class="input-control text span5">
-					 		<%= f.text_field :naim %>
-					 	</div>
-					</div>
-
-					<div class="row">
-						<div class="span3"><h5>Код товара*:</h5></div>
-					 	<div class="input-control select span5">
-					 		<%= f.select( :code, {"УКТ ВЭД" => "УКТ ВЭД", "ГНГ" => "ГНГ", "ЕТ СНГ" => "ЕТ СНГ"}, :class => "input-control select") %>
-					 	</div>
-				 	</div>
-				
-					<div class="row">
-						<div class="span3"><h5>Таможенный режим*:</h5></div>
-				
-						<div class="input-control select span5">
-					 		<%= f.select( :tamrez, {"транзит" => "транзит",
-																 "импорт" => "импорт",
-																 "временный ввоз" => "временный ввоз",
-																 "экспорт" => "экспорт",
-																 "реэкспорт" => "реэкспорт",
-																 "переработка на территории Украины" => "переработка на территории Украины",
-																 "переработка за пределами территории Украины" => "переработка за пределами территории Украины",
-																 "другое" => "другое"
-																}, :class => "input-control select") %>
-					 	</div>
-				 	</div>
-
-					<div class="row">
-						<div class="span3"><h5>Вид транспорта*:</h5></div>
-						<div class="input-control select span5">
-					 		<%= f.select(:typetran, {"авто" => "авто",
-																 "ж/д" => "ж/д",
-																 "водный" => "водный",
-																 "авиа" => "авиа",
-																 "трубопроводный" => "трубопроводный",
-																}, :class => "input-control select" )%>
-					 	</div>
-				 	</div>
-
-					<div class="row">
-						<div class="span5"><h5>Количество товара*:</h5></div>
-						<div class="input-control text span3">
-					 		<%= f.text_field :koltov %>
-					 	</div>
-				 	</div>
-				 	<div class="row">
-						<div class="span5">1) Основные еденицы измерения:</h4></div>
-						<div class="input-control text span3">
-					 		<%= f.text_field :base_ed %>
-					 	</div>
-				 	</div>
-
-					<div class="row">
-						<div class="span5">2) Дополнительные еденицы измерения:</div>
-						<div class="input-control text span3">
-					 		<%= f.text_field :dop_ed %>
-					 	</div>
-				 	</div>
-
-					<div class="row">
-							<ul>
-								<h4><li>Для алкоголя -  количество бутылок, емкость.</li></h4>
-								<h4><li>Для автомобилей – марка, дата выпуска, объем двигателя.</li></h4>
-								<h4><li>Табачные изделия – сигары, сигареты – количество штук.</li></h4>
-							</ul>
-					</div>
-					<div class="row">
-						<div class="span3"><h5>Стоимость товара*:</h5></div>
-						<div class="input-control select span2">
-					 		<%= f.select(:stoim, {"USD" => "USD",
-															 "EURO" => "EURO",
-															 "UAH" => "UAH",
-															 "другая валюта" => "другая валюта",
-															}, :class => "input-control select")%>
-					 	</div>
-				  </div>
-					 	<div class="row">
-						 	<div class="span3">1) За еденицу товара:</div>
-						 	<div class="input-control text span2">
-						 		<%= f.text_field :ed %>
-						 	</div>
-					 	</div>
-					 	<div class="row">
-						 	<div class="span3">2) Всего:</div>
-						 	<div class="input-control text span2">
-						 		<%= f.text_field :total %>
-						 	</div>
-					 	</div>
-				 	
-
-					<div class="row">
-						<h5>Маршрут движения (таможенный орган отправления Украины - таможенный орган назначения Украины):</h5>
-						<div class="input-control text span10">
-					 		<%= f.text_field :path_ryhy %>
-					 	</div>
-					</div>
-				
-					<div class="row">
-						<h5>Частота перевозок и объемы(в месяц, в квартал):</h5>
-						<div class="input-control text span10">
-					 		<%= f.text_field :chastota %>
-					 	</div>
-					</div>
-			 		
-			 		<div class="row">
-						<div class="span2" style="width: 150px;"><h5>Контактное лицо*:</h5></div>
-						<div class="input-control text span3" style="margin-right: 50px;">
-					 		<%= f.text_field :fio %>
-					 	</div>
-					 	<div class="span1" style="width: 100px;"><h5>Должность*:</h5></div>
-						<div class="input-control text span3" >
-					 		<%= f.text_field :rank %>
-					 	</div>
-				 	</div>
-
-				 	<div class="row">
-						<div class="span2" style="width: 150px;"><h5>Телефон*:</h5></div>
-						<div class="input-control text span3" style="margin-right: 50px;">
-					 		<%= f.text_field :phone %>
-					 	</div>
-					 	<div class="span1" style="width: 100px;"><h5>Email*:</h5></div>
-						<div class="input-control text span3">
-					 		<%= f.text_field :email %>
-					 	</div>
-				 	</div>
-
-			 	</div>
-			<h5>Прикрепить файл</h5>
-			<%= f.file_field :att %>
-			( .doc, docx, txt, xls, xlsx, pdf, jpg )
-			<br/>
-			<br/>
+<div class="page">
+  <div class="page-region-content">
 			<div class="row">
-				<h5>Дополнительная информация, коментарии:</h5>
-				<div class="span10">
-					<div class="input-control textarea">
-						<%= f.text_area :dopinfo, :rows => "5" %>
+				<br>
+					<%= image_tag "logo.png", :width => 115%>
+					<h5><%= Time.now %></h5>
+					<center>
+						<h2>
+							Запрос<br>на определение стоимости финансовой гарантии
+						</h2>
+					</center>
+			</div>
+			<fieldset >
+				<br/>
+				<div class="row">
+					<div class="span11">
+						<%= form_for( @zapros, :url => {:action => 'create'}, :multipart => true) do |f| %>
+							
+							<div class="grid">
+								<div class="row">
+									<div class="span3"><h5>Наименование товара*:</h5></div>
+									<div class="input-control text span5">
+								 		<%= f.text_field :naim %>
+								 	</div>
+								</div>
+
+								<div class="row">
+									<div class="span3"><h5>Код товара*:</h5></div>
+								 	<div class="input-control select span5">
+								 		<%= f.select( :code, {"УКТ ВЭД" => "УКТ ВЭД", "ГНГ" => "ГНГ", "ЕТ СНГ" => "ЕТ СНГ"}, :class => "input-control select") %>
+								 	</div>
+							 	</div>
+							
+								<div class="row">
+									<div class="span3"><h5>Таможенный режим*:</h5></div>
+							
+									<div class="input-control select span5">
+								 		<%= f.select( :tamrez, {"транзит" => "транзит",
+																			 "импорт" => "импорт",
+																			 "временный ввоз" => "временный ввоз",
+																			 "экспорт" => "экспорт",
+																			 "реэкспорт" => "реэкспорт",
+																			 "переработка на территории Украины" => "переработка на территории Украины",
+																			 "переработка за пределами территории Украины" => "переработка за пределами территории Украины",
+																			 "другое" => "другое"
+																			}, :class => "input-control select") %>
+								 	</div>
+							 	</div>
+
+								<div class="row">
+									<div class="span3"><h5>Вид транспорта*:</h5></div>
+									<div class="input-control select span5">
+								 		<%= f.select(:typetran, {"авто" => "авто",
+																			 "ж/д" => "ж/д",
+																			 "водный" => "водный",
+																			 "авиа" => "авиа",
+																			 "трубопроводный" => "трубопроводный",
+																			}, :class => "input-control select" )%>
+								 	</div>
+							 	</div>
+
+								<div class="row">
+									<div class="span5"><h5>Количество товара*:</h5></div>
+									<div class="input-control text span3">
+								 		<%= f.text_field :koltov %>
+								 	</div>
+							 	</div>
+							 	<div class="row">
+									<div class="span5">1) Основные еденицы измерения:</h4></div>
+									<div class="input-control text span3">
+								 		<%= f.text_field :base_ed %>
+								 	</div>
+							 	</div>
+
+								<div class="row">
+									<div class="span5">2) Дополнительные еденицы измерения:</div>
+									<div class="input-control text span3">
+								 		<%= f.text_field :dop_ed %>
+								 	</div>
+							 	</div>
+
+								<div class="row">
+										<ul>
+											<h4><li>Для алкоголя -  количество бутылок, емкость.</li></h4>
+											<h4><li>Для автомобилей – марка, дата выпуска, объем двигателя.</li></h4>
+											<h4><li>Табачные изделия – сигары, сигареты – количество штук.</li></h4>
+										</ul>
+								</div>
+								<div class="row">
+									<div class="span3"><h5>Стоимость товара*:</h5></div>
+									<div class="input-control select span2">
+								 		<%= f.select(:stoim, {"USD" => "USD",
+																		 "EURO" => "EURO",
+																		 "UAH" => "UAH",
+																		 "другая валюта" => "другая валюта",
+																		}, :class => "input-control select")%>
+								 	</div>
+							  </div>
+								 	<div class="row">
+									 	<div class="span3">1) За еденицу товара:</div>
+									 	<div class="input-control text span2">
+									 		<%= f.text_field :ed %>
+									 	</div>
+								 	</div>
+								 	<div class="row">
+									 	<div class="span3">2) Всего:</div>
+									 	<div class="input-control text span2">
+									 		<%= f.text_field :total %>
+									 	</div>
+								 	</div>
+							 	
+
+								<div class="row">
+									<h5>Маршрут движения (таможенный орган отправления Украины - таможенный орган назначения Украины):</h5>
+									<div class="input-control text span10">
+								 		<%= f.text_field :path_ryhy %>
+								 	</div>
+								</div>
+							
+								<div class="row">
+									<h5>Частота перевозок и объемы(в месяц, в квартал):</h5>
+									<div class="input-control text span10">
+								 		<%= f.text_field :chastota %>
+								 	</div>
+								</div>
+						 		
+						 		<div class="row">
+									<div class="span2" style="width: 150px;"><h5>Контактное лицо*:</h5></div>
+									<div class="input-control text span3" style="margin-right: 50px;">
+								 		<%= f.text_field :fio %>
+								 	</div>
+								 	<div class="span1" style="width: 100px;"><h5>Должность*:</h5></div>
+									<div class="input-control text span3" >
+								 		<%= f.text_field :rank %>
+								 	</div>
+							 	</div>
+
+							 	<div class="row">
+									<div class="span2" style="width: 150px;"><h5>Телефон*:</h5></div>
+									<div class="input-control text span3" style="margin-right: 50px;">
+								 		<%= f.text_field :phone %>
+								 	</div>
+								 	<div class="span1" style="width: 100px;"><h5>Email*:</h5></div>
+									<div class="input-control text span3">
+								 		<%= f.text_field :email %>
+								 	</div>
+							 	</div>
+
+						 	</div>
+						<h5>Прикрепить файл</h5>
+						<%= f.file_field :att %>
+						( .doc, docx, txt, xls, xlsx, pdf, jpg )
+						<br/>
+						<br/>
+						<div class="row">
+							<h5>Дополнительная информация, коментарии:</h5>
+							<div class="span10">
+								<div class="input-control textarea">
+									<%= f.text_area :dopinfo, :rows => "5" %>
+								</div>
+							</div>
+						</div>
+						<center>(* - поля обязательные для заполнения)</center>
+						<br/>
+						<br/>
+
+						<div class="place-right" style="margin-right: 70px;">
+							<%= submit_tag "Отправить", class: "default" %>
+							<button>Отмена</button>
+						</div>
+						<% end  %>
 					</div>
 				</div>
-			</div>
-			<center>(* - поля обязательные для заполнения)</center>
+			</fieldset>
 			<br/>
 			<br/>
-
-			<div class="place-right" style="margin-right: 70px;">
-				<%= submit_tag "Отправить", class: "default" %>
-				<button>Отмена</button>
+			<br/>
 			</div>
-			<% end  %>
-		</div>
+			</div>
 	</div>
-</fieldset>
-<br/>
-<br/>
-<br/>
-</div>
 </div>
