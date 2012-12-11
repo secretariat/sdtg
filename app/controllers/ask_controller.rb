@@ -10,7 +10,6 @@ class AskController < ApplicationController
 		if @askq.save then
 			AskMailer.ask_question( @askq ).deliver
 			redirect_to(:controller => 'page', :action => 'index')
-
 		end
 
 	end

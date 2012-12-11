@@ -1,19 +1,5 @@
 <br>
 <div class="page secondary">
-<!--     <div style="display: none; position: fixed; height: 100px; width: 100px; padding: 10px; z-index: 10000;" class="bottom-right bg-color-darken fg-color-white">
-    </div> -->
-<!--             <div class="carousel" style="height: 550px;" data-role="carousel" data-param-effect="fade" data-param-direction="left" data-param-period="7000" data-param-markers="off">
-                <div class="slides">
-                    <div class="slide image" id="slide11">
-                        <%#= image_tag "banner.jpg" %>
-                        <div class="description">
-                            <center>
-                            <b>Мы всегда готовы к сотрудничеству на комфортных для Вас условиях.</b>
-                        </center>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
         <div>
             <%= image_tag "banner2.jpg", :style =>"padding-bottom:15px"; %>
         </div>
@@ -111,13 +97,12 @@
                     </div>
                     <div class="span6 bloc">
                         <h3 align="center">Добро пожаловать на официальный сайт 
-коммандитного общества «Донтрансгарант и компания»!</h3>
-
-<p align="justify"><i>Коммандитное общество «Донтрансгарант и компания» более 5 лет является независимым финансовым посредником, уполномоченным Государственной таможенной службой Украины на предоставление таможенным органам Украины финансовой гарантии в виде документа.</i></p>
-<p align="justify"><i>Компетентность и богатый опыт высококвалифицированного персонала и уполномоченных представителей коммандитного общества «Донтрансгарант и компания» в международных пунктах пропуска через государственную границу Украины обеспечивают успешную деятельность, лидирующие позиции и активное развитие компании на рынке услуг по предоставлению финансовых гарантий.</i></p>
-<p align="justify"><i>Мы рады предложить Вам индивидуальный подход к каждому договорному партнёру, оптимальную стоимость и круглосуточное предоставление услуг по предоставлению финансовой гарантии по всей территории Украины на высшем уровне.</i></p> 
-<p align="justify"><i>Коммандитное общество «Донтрансгарант и компания» повышает конкурентоспособность своих партнёров путем оптимизации затрат времени на таможенные процедуры и финансовых ресурсов.
-Всегда рады сотрудничеству на комфортных для Вас условиях!</i></p>
+                            коммандитного общества «Донтрансгарант и компания»!</h3>
+                            <p align="justify"><i>Коммандитное общество «Донтрансгарант и компания» более 5 лет является независимым финансовым посредником, уполномоченным Государственной таможенной службой Украины на предоставление таможенным органам Украины финансовой гарантии в виде документа.</i></p>
+                            <p align="justify"><i>Компетентность и богатый опыт высококвалифицированного персонала и уполномоченных представителей коммандитного общества «Донтрансгарант и компания» в международных пунктах пропуска через государственную границу Украины обеспечивают успешную деятельность, лидирующие позиции и активное развитие компании на рынке услуг по предоставлению финансовых гарантий.</i></p>
+                            <p align="justify"><i>Мы рады предложить Вам индивидуальный подход к каждому договорному партнёру, оптимальную стоимость и круглосуточное предоставление услуг по предоставлению финансовой гарантии по всей территории Украины на высшем уровне.</i></p> 
+                            <p align="justify"><i>Коммандитное общество «Донтрансгарант и компания» повышает конкурентоспособность своих партнёров путем оптимизации затрат времени на таможенные процедуры и финансовых ресурсов.
+                            Всегда рады сотрудничеству на комфортных для Вас условиях!</i></p>
                     </div>
                 </div>
                 
@@ -129,17 +114,36 @@
                     <br>
                 </div>
                 <div class="row">
-                        <div class="span3">
-                           <h3> <br>Наши партнеры:</h3>
+                    <div class="span3">
+                       <h3> <br>Наши партнеры:</h3>
+                    </div>
+                    <div id="wrap">
+                        <div id="list">
+                            <div class="prev"><img src="/images/prev.jpg" alt="prev" /></div>
+                                <div class="part">
+                                    <ul>
+                                        <li>
+                                            <%= link_to( (image_tag "uta_logo.jpg"), "http://www.transgarant.com.ua/" ) %>
+                                        </li>
+                                        <li>
+                                            <%= link_to( (image_tag "brok_logo.jpg"), "http://www.bbs.ua" )%>
+                                        </li>
+                                        <li>
+                                            <%= link_to( (image_tag "sv_logo.jpg"), "http://www.transfer-sv.md/" )%>
+                                        </li>
+                                        <li>
+                                            <%= link_to( (image_tag "red_logos.gif"), "http://www.plaske.ua" )%>
+                                        </li>
+                                        <li>
+                                            <%= link_to( (image_tag "bsss_logo.gif" ), "http://www.bsss-group.com.ua/" )%>
+                                        </li>
+                                    </ul>
+                                </div>
+                            <div class="next"><img src="/images/next.jpg" alt="next" /></div>
                         </div>
-                        <center>
-                            <%= link_to( (image_tag "uta_logo.jpg",  :style=>"padding-left: 15px;", :height => "60px;"), "http://www.transgarant.com.ua/" ) %>
-                            <%= link_to( (image_tag "brok_logo.jpg",  :style=>"padding-left: 15px;",:height => "60px;"), "http://www.bbs.ua" )%>
-                            <%= link_to( (image_tag "sv_logo.jpg",  :style=>"padding-left: 15px;",:height => "60px;"), "http://www.transfer-sv.md/" )%>
-                            <%= link_to( (image_tag "red_logos.gif",  :style=>"padding-left: 15px;",:height => "60px;"), "http://www.plaske.ua" )%>
-                            <%= link_to( (image_tag "bsss_logo.gif",  :style=>"padding-left: 15px;",:height => "60px;"), "http://www.bsss-group.com.ua/" )%>
-                        </center>
+                    </div>
                 </div>
+                
             </div>
         </div>
 </div>

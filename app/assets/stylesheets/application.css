@@ -15,3 +15,84 @@
 p {
 	text-indent: 30px;
 }
+
+#wrap {
+     margin:10px auto;
+     width:900px; 
+}
+
+/************************************************
+           JCAROUSEL LITE          
+************************************************/
+#list {
+     height:130px;
+     width:880px; 
+     margin:30px auto; 
+}
+
+.part {
+     float:left;
+     left: -5000px; 
+     margin:15px; 
+     position:relative; 
+     visibility:hidden;  
+}
+     
+.part ul {
+     height:60px;
+     width:600px; 
+}
+
+.part ul li {
+     padding:0 20px;
+}
+
+.part ul li img {
+     cursor:pointer;
+     height:60px; 
+     padding-top:3px;
+     width:120px;  
+}
+
+.prev {
+     cursor:pointer; 
+     float:left;
+     padding-top:30px;
+}
+
+.next {
+     cursor:pointer; 
+     float:right; 
+     padding-top:30px;
+}
+
+/************************************************
+           CAPTIFY CAPTION         
+************************************************/
+.caption-top, .caption-bottom {
+     background: #000000;
+     color: #ffffff; 
+     cursor:default;
+     padding:2px; 
+     font-size:11px;   
+     text-align:center;
+}
+
+.caption-top {
+     border-width:0px;
+}
+
+.caption-bottom {
+     border-width:0px;
+}
+
+.caption a, .caption a {
+     background:#000;
+     border:none; 
+     text-decoration:none;  
+     padding:2px;
+}
+
+.caption a:hover, .caption a:hover {
+     background:#202020;
+}
