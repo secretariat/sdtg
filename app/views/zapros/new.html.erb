@@ -59,57 +59,55 @@
 								 	</div>
 							 	</div>
 
-								<div class="row">
-									<div class="span5"><h5>Количество товара*:</h5></div>
-									<div class="input-control text span3">
-								 		<%= f.text_field :koltov %>
-								 	</div>
-							 	</div>
-							 	<div class="row">
-									<div class="span5">1) Основные еденицы измерения:</h4></div>
-									<div class="input-control text span3">
-								 		<%= f.text_field :base_ed %>
-								 	</div>
-							 	</div>
+					<div class="row">
+						<div class="span5"><h5>Количество товара*:</h5></div>
+						<div class="input-control text span3">
+					 		<%= f.text_field :koltov %>
+					 	</div>
+				 	</div>
+				 	<div class="row">
+						<div class="span5">1) Основные единицы измерения:</h4></div>
+						<div class="input-control text span3">
+					 		<%= f.text_field :base_ed %>
+					 	</div>
+				 	</div>
 
-								<div class="row">
-									<div class="span5">2) Дополнительные еденицы измерения:</div>
-									<div class="input-control text span3">
-								 		<%= f.text_field :dop_ed %>
-								 	</div>
-							 	</div>
+					<div class="row">
+						<div class="span5">2) Дополнительные единицы измерения:</div>
+						<div class="input-control text span3">
+					 		<%= f.text_field :dop_ed %>
+					 	</div>
+				 	</div>
 
-								<div class="row">
-										<ul>
-											<h4><li>Для алкоголя -  количество бутылок, емкость.</li></h4>
-											<h4><li>Для автомобилей – марка, дата выпуска, объем двигателя.</li></h4>
-											<h4><li>Табачные изделия – сигары, сигареты – количество штук.</li></h4>
-										</ul>
-								</div>
-								<div class="row">
-									<div class="span3"><h5>Стоимость товара*:</h5></div>
-									<div class="input-control select span2">
-								 		<%= f.select(:stoim, {"USD" => "USD",
-																		 "EURO" => "EURO",
-																		 "UAH" => "UAH",
-																		 "другая валюта" => "другая валюта",
-																		}, :class => "input-control select")%>
-								 	</div>
-							  </div>
-								 	<div class="row">
-									 	<div class="span3">1) За еденицу товара:</div>
-									 	<div class="input-control text span2">
-									 		<%= f.text_field :ed %>
-									 	</div>
-								 	</div>
-								 	<div class="row">
-									 	<div class="span3">2) Всего:</div>
-									 	<div class="input-control text span2">
-									 		<%= f.text_field :total %>
-									 	</div>
-								 	</div>
-							 	
-
+					<div class="row">
+							<ul>
+								<h4><li>Для алкоголя -  количество бутылок, емкость.</li></h4>
+								<h4><li>Для автомобилей – марка, дата выпуска, объем двигателя.</li></h4>
+								<h4><li>Табачные изделия – сигары, сигареты – количество штук.</li></h4>
+							</ul>
+					</div>
+					<div class="row">
+						<div class="span3"><h5>Стоимость товара*:</h5></div>
+						<div class="input-control select span2">
+					 		<%= f.select(:stoim, {"USD" => "USD",
+															 "EURO" => "EURO",
+															 "UAH" => "UAH",
+															 "другая валюта" => "другая валюта",
+															}, :class => "input-control select")%>
+					 	</div>
+				  </div>
+					 	<div class="row">
+						 	<div class="span3">1) За единицу товара:</div>
+						 	<div class="input-control text span2">
+						 		<%= f.text_field :ed %>
+						 	</div>
+					 	</div>
+					 	<div class="row">
+						 	<div class="span3">2) Всего:</div>
+						 	<div class="input-control text span2">
+						 		<%= f.text_field :total %>
+						 	</div>
+					 	</div>
 								<div class="row">
 									<h5>Маршрут движения (таможенный орган отправления Украины - таможенный орган назначения Украины):</h5>
 									<div class="input-control text span10">
