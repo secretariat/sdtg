@@ -7,6 +7,11 @@ class PageController < ApplicationController
 		render :layout => 'secondary'
 	end
 
+	def partners_login
+		render :layout => 'application'
+	end
+
+
 	def partners
 		render :layout => 'secondary'
 	end
@@ -32,6 +37,9 @@ class PageController < ApplicationController
 	end
 
 	def represent
+		render :layout => 'secondary'
+	end
+	def dopinfo
 		render :layout => 'secondary'
 	end
 end
