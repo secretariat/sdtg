@@ -16,16 +16,12 @@ p {
 	text-indent: 30px;
 }
 
-#wrap {
-     margin:10px auto;
-     width:900px; 
-}
-
 /************************************************
            JCAROUSEL LITE          
 ************************************************/
 .list {
      height:65px;
+     width: 710px;
      margin:auto; 
 }
 
@@ -38,12 +34,12 @@ p {
 }
      
 .part ul {
-     height:60px;
-     width:600px; 
+     height:65px;
+     width:900px; 
 }
 
 .part ul li {
-     padding:0 20px;
+     padding:0 0px;
 }
 
 .part ul li img {
