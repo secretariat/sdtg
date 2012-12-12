@@ -5,19 +5,20 @@
 			<table class="bordered">
 			<thead>
         <tr>
-          <th><center>№</center></th>
-          <th><center>Вопрос</center></th>
-          <th><center>Создан</center></th>
-          <th><center>Опубликован</center></th>
+          <th><center><b>№</b></center></th>
+          <th><center><b>Вопрос</b></center></th>
+          <th><center><b>Создан</b></center></th>
+          <th><center><b>Опубликован</b></center></th>
           <th><center></center></th>
         </tr>
       </thead>
       <% @faqs.each do |f|  %>
     	<tr>
-    		<td><center><%= f.id %></center></td>
-    		<td><%= f.quest %></td>
+    		<td><center><%= f.id %>.</center></td>
+        <% str = f.quest%>
+    		<td><%= str[1..85]%>...</td>
     		<td><center><%= f.created_at%></center></td>
-    		<td><center><%= f.visible%></center></td>
+    		<td><center><%= status(f.visible)%></center></td>
     		<td></td>
     	</tr>
     	<% end %>

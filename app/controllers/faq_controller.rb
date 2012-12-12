@@ -1,5 +1,9 @@
 # -*- encoding : utf-8 -*-
+require 'funcs'
 class FaqController < ApplicationController
+  
+  layout 'admin'
+  
   def new
   	@faq = Faq.new
   end
