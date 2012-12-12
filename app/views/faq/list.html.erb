@@ -19,7 +19,7 @@
     		<td><%= str[1..85]%>...</td>
     		<td><center><%= f.created_at%></center></td>
     		<td><center><%= status(f.visible)%></center></td>
-    		<td></td>
+    		<td><%= link_to( "", f, :method => :delete,  :class => "icon-edit", :confirm => "Вы уверены?") %></td>
     	</tr>
     	<% end %>
     	</table>

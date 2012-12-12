@@ -25,7 +25,11 @@ Sdtg::Application.routes.draw do
   get "zapros/new"
   get "ask/new"
 
+
   root :to => 'page#index'
+
+  resources :admin, only: [ :index, :list, :new, :create, :destroy]
+  resources :faq, only: [ :index, :list, :new, :create, :destroy]
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
