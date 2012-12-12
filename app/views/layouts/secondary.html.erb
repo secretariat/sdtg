@@ -5,6 +5,45 @@
     <%= stylesheet_link_tag "application", :media => "all" %>
     <%= csrf_meta_tags %>
     <script src="/js/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="/js/jcarousellite_1.0.1.pack.js"></script>
+    <script type="text/javascript" src="/js/captify.tiny.js"></script>
+
+    <script type="text/javascript">
+        $(function() {
+            $(".part").jCarouselLite({
+                btnNext: ".next",
+                btnPrev: ".prev",
+                visible: 5
+         
+            });
+        });
+
+        $(document).ready(function(){
+            $('img.captify').captify({
+                // all of these options are... optional
+                // ---
+                // speed of the mouseover effect
+                speedOver: 'fast',
+                // speed of the mouseout effect
+                speedOut: 'normal',
+                // how long to delay the hiding of the caption after mouseout (ms)
+                hideDelay: 500, 
+                // 'fade', 'slide', 'always-on'
+                animation: 'slide',     
+                // text/html to be placed at the beginning of every caption
+                prefix: '',     
+                // opacity of the caption on mouse over
+                opacity: '0.7',                 
+                // the name of the CSS class to apply to the caption box
+                className: 'caption-bottom',    
+                // position of the caption (top or bottom)
+                position: 'bottom',
+                // caption span % of the image
+                spanWidth: '100%'
+            });
+        });
+
+    </script>
 </head>
 <body class="modern-ui">
     <div class="page">
@@ -56,23 +95,44 @@
     <br/>
     <div class="row">
         <div class="span12" style="margin:auto;">
-            <div class="span3 place-left"><a class="fg-color-blueDark" href="/page/about"><b>О нас и наших партнерах</b></a></div>
-            <div class="span3 place-left" align="left">
-                <a class="fg-color-blueDark" href="/page/services"><b>Услуги</b></a><br>
-                    <a href="/page/singleg" class="tertiary-secondary-text">Индивидуальная фин. гарантия</a>
-                    <a href="/page/mltig" class="tertiary-secondary-text">Многоразовая фин. гарантия</a>
-                    <a href="/page/geng" class="tertiary-secondary-text">Генеральная фин. гарантия</a>
-            </div>
-            <div class="span3 place-left"><a class="fg-color-blueDark" href="/page/dopinfo"><b>Доп информация</b></a></div>
-            <div class="span2 place-right"><a class="fg-color-greenDark" href="/page/partners"><b>Зона партнеров</b></a></div>
+            <ul class="footer-menu">
+                <li><b>О нас и наших партнерах</b>
+                    <ul class="footer-submenu">
+                        <li><a href="/page/presentation">Презентация</a></li><br>
+                        <li><a href="/page/partners">Наши партнеры</a></li><br>
+                        <li><a href="/page/represent">Наши представители</a></li><br>
+                    </ul>
+                </li>
+                <li style="margin-left: 40px;"><b>Услуги</b>
+                    <ul class="footer-submenu">
+                        <li><a href="/page/singleg">Индивидуальная гарантия</a></li><br>
+                        <li><a href="/page/multig">Многоразовая гарантия</a></li><br>
+                        <li><a href="/page/geng">Генеральная гарантия</a></li><br>
+                    </ul>
+                </li>
+                <li style="margin-left: 40px;"><b>Дополнительная информация</b>
+                    <ul class="footer-submenu">
+                        <li><a href="/">ЧАВО</a></li><br>
+                        <li><a href="/">Нормативно-правовые акты</a></li><br>
+                        <li><a href="/">Наши представители</a></li><br>
+                        <li><a href="/ask/new">Задать вопрос</a></li><br>
+                    </ul>
+                </li>
+                <li class="place-right" style="color: #1E7145"><b>Зона партнеров</b>
+                    <ul class="footer-submenu">
+                        <li><a href="/page/partners_login">Вход для партнеров</a></li><br>
+                    </ul>
+                </li>
+            </ul>
+     
             <br><br><br><br><br>
             <hr>
             <div class="place-left">
                 <p class="tertiary-secondary-text">Командитное товоарищество  <b>ДОНТРАНСГАРАНТ и компания &copy; </b>2012</p>
             </div>
             <div class="place-right">
-                <p class="tertiary-secondary-text" align="left"><b><u>КОНТАКТЫ:</u></b><br>
-                04073, Украина г. Киев<br>
+                <p class="tertiary-secondary-text" align="left"><b><u>КОНТАКТЫ:</u></b>
+                    <br>04073, Украина г. Киев<br>
                     пр-т. Московский, 16-Б, корп.5, 2-й этаж<br>
                     <span class="icon-contact"></span>+38 044 500 92 68<br>
                     <span class="icon-documents-1"></span>+38 044 581 08 68<br>

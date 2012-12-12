@@ -1,64 +1,62 @@
 <div class="page">
   <div class="page-region-content">
+  	<div class="grid">
 			<div class="row">
 				<br>
 					<%= image_tag "logo.png", :width => 115%>
 					<h5><%= Time.now %></h5>
-		<center>
-			<h2>
-				Задать вопрос
-			</h2>
-		</center>
-	</div>
-	</div>
-	<fieldset>
-		<br/>
-		<div class="row">
-			<div class="span11">
-				<%= form_for( @askq, :url => {:action => 'create'} ) do |f| %>
-					
-					<div class="grid">
-						<div class="row">
-							<div class="span1"><h5>ФИО*:</h5></div>
-							<div class="input-control text span5">
-						 		<%= f.text_field :fio %>
-						 	</div>
-						</div>
-						
-						<div class="row">
-							<div class="span1"><h5>Email*:</h5></div>
-							<div class="input-control text span5">
-						 		<%= f.text_field :from %>
-						 	</div>
-						</div>
-
-						<div class="row">
-							<div class="span1"><h5>Тема*:</h5></div>
-							<div class="input-control text span5">
-						 		<%= f.text_field :subj %>
-						 	</div>
-						</div>
-
+					<center>
+						<h2>
+							Задать вопрос
+						</h2>
+					</center>
+			</div>
+			<fieldset>
+				<br/>
+				<div class="row">
+					<div class="span11">
+						<%= form_for( @askq, :url => {:action => 'create'} ) do |f| %>
+							<div class="row">
+								<div class="span1"><h5>ФИО*:</h5></div>
+								<div class="input-control text span5">
+							 		<%= f.text_field :fio %>
+							 	</div>
+							</div>
 							
-						<div class="row">
-							<h5>Вопрос*:</h5>
-							<div class="span10">
-								<div class="input-control textarea">
-									<%= f.text_area :question, :rows => "5" %>
+							<div class="row">
+								<div class="span1"><h5>Email*:</h5></div>
+								<div class="input-control text span5">
+							 		<%= f.text_field :from %>
+							 	</div>
+							</div>
+
+							<div class="row">
+								<div class="span1"><h5>Тема*:</h5></div>
+								<div class="input-control text span5">
+							 		<%= f.text_field :subj %>
+							 	</div>
+							</div>
+
+								
+							<div class="row">
+								<h5>Вопрос*:</h5>
+								<div class="span10">
+									<div class="input-control textarea">
+										<%= f.text_area :question, :rows => "5" %>
+									</div>
 								</div>
 							</div>
-						</div>
-						<center>(* - поля обязательные для заполнения)</center>
+							<center>(* - поля обязательные для заполнения)</center>
 
-						<div class="place-right" style="margin-right: 70px;">
-							<%= submit_tag "Отправить", class: "default" %>
-							<button>Отмена</button>
-						</div>
-					<% end  %>
+							<div class="place-right" style="margin-right: 70px;">
+								<%= submit_tag "Отправить", class: "default" %>
+								<button>Отмена</button>
+							</div>
+						<% end  %>
+					</div>
 				</div>
+			</fieldset>
+			<br>
 		</div>
-	</fieldset>
-</div>
-</div>
 	</div>
 </div>
