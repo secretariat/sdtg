@@ -1,5 +1,27 @@
 # -*- encoding : utf-8 -*-
 Sdtg::Application.routes.draw do
+  get "faq/new"
+
+  get "faq/show"
+
+  get "faq/list"
+
+  get "faq/edit"
+
+  get "admin/attempt_login"
+
+  get "admin/login"
+
+  get "admin/logout"
+
+  get "admin/main"
+
+  get "admin/new"
+
+  get "admin/create"
+
+  get "admin/destroy"
+
   get "zapros/new"
   get "ask/new"
 

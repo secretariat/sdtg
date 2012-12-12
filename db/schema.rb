@@ -11,13 +11,38 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121210225510) do
+ActiveRecord::Schema.define(:version => 20121212194921) do
+
+  create_table "admins", :force => true do |t|
+    t.string   "name"
+    t.string   "login"
+    t.string   "email"
+    t.string   "hash_pass"
+    t.string   "hash_salt"
+    t.integer  "priv_level"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "asks", :force => true do |t|
     t.string   "fio"
     t.string   "from"
     t.string   "subj"
     t.text     "question"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "faqs", :force => true do |t|
+    t.text     "quest"
+    t.text     "answer"
+    t.boolean  "visible"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "transports", :force => true do |t|
+    t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

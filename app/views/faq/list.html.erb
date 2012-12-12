@@ -1,0 +1,32 @@
+<div class="page">
+  <div class="page-region-content">
+		<div class="row">
+			<center><h3>Редактировать вопрос-ответ</h3></center>
+			<table class="bordered">
+			<thead>
+        <tr>
+          <th><center>№</center></th>
+          <th><center>Вопрос</center></th>
+          <th><center>Создан</center></th>
+          <th><center>Опубликован</center></th>
+          <th><center></center></th>
+        </tr>
+      </thead>
+      <% @faqs.each do |f|  %>
+    	<tr>
+    		<td><center><%= f.id %></center></td>
+    		<td><%= f.quest %></td>
+    		<td><center><%= f.created_at%></center></td>
+    		<td><center><%= f.visible%></center></td>
+    		<td></td>
+    	</tr>
+    	<% end %>
+    	</table>
+			
+		</div>
+	</div>
+</div>
+<br/>
+<br/>
+<br/>
+<br/>
