@@ -4326,7 +4326,7 @@ table.bordered tbody tr:last-child td {
   float: left;
   min-height: 100% !important;
   height: auto;
-  background-color: #EBEBEB;
+  /*background-color: #EBEBEB;*/
   padding-top: 10px;
   padding-bottom: 10px;
   margin-top: 10px;
@@ -4353,7 +4353,7 @@ table.bordered tbody tr:last-child td {
   color: rgba(0, 0, 0, 0.4);
 }
 .page-sidebar a:hover {
-  background-color: #2d89ef !important;
+  background-color: #0056A2 !important;
   color: #ffffff !important;
 }
 .page-sidebar li {
@@ -4437,7 +4437,7 @@ table.bordered tbody tr:last-child td {
 .page-sidebar ul {
   margin-left: 0;
   list-style: none;
-  background-color: #EBEBEB;
+  background-color: #2dabef;
 }
 .page-sidebar ul.sub-menu {
   padding-top: 5px;
