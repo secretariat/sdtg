@@ -43,6 +43,7 @@ p {
 }
 
 .part ul li img {
+     /*border: 1px dotted black;*/
      cursor:pointer;
      height:60px; 
      padding-top:3px;
