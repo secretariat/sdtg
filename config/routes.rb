@@ -1,5 +1,17 @@
 # -*- encoding : utf-8 -*-
 Sdtg::Application.routes.draw do
+  get "contacts/new"
+
+  get "contacts/index"
+
+  get "contacts/list"
+
+  get "contacts/edit"
+
+  get "contacts/destroy"
+
+  get "contacts/show"
+
   get "faq/new"
 
   get "faq/show"

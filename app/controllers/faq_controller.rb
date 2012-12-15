@@ -12,21 +12,39 @@ class FaqController < ApplicationController
   	@faq = Faq.new( params[:faq] )
   	if @faq.save then
   	flash[:notice] = "Вопрос-ответ создан успешно"
-      # DtgMailer.delay.welcome_email( @main, @main.admin, @pass )
       redirect_to( :controller => 'faq', :action => 'list')
     else
-      flash[:notice] = "##{@faq.errors.full_messages.to_sentence}" 
+      flash[:notice] = "#{@faq.errors.full_messages.to_sentence}" 
       redirect_to( :controller => 'faq', :action => 'new')
     end   
   end
 
   def show
+    @faq = Faq.find( params[:id] )
   end
 
   def list
-  	@faqs = Faq.find( :all )
+  	@faq = Faq.find( :all )
   end
 
   def edit
+    @faq = Faq.find( params[:id] )
   end
+
+  def update
+    @faq = Faq.find( params[:id] )
+    if @faq.update_attributes( params[:faq]) then
+      flash[:notice] = "Вопрос-ответ успешно отредактирован"
+      redirect_to( :controller => 'faq', :action => 'list')
+    else
+      render('edit')
+    end   
+  end
+
+  def destroy
+    Faq.find( params[:id] ).destroy
+    flash[:notice] = "Запись удачно удалена"
+    redirect_to(:action => 'list')
+  end
+
 end

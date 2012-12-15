@@ -1,9 +1,9 @@
 <div class="page">
   <div class="page-region-content">
 		<div class="row">
-			<center><h3>Новый вопрос-ответ</h3></center>
+			<center><h3>Редактировать вопрос-ответ</h3></center>
 			<fieldset>
-			<%= form_for(:faq, :url => {:action => 'create'}) do |f| %>
+			<%= form_for(:faq, :url => {:controller => 'faq', :action => 'update', :id => @faq.id }) do |f| %>
 			 	<div class="grid">
 					
 						<div class="row">
