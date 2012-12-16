@@ -1,0 +1,45 @@
+<div class="page">
+  <div class="page-region-content">
+		<div class="row">
+			<center>
+        <h3>Редактировать рубрику вопрос-ответ</h3>
+        <%= link_to "Создать", {:controller => "faq", :action => "new"}, :class=>"button big bg-color-blueDark", :style => "height: 10px; color: white;" %>
+      </center>
+			<table class="bordered">
+			<thead>
+        <tr>
+          <th><center><b>№</b></center></th>
+          <th><center><b>Вопрос</b></center></th>
+          <th><center><b>Создан</b></center></th>
+          <th><center><b>Опубликован</b></center></th>
+        </tr>
+      </thead>
+      <% @faq.each do |f|  %>
+      	<tr>
+      		<td><center><%= f.id %>.</center></td>
+          <% str = f.quest%>
+      		<td><%= str[1..85]%>...</td>
+      		<td><center><%= f.created_at%></center></td>
+      		<td><center><%= status(f.visible)%></center></td>
+      		<td><center>
+              <%= link_to( "Показать",  :controller => 'faq', :action=>'show', :id => f.id ) %></center>
+            </td>
+            <td><center>
+              <%= link_to( "Редактировать", :controller => 'faq', :action=>'edit',:id => f.id ) %></center>
+            </td>
+            <!-- <td>
+              <center>
+                <%#= link_to( "у", f, :method => :delete, :confirm => "Вы уверены?") %>
+              </center>
+            </td> -->
+      	</tr>
+    	<% end %>
+    	</table>
+			
+		</div>
+	</div>
+</div>
+<br/>
+<br/>
+<br/>
+<br/>

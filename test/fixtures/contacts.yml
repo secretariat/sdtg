@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  unit: MyString
+  rank: MyString
+  fio: MyString
+  phone_g1: MyString
+  phone_g2: MyString
+  pnone_m1: MyString
+  phone_m2: MyString
+  skype: MyString
+  email1: MyString
+  email2: MyString
+
+two:
+  unit: MyString
+  rank: MyString
+  fio: MyString
+  phone_g1: MyString
+  phone_g2: MyString
+  pnone_m1: MyString
+  phone_m2: MyString
+  skype: MyString
+  email1: MyString
+  email2: MyString

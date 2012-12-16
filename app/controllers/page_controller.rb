@@ -42,4 +42,8 @@ class PageController < ApplicationController
 	def dopinfo
 		render :layout => 'secondary'
 	end
+
+	def contacts
+		render :layout => 'secondary'
+	end
 end

@@ -1,0 +1,52 @@
+<div class="page">
+  <div class="page-region-content">
+		<div class="row">
+			<center><h3>Создание нового администратора</h3></center>
+			<fieldset>
+			<div class="span6 offset2">
+			<%= form_for(:admin, :url => {:action => 'create'}) do |f| %>
+			 	<div class="grid">
+					
+					<div class="row">
+						<div class="span1"><h5>ФИО*:</h5></div>
+						<div class="input-control text span5">
+					 		<%= f.text_field :name %>
+					 	</div>
+					</div>
+					
+					<div class="row">
+						<div class="span1"><h5>Email*:</h5></div>
+						<div class="input-control text span5">
+					 		<%= f.text_field :email %>
+					 	</div>
+					</div>
+
+					<div class="row">
+						<div class="span1"><h5>Логин*:</h5></div>
+						<div class="input-control text span5">
+					 		<%= f.text_field :login %>
+					 	</div>
+					</div>
+
+					<div class="row">
+						<div class="span1"><h5>Логин*:</h5></div>
+						<div class="input-control text span5">
+					 		<%= f.text_field :password %>
+					 	</div>
+					</div>
+						
+					
+					<center>(* - поля обязательные для заполнения)</center>
+
+					<div>
+						<center>
+							<%= submit_tag "Создать", class: "default" %>
+						</center>
+					</div>
+				</div>
+			<% end %>
+			</div>
+			</fieldset>
+		</div>
+	</div>
+</div>
