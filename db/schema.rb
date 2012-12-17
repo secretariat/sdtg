@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121214185925) do
+ActiveRecord::Schema.define(:version => 20121217200221) do
 
   create_table "admins", :force => true do |t|
     t.string   "name"
@@ -33,6 +33,12 @@ ActiveRecord::Schema.define(:version => 20121214185925) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "codes", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "contacts", :force => true do |t|
     t.string   "unit"
     t.string   "rank"
@@ -49,6 +55,12 @@ ActiveRecord::Schema.define(:version => 20121214185925) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "currencies", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "faqs", :force => true do |t|
     t.text     "quest"
     t.text     "answer"
@@ -58,6 +70,18 @@ ActiveRecord::Schema.define(:version => 20121214185925) do
   end
 
   create_table "transports", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "transps", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "trs", :force => true do |t|
     t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false

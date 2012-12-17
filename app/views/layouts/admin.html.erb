@@ -15,10 +15,10 @@
 			
 				<li data-role="dropdown"><a href="#">Словари</a>
 					<ul class="dropdown-menu">
-						<li><%= link_to "Код товара", "#" %></li>
-						<li><%= link_to "Таможенный режим", "#" %></li>
-						<li><%= link_to "Вид транспорта", "#" %></li>
-						<li><%= link_to "Валюта", "#" %></li>
+						<li><%= link_to "Код товара", :controller => "code", :action => "list" %></li>
+						<li><%= link_to "Таможенный режим", :controller => "tr", :action => "list" %></li>
+						<li><%= link_to "Вид транспорта", :controller => "transport", :action => "list" %></li>
+						<li><%= link_to "Валюта", :controller => "currency", :action => "list" %></li>
 					</ul>		
 				</li>
 			

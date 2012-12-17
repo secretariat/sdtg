@@ -25,7 +25,7 @@
 							<div class="row">
 								<div class="span3"><h5>Код товара*:</h5></div>
 							 	<div class="input-control select span5">
-							 		<%= f.select( :code, {"УКТ ВЭД" => "УКТ ВЭД", "ГНГ" => "ГНГ", "ЕТ СНГ" => "ЕТ СНГ"}, :class => "input-control select") %>
+							 		<%= f.select( :code, Code.find(:all).collect{ |u| [u.name] }, :class => "input-control select") %>
 							 	</div>
 						 	</div>
 						
@@ -33,27 +33,14 @@
 								<div class="span3"><h5>Таможенный режим*:</h5></div>
 						
 								<div class="input-control select span5">
-							 		<%= f.select( :tamrez, {"транзит" => "транзит",
-																		 "импорт" => "импорт",
-																		 "временный ввоз" => "временный ввоз",
-																		 "экспорт" => "экспорт",
-																		 "реэкспорт" => "реэкспорт",
-																		 "переработка на территории Украины" => "переработка на территории Украины",
-																		 "переработка за пределами территории Украины" => "переработка за пределами территории Украины",
-																		 "другое" => "другое"
-																		}, :class => "input-control select") %>
+							 		<%= f.select( :tamrez, Tr.find(:all).collect{ |u| [u.name] }, :class => "input-control select") %>
 							 	</div>
 						 	</div>
 
 							<div class="row">
 								<div class="span3"><h5>Вид транспорта*:</h5></div>
 								<div class="input-control select span5">
-							 		<%= f.select(:typetran, {"авто" => "авто",
-																		 "ж/д" => "ж/д",
-																		 "водный" => "водный",
-																		 "авиа" => "авиа",
-																		 "трубопроводный" => "трубопроводный",
-																		}, :class => "input-control select" )%>
+							 		<%= f.select(:typetran, Transp.find(:all).collect{ |u| [u.name] }, :class => "input-control select")%>
 							 	</div>
 						 	</div>
 
@@ -87,11 +74,7 @@
 							<div class="row">
 								<div class="span3"><h5>Стоимость товара*:</h5></div>
 								<div class="input-control select span2">
-							 		<%= f.select(:stoim, {"USD" => "USD",
-																	 "EURO" => "EURO",
-																	 "UAH" => "UAH",
-																	 "другая валюта" => "другая валюта",
-																	}, :class => "input-control select")%>
+							 		<%= f.select(:stoim, Currency.find(:all).collect{ |u| [u.name] }, :class => "input-control select")%>
 							 	</div>
 						  </div>
 						 	<div class="row">

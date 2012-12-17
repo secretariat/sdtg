@@ -1,5 +1,31 @@
 # -*- encoding : utf-8 -*-
 Sdtg::Application.routes.draw do
+  get "currency/new"
+
+  get "currency/list"
+
+  get "currency/edit"
+
+  get "transport/new"
+
+  get "transport/list"
+
+  get "transport/edit"
+
+  get "tr/new"
+
+  get "tr/list"
+
+  get "tr/edit"
+
+  get "code/new"
+
+  get "code/list"
+
+  get "code/show"
+
+  get "code/edit"
+
   get "contacts/new"
 
   get "contacts/index"
@@ -42,6 +68,7 @@ Sdtg::Application.routes.draw do
 
   resources :admin, only: [ :index, :list, :new, :create, :destroy]
   resources :faq, only: [ :index, :list, :new, :create, :destroy]
+  resources :code, only: [ :index, :list, :new, :create, :destroy]
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
