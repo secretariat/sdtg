@@ -9,7 +9,16 @@ body {
 }
 
 .page-footer {
-    background: url("/assets/footer.gif") repeat-x scroll left top transparent;
+    /*background: url("/assets/footer.gif") repeat-x scroll left top transparent;*/
+background: #1e7145; /* Old browsers */
+background: -moz-linear-gradient(top,  #1e7145 0%, #80af92 18%, #ffffff 75%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1e7145), color-stop(18%,#80af92), color-stop(75%,#ffffff)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #1e7145 0%,#80af92 18%,#ffffff 75%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #1e7145 0%,#80af92 18%,#ffffff 75%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #1e7145 0%,#80af92 18%,#ffffff 75%); /* IE10+ */
+background: linear-gradient(to bottom,  #1e7145 0%,#80af92 18%,#ffffff 75%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e7145', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+
 }
 
 .hr {
@@ -49,7 +58,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c6e8ff', end
 
 ul.footer-menu {
  list-style: none;
- color: #2B5797;
+ color: #3038A8;
 
 }
 
@@ -66,14 +75,15 @@ ul.footer-submenu {
 
 ul.footer-submenu li a {
  float:none;
- color: grey;
+ color: rgba(0, 0, 0, 0.65);
  font-size: 12px;
  line-height: 10px;
 }
 
 ul.footer-submenu li a:hover {
  float:none;
- color: black;
+ color: rgba(0, 0, 0, 1);
+ text-decoration:underline;
 }
 
 
