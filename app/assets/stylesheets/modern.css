@@ -3590,7 +3590,7 @@ button.big [class*=icon-],
  * Tables.less
  *
  */
-table {
+/*table {
   width: 100%;
   border-collapse: separate;
   margin: 0 0 20px;
@@ -3650,9 +3650,7 @@ table tbody tr td.center {
 table tbody tr td.last {
   border-right: 1px transparent solid;
 }
-table tbody tr td:last-child {
-  border-right: 1px transparent solid;
-}
+
 table tbody tr.success {
   background-color: #00a300 !important;
 }
@@ -3708,7 +3706,7 @@ table.bordered {
 }
 table.bordered tbody tr:last-child td {
   border-bottom: 0;
-}
+}*/
 /*
  * Metro UI CSS
  * Copyright 2012 Sergey Pimenov
