@@ -10,17 +10,18 @@
 <div class="page-region">
     <div class="page-region-content">
         <div class="grid">
-            <h2>Дополнительная информация</h2>
+            <h2>Частые вопросы</h2>
             <div class="row">
-                <div class="span4"> 
-                    <p align="justify">
-                        Предоставление таможенным органам обеспечения уплаты таможенных платежей является обязательным при ввозе на таможенную территорию Украины и/или перемещении территорией Украины проходящим и внутренним транзитом товаров согласно перечня, утвержденного Кабинетом Министров Украины, а также в других случаях, установленных Таможенным кодексом Украины.
-                    </p>
+                <div class="span7" style="align: justify;"> 
+                    
+                    <% @faqs.each do |f|%>    
+                        <b>Вопрос:</b><%= f.quest %><br/>
+                        <b>Ответ:</b><%= f.answer %><br/>
+                        <br/>
+                    <% end %>    
+                    
                 </div>   
-                <div class="span1">
-                    <a href="#"><%= image_tag "railroad.jpg" %> </a>
-                    <a href="#"><%= image_tag "tpp.jpg" %> </a>
-                </div>
+               
             </div>
             <br>
             <div class="row">
