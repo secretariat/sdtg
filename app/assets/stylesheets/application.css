@@ -92,3 +92,7 @@ p {
 .caption a:hover, .caption a:hover {
      background:#202020;
 }
+
+.logo{
+     margin-left: 20px; 
+}
