@@ -159,3 +159,20 @@ hr {
         display: none;
     }
 }
+
+table td {
+    overflow:hidden;
+    border: 1px solid black; 
+}
+
+.pull-left {
+    font-size: 9pt;
+    float: left !important;
+    margin-left: 2px;
+}
+
+.pull-right {
+    font-size: 9pt;
+    float: right !important;
+    margin-right: 2px;
+}
