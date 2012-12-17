@@ -11,12 +11,12 @@ body {
 .page-footer {
     /*background: url("/assets/footer.gif") repeat-x scroll left top transparent;*/
 background: #1e7145; /* Old browsers */
-background: -moz-linear-gradient(top,  #1e7145 0%, #80af92 18%, #ffffff 75%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1e7145), color-stop(18%,#80af92), color-stop(75%,#ffffff)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top,  #1e7145 0%,#80af92 18%,#ffffff 75%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top,  #1e7145 0%,#80af92 18%,#ffffff 75%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top,  #1e7145 0%,#80af92 18%,#ffffff 75%); /* IE10+ */
-background: linear-gradient(to bottom,  #1e7145 0%,#80af92 18%,#ffffff 75%); /* W3C */
+background: -moz-linear-gradient(top,  #1e7145 0%, #80af92 38%, #ffffff 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1e7145), color-stop(38%,#80af92), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #1e7145 0%,#80af92 38%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #1e7145 0%,#80af92 38%,#ffffff 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #1e7145 0%,#80af92 38%,#ffffff 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #1e7145 0%,#80af92 38%,#ffffff 100%); /* W3C */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e7145', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
 
 }
