@@ -1,2 +1,97 @@
-<h1>Contacts#edit</h1>
-<p>Find me in app/views/contacts/edit.html.erb</p>
+<div class="page">
+  <div class="page-region-content">
+		<div class="row">
+			<center>
+				<h2>
+					Добавление нового контакта
+				</h2>
+			</center>
+			<fieldset>
+				<div class="row">
+					<div class="span11">
+						<%= form_for( @contact, :url => {:controller => 'contacts', :action => 'update', :id => @contact.id } ) do |f| %>
+							<div class="grid">
+								<!-- ############################################################# -->
+								<div class="row">
+									<div class="span3"><h5>Наименование подразделения:</h5></div>
+									<div class="input-control text span3">
+								 		<%= f.text_field :unit %>
+								 	</div>
+								</div>
+								<!-- ############################################################# -->
+								<div class="row">
+									<div class="span3"><h5>Должность:</h5></div>
+									<div class="input-control text span3">
+								 		<%= f.text_field :rank %>
+								 	</div>
+								</div>
+								<!-- ############################################################# -->
+								<div class="row">
+									<div class="span3"><h5>ФИО:</h5></div>
+									<div class="input-control text span3">
+								 		<%= f.text_field :fio %>
+								 	</div>
+								</div>
+								<!-- ############################################################# -->
+								<div class="row">
+									<div class="span3"><h5>Городской телефон 1:</h5></div>
+									<div class="input-control text span3">
+								 		<%= f.text_field :phone_g1 %>
+								 	</div>
+								</div>
+								<!-- ############################################################# -->
+								<div class="row">
+									<div class="span3"><h5>Городской телефон 2:</h5></div>
+									<div class="input-control text span3">
+								 		<%= f.text_field :phone_g2 %>
+								 	</div>
+								</div>
+								<!-- ############################################################# -->
+								<div class="row">
+									<div class="span3"><h5>Мобильный телефон 1:</h5></div>
+									<div class="input-control text span3">
+								 		<%= f.text_field :mobile1 %>
+								 	</div>
+								</div>
+								<!-- ############################################################# -->
+								<div class="row">
+									<div class="span3"><h5>Мобильный телефон 2:</h5></div>
+									<div class="input-control text span3">
+								 		<%= f.text_field :mobile2 %>
+								 	</div>
+								</div>
+								<!-- ############################################################# -->
+								<div class="row">
+									<div class="span3"><h5>Email - основной:</h5></div>
+									<div class="input-control text span3">
+								 		<%= f.text_field :email1 %>
+								 	</div>
+								</div>
+								<!-- ############################################################# -->
+								<div class="row">
+									<div class="span3"><h5>Email - дополнительный:</h5></div>
+									<div class="input-control text span3">
+								 		<%= f.text_field :email2 %>
+								 	</div>
+								</div>
+								<!-- ############################################################# -->
+								<div class="row">
+									<div class="span3"><h5>Skype:</h5></div>
+									<div class="input-control text span3">
+								 		<%= f.text_field :skype %>
+								 	</div>
+								</div>
+							</div>
+								<!-- ############################################################# -->
+							<h4><%= f.check_box(:visible) %>Опубликовать</h4>
+							<div class="place-right" style="margin-right: 70px;">
+								<%= submit_tag "Сохранить", class: "default" %>
+                <%= link_to "Отмена", {:controller => "contacts", :action => "list"}, :class=>"button big bg-color-blueDark", :style => "height: 10px; color: white;" %>
+							</div>
+						<% end  %>
+					</div>
+				</div>
+			</fieldset>
+		</div>
+	</div>
+</div>

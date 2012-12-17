@@ -1,2 +1,24 @@
-<h1>Contacts#show</h1>
-<p>Find me in app/views/contacts/show.html.erb</p>
+<div class="page">
+  <div class="page-region-content">
+		<div class="row">
+			<center><h3>Просмотр</h3></center>
+      <b>Наименование подразделения: </b><%= @contact.unit %><br/>
+			<b>Должность: </b><%= @contact.rank %><br/>
+			<b>ФИО: </b><%= @contact.fio %><br/>
+			<b>Городской телефон 1: </b><%= @contact.phone_g1 %><br/>
+			<b>Городской телефон 2: </b><%= @contact.phone_g2 %><br/>
+			<b>Мобильный телефон 1: </b><%= @contact.mobile1 %><br/>
+			<b>Мобильный телефон 3: </b><%= @contact.mobile2 %><br/>
+			<b>Skype: </b><%= @contact.skype %><br/>
+			<b>Email - основной: </b><%= @contact.email1 %><br/>
+			<b>Email - дополнительный: </b><%= @contact.email2 %><br/>
+      <center>
+        <%= link_to "Назад", {:controller => "contacts", :action => "list"}, :class=>"button big bg-color-blueDark", :style => "height: 10px; color: white;" %>
+      </center>
+		</div>
+	</div>
+</div>
+<br/>
+<br/>
+<br/>
+<br/>

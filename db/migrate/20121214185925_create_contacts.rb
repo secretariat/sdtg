@@ -6,11 +6,12 @@ class CreateContacts < ActiveRecord::Migration
       t.string :fio
       t.string :phone_g1
       t.string :phone_g2
-      t.string :pnone_m1
-      t.string :phone_m2
+      t.string :mobile1
+      t.string :mobile2
       t.string :skype
       t.string :email1
       t.string :email2
+      t.boolean :visible
 
       t.timestamps
     end
