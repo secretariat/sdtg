@@ -9,24 +9,32 @@
 						<b><%= c.unit %></b><br/>
 						<h4><%= c.rank %></h4>
 						<em><%= c.fio %></em><br/><br/>
-						<% if c.mobile1 then  %>
+						<!-- ################################################### -->
+						<% if (c.mobile1).length > 0 then  %>
 							<span class="icon-contact"></span><%= c.mobile1 %>
-							<% if c.mobile2 then %>
+							<% if (c.mobile2).length > 0 then %>
 								,<%= c.mobile2 %><br>
+							<% else %>
+								<br/>
 							<% end  %>		
 						<% end  %>
-
-						<% if c.phone_g1 then  %>
+						<!-- ################################################### -->
+						<% if (c.phone_g1).length > 0 then  %>
 							<span class="icon-contact"></span><%= c.phone_g1 %>
-							<% if c.phone_g2 then %>
+							<% if (c.phone_g2).length > 0 then %>
 								,<%= c.phone_g2 %><br>
+							<% else %>
+								<br/>
 							<% end  %>		
 						<% end  %>
+						<!-- ################################################### -->
 						<span class="icon-contact"></span><%= c.skype %><br/>
-				    <% if c.email1 then %>
+				    <!-- ################################################### -->
+				    <% if (c.email1).length > 0 then %>
 				    	<span class="icon-mail"></span><a href="mailto:<%= c.email1 %>" class="tertiary-secondary-text"><%= c.email1 %></a><br/>
 				    <% end %>
-				    <% if c.email2 then  %>
+				    <!-- ################################################### -->
+				    <% if (c.email2).length > 0 then  %>
 				    	<span class="icon-mail"></span><a href="mailto:<%= c.email2 %>" class="tertiary-secondary-text"><%= c.email2 %></a>
 				   	<% end %>
 					</div>
