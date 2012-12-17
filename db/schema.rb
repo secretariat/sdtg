@@ -39,11 +39,12 @@ ActiveRecord::Schema.define(:version => 20121214185925) do
     t.string   "fio"
     t.string   "phone_g1"
     t.string   "phone_g2"
-    t.string   "pnone_m1"
-    t.string   "phone_m2"
+    t.string   "mobile1"
+    t.string   "mobile2"
     t.string   "skype"
     t.string   "email1"
     t.string   "email2"
+    t.boolean  "visible"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

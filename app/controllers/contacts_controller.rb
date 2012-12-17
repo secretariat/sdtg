@@ -14,7 +14,7 @@ class ContactsController < ApplicationController
   def create
     @contact = Contacts.new( params[:contacts] )
     if @contact.save then
-    flash[:notice] = "Вопрос-ответ создан успешно"
+    flash[:notice] = "Контакт  создан успешно"
       redirect_to( :controller => 'contacts', :action => 'list')
     else
       flash[:notice] = "#{@contacts.errors.full_messages.to_sentence}" 

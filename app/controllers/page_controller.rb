@@ -11,6 +11,10 @@ class PageController < ApplicationController
 		render :layout => 'application'
 	end
 
+	def faq
+		@faqs = Faq.where( :visible => 1 )
+		render :layout => 'secondary'
+	end
 
 	def partners
 		render :layout => 'secondary'
@@ -48,6 +52,8 @@ class PageController < ApplicationController
 	end
 
 	def contacts
+		# @contacts = Contacts.find( :all ) 
+		@contacts = Contacts.where( :visible => 1 ) 
 		render :layout => 'secondary'
 	end
 end

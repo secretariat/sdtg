@@ -34,28 +34,28 @@
 								</div>
 								<!-- ############################################################# -->
 								<div class="row">
-									<div class="span3"><h5>Городской телефон - основной:</h5></div>
+									<div class="span3"><h5>Городской телефон 1:</h5></div>
 									<div class="input-control text span3">
 								 		<%= f.text_field :phone_g1 %>
 								 	</div>
 								</div>
 								<!-- ############################################################# -->
 								<div class="row">
-									<div class="span3"><h5>Городской телефон - дополнительный:</h5></div>
+									<div class="span3"><h5>Городской телефон 2:</h5></div>
 									<div class="input-control text span3">
 								 		<%= f.text_field :phone_g2 %>
 								 	</div>
 								</div>
 								<!-- ############################################################# -->
 								<div class="row">
-									<div class="span3"><h5>Мобильный телефон - основной:</h5></div>
+									<div class="span3"><h5>Мобильный телефон 1:</h5></div>
 									<div class="input-control text span3">
 								 		<%= f.text_field :mobile1 %>
 								 	</div>
 								</div>
 								<!-- ############################################################# -->
 								<div class="row">
-									<div class="span3"><h5>Мобильный телефон - дополнительный:</h5></div>
+									<div class="span3"><h5>Мобильный телефон 2:</h5></div>
 									<div class="input-control text span3">
 								 		<%= f.text_field :mobile2 %>
 								 	</div>
@@ -83,9 +83,10 @@
 								</div>
 							</div>
 								<!-- ############################################################# -->
-
+							<h4><%= f.check_box(:visible) %>Опубликовать</h4>
 							<div class="place-right" style="margin-right: 70px;">
 								<%= submit_tag "Создать", class: "default" %>
+                <%= link_to "Отмена", {:controller => "contacts", :action => "list"}, :class=>"button big bg-color-blueDark", :style => "height: 10px; color: white;" %>
 							</div>
 						<% end  %>
 					</div>
