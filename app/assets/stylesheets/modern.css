@@ -4615,6 +4615,10 @@ table.bordered tbody tr:last-child td {
   height: auto;
   padding: 10px;
 }
+.replies > div .reply, .replies > li .reply, .replies > span .reply {
+    margin-left: 60px;
+    margin-top: -50px;
+}
 .replies  > div .avatar,
 .replies  > li .avatar,
 .replies  > span .avatar {
@@ -4626,6 +4630,7 @@ table.bordered tbody tr:last-child td {
   background: #6e6e6e;
   box-shadow-bottom: inset 0px 0px 3px #fff;
 }
+
 .replies  > div .avatar img,
 .replies  > li .avatar img,
 .replies  > span .avatar img {

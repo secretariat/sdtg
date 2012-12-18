@@ -13,7 +13,7 @@
             <% @faqs.each do |f|%>    
                 <div class="row">
                     <div class="span4"> 
-                        <ul class="replies">
+                        <ul class="replies" style="margin:0px;">
                             <li class="bg-color-blue">
                                 <div class="reply">
                                     <div class="date"><%= f.created_at %></div>
@@ -27,7 +27,7 @@
                         <ul class="replies">
                             <li class="bg-color-blueDark">
                                 <b class="sticker sticker-left sticker-color-blueDark"></b>
-                                <div class="reply">
+                                <div class="reply" style="margin:0px;">
                                     <div class="date"><%= f.updated_at %></div>
                                     <div class="author">Ответ:</div>
                                     <div class="text"><%= f.answer%></div>
