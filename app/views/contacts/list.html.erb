@@ -11,17 +11,18 @@
           <th><center><b>№</b></center></th>
           <th><center><b>Должность</b></center></th>
           <th><center><b>ФИО</b></center></th>
+          <th colspan="2"></th>
         </tr>
       </thead>
       <% @contact.each do |f|  %>
       	<tr>
       		<td><center><%= f.id %>.</center></td>
-      		<td><%= f.rank %></td>
+      		<td><center><%= f.rank %></center></td>
       		<td><center><%= f.fio%></center></td>
       		<td><center>
               <%= link_to( "Показать",  :controller => 'contacts', :action=>'show', :id => f.id ) %></center>
             </td>
-            <td border="1"><center>
+            <td><center>
               <%= link_to( "Редактировать", :controller => 'contacts', :action=>'edit',:id => f.id ) %></center>
             </td>
       	</tr>

@@ -892,6 +892,7 @@ button:active [class*=icon-],
 }
 .icon-skype{
     background-image:url('icon-skype.png');
+    left: 30px;
     height: 20px;
     width: 20px;
     }
