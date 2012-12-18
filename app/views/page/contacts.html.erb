@@ -10,9 +10,9 @@
 						<h4><%= c.rank %></h4>
 						<em><%= c.fio %></em><br/><br/>
 						<!-- ################################################### -->
-						<% if (c.mobile1).length > 0 then  %>
+						<% if c.mobile1 != nil then  %>
 							<span class="icon-contact"></span><%= c.mobile1 %>
-							<% if (c.mobile2).length > 0 then %>
+							<% if c.mobile2 != nil then %>
 								,<%= c.mobile2 %><br>
 							<% else %>
 								<br/>
