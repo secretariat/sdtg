@@ -5,25 +5,26 @@
         <h3>Редактировать рубрику "Частые вопросы"</h3>
         <%= link_to "Создать", {:controller => "faq", :action => "new"}, :class=>"button big bg-color-blueDark", :style => "height: 10px; color: white;" %>
       </center>
-			<table border="1" width="100%">
-			<!-- <thead> -->
+			<table class="bordered">
+			<thead>
         <tr>
-          <th border="1"><center><b>№</b></center></th>
-          <th border="1"><center><b>Вопрос</b></center></th>
-          <th border="1"><center><b>Создан</b></center></th>
-          <th border="1"><center><b>Опубликован</b></center></th>
+          <th><center><b>№</b></center></th>
+          <th><center><b>Вопрос</b></center></th>
+          <th><center><b>Создан</b></center></th>
+          <th><center><b>Опубликован</b></center></th>
+          <th colspan="2"></th>
         </tr>
-      <!-- </thead> -->
+      </thead>
       <% @faq.each do |f|  %>
       	<tr>
-      		<td border="1"><center><%= f.id %>.</center></td>
-      		<td border="1"><%= f.quest %></td>
-      		<td border="1"><center><%= f.created_at%></center></td>
-      		<td border="1"><center><%= status(f.visible)%></center></td>
-      		<td border="1"><center>
+      		<td><center><%= f.id %>.</center></td>
+      		<td><%= f.quest %></td>
+      		<td><center><%= f.created_at%></center></td>
+      		<td><center><%= status(f.visible)%></center></td>
+      		<td><center>
               <%= link_to( "Показать",  :controller => 'faq', :action=>'show', :id => f.id ) %></center>
             </td>
-            <td border="1"><center>
+            <td><center>
               <%= link_to( "Редактировать", :controller => 'faq', :action=>'edit',:id => f.id ) %></center>
             </td>
             <!-- <td>
