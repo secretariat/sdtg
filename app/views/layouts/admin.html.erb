@@ -36,7 +36,8 @@
 						<li><%= link_to "Контакты", :controller => "contacts", :action => "list" %></li>
 					</ul>		
 				</li>
-
+				<li><%= link_to "Просмотр сайта", "/", :target => "_blanc"  %>		
+				</li>
 				<li data-role="dropdown" class="place-right">
 					<a href="#" style="padding:5px;"><%= session[:login] %></a>
 					<ul class="dropdown-menu">
