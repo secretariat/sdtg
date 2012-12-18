@@ -1,6 +1,9 @@
 # -*- encoding : utf-8 -*-
 
 class CodeController < ApplicationController
+  
+  # before_filter :confirm_logged_in
+
   layout 'admin'
   
   def new

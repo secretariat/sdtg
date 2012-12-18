@@ -1,6 +1,7 @@
 # -*- encoding : utf-8 -*-
 require 'funcs'
 class FaqController < ApplicationController
+  # before_filter :confirm_logged_in
   
   layout 'admin'
   

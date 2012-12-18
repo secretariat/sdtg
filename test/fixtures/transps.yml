@@ -1,7 +1,21 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  name: MyString
+  id: 1
+  name: авто
 
 two:
-  name: MyString
+  id: 2
+  name: ж/д
+
+three:
+  id: 3
+  name: водный
+
+four:
+  id: 4
+  name: авиа
+
+five:
+  id: 5
+  name: трубопроводный

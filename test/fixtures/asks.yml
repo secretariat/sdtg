@@ -1,13 +1,2 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  fio: MyString
-  from: MyString
-  subj: MyString
-  question: MyText
-
-two:
-  fio: MyString
-  from: MyString
-  subj: MyString
-  question: MyText

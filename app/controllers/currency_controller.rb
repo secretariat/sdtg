@@ -1,8 +1,9 @@
 # -*- encoding : utf-8 -*-
 
 class CurrencyController < ApplicationController
+	# before_filter :confirm_logged_in
 	
-	layout 'admin'
+  layout 'admin'
   
   def new
   	@currency = Currency.new

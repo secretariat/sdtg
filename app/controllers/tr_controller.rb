@@ -1,6 +1,8 @@
 # -*- encoding : utf-8 -*-
 
 class TrController < ApplicationController
+  # before_filter :confirm_logged_in
+
   layout 'admin'
   
   def new

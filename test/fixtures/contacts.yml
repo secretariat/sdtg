@@ -1,25 +1,57 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  unit: MyString
-  rank: MyString
-  fio: MyString
-  phone_g1: MyString
-  phone_g2: MyString
-  pnone_m1: MyString
-  phone_m2: MyString
-  skype: MyString
-  email1: MyString
-  email2: MyString
+  id: 1
+  unit: Отдел развития
+  rank: Начальник отдела
+  fio: Карташова Екатерина Александровна
+  phone_g1: 
+  phone_g2: 
+  mobile1: +380674813235
+  mobile2: 
+  skype: dtg_kartesheva
+  email1: garant@dtg.kiev.ua
+  email2: ek@dtg.kiev.ua
+  visible: 1
 
 two:
-  unit: MyString
-  rank: MyString
-  fio: MyString
-  phone_g1: MyString
-  phone_g2: MyString
-  pnone_m1: MyString
-  phone_m2: MyString
-  skype: MyString
-  email1: MyString
-  email2: MyString
+  id: 2
+  unit: Отдел гарантирования
+  rank: Начальник отдела
+  fio: Дехтяренко Галина Владимировна
+  phone_g1: 
+  phone_g2: 
+  mobile1: +380673321040
+  mobile2: +380674027352
+  skype: Korol_galyna
+  email1: dtg@dtg.kiev.ua
+  email2: 
+  visible: 1
+
+three:
+  id: 3
+  unit: Отдел поддержки клиентов
+  rank: Начальник отдела
+  fio: Бабак Раиса Анатольевна
+  phone_g1: 
+  phone_g2: 
+  mobile1: +380675475228
+  mobile2: 
+  skype: raisa_babak
+  email1: support@dtg.kiev.ua
+  email2: r.babak@dtg.kiev.ua
+  visible: 1
+
+four:
+  id: 4
+  unit: Финансовый отдел
+  rank: Главный бухгалтер
+  fio: Клюско Оксана Эдуардовна
+  phone_g1: 
+  phone_g2: 
+  mobile1: +380674813252
+  mobile2: 
+  skype: oe_klusko
+  email1: ok@dtg.kiev.ua
+  email2: 
+  visible: 1

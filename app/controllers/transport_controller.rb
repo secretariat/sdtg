@@ -1,7 +1,9 @@
 # -*- encoding : utf-8 -*-
 
 class TransportController < ApplicationController
- layout 'admin'
+  layout 'admin'
+  
+  # before_filter :confirm_logged_in
   
   def new
   	@transport = Tr.new

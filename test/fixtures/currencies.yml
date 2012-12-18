@@ -1,7 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  name: MyString
+  id: 1
+  name: USD
 
 two:
-  name: MyString
+  id: 2  
+  name: EURO
+
+three:
+  id: 3
+  name: UAH
+
+four:
+  id: 4  
+  name: другая валюта

@@ -6,21 +6,21 @@
         <%= link_to "Создать", {:controller => "transport", :action => "new"}, :class=>"button big bg-color-blueDark", :style => "height: 10px; color: white;" %>
       </center>
 			<table border="1" width="100%">
-			<!-- <thead> -->
-        <tr>
-          <th border="1"><center><b>№</b></center></th>
-          <th border="1"><center><b>Наименование</b></center></th>
-        </tr>
-      <!-- </thead> -->
-      <% @transport.each do |f|  %>
-      	<tr>
-      		<td border="1"><center><%= f.id %>.</center></td>
-      		<td border="1"><center><%= f.name %></center></td>
-          <td border="1"><center>
-            <%= link_to( "Редактировать", :controller => 'transport', :action=>'edit',:id => f.id ) %></center>
-          </td>
-      	</tr>
-    	<% end %>
+  			<!-- <thead> -->
+          <tr>
+            <th><center><b>№</b></center></th>
+            <th><center><b>Наименование</b></center></th>
+          </tr>
+        <!-- </thead> -->
+        <% @transport.each do |f|  %>
+        	<tr>
+        		<td border="1"><center><%= f.id %>.</center></td>
+        		<td border="1"><center><%= f.name %></center></td>
+            <td border="1"><center>
+              <%= link_to( "Редактировать", :controller => 'transport', :action=>'edit',:id => f.id ) %></center>
+            </td>
+        	</tr>
+      	<% end %>
     	</table>
 		</div>
 	</div>

@@ -29,6 +29,7 @@ class ZaprosPdf < Prawn::Document
 
     #################################################
     formatted_text [ { :text =>"Код товара: ", :style => :bold},
+                     { :text => "#{@zapros.code_num},",:styles => [:underline]},
                      { :text => "#{@zapros.code}",:styles => [:underline]},
                      ]
     move_down 5

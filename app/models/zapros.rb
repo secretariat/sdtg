@@ -21,5 +21,6 @@ class Zapros < ActiveRecord::Base
     			    :fpath,
                     :att,
                     :att_file_name,
-    				:dopinfo
+    				:dopinfo,
+                    :code_num
     end

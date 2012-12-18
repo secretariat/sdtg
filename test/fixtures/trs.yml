@@ -1,7 +1,33 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  name: MyString
+  id: 1
+  name: транзит
 
 two:
-  name: MyString
+  id: 2
+  name: импорт(на сумму по ПД)
+
+three:
+  id: 3  
+  name: временный ввоз
+
+four:
+  id: 4
+  name: экспорт
+
+five:
+  id: 5
+  name: реэкспорт
+
+six:
+  id: 6
+  name: переработка на территории Украины
+
+seven:
+  id: 7
+  name: переработка за пределами территории Украины
+
+eight:
+  id: 8
+  name: другое

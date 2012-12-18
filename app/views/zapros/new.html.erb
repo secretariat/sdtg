@@ -24,7 +24,10 @@
 
 							<div class="row">
 								<div class="span3"><h5>Код товара*:</h5></div>
-							 	<div class="input-control select span5">
+								<div class="input-control text span3">
+							 		<%= f.text_field :code_num %>
+							 	</div>
+							 	<div class="input-control select span2" style="margin-left: 20px;">
 							 		<%= f.select( :code, Code.find(:all).collect{ |u| [u.name] }, :class => "input-control select") %>
 							 	</div>
 						 	</div>

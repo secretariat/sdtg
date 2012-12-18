@@ -1,7 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  name: MyString
+  id: 1
+  name: УКТ ВЭД
 
 two:
-  name: MyString
+  id: 2
+  name: ГНГ
+
+three:
+  id: 3  
+  name: ЕТ СНГ

@@ -1,11 +1,2 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  quest: MyText
-  answer: MyText
-  visible: false
-
-two:
-  quest: MyText
-  answer: MyText
-  visible: false

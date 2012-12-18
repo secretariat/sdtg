@@ -3,7 +3,8 @@ class CreateZapros < ActiveRecord::Migration
   def change
     create_table :zapros do |t|
     	t.string :naim
-    	t.string :code
+        t.string :code_num
+        t.string :code
     	t.string :tamrez
     	t.string :typetran
         t.string :koltov
