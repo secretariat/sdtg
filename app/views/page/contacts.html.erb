@@ -19,9 +19,9 @@
 							<% end  %>		
 						<% end  %>
 						<!-- ################################################### -->
-						<% if (c.phone_g1).length > 0 then  %>
+						<% if c.phone_g1 != nil then  %>
 							<span class="icon-contact"></span><%= c.phone_g1 %>
-							<% if (c.phone_g2).length > 0 then %>
+							<% if c.phone_g2 != nil then %>
 								,<%= c.phone_g2 %><br>
 							<% else %>
 								<br/>
@@ -30,11 +30,11 @@
 						<!-- ################################################### -->
 						<span class="icon-contact"></span><%= c.skype %><br/>
 				    <!-- ################################################### -->
-				    <% if (c.email1).length > 0 then %>
+				    <% if c.email1 != nil then %>
 				    	<span class="icon-mail"></span><a href="mailto:<%= c.email1 %>" class="tertiary-secondary-text"><%= c.email1 %></a><br/>
 				    <% end %>
 				    <!-- ################################################### -->
-				    <% if (c.email2).length > 0 then  %>
+				    <% if c.email2 != nil then  %>
 				    	<span class="icon-mail"></span><a href="mailto:<%= c.email2 %>" class="tertiary-secondary-text"><%= c.email2 %></a>
 				   	<% end %>
 					</div>
