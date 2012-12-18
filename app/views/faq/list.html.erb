@@ -17,8 +17,7 @@
       <% @faq.each do |f|  %>
       	<tr>
       		<td border="1"><center><%= f.id %>.</center></td>
-          <% str = f.quest%>
-      		<td border="1"><%= str[0..85]%>...</td>
+      		<td border="1"><%= f.quest %></td>
       		<td border="1"><center><%= f.created_at%></center></td>
       		<td border="1"><center><%= status(f.visible)%></center></td>
       		<td border="1"><center>
