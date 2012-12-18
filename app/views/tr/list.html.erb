@@ -5,18 +5,18 @@
         <h3>Словарь "Таможенный режим"</h3>
         <%= link_to "Создать", {:controller => "tr", :action => "new"}, :class=>"button big bg-color-blueDark", :style => "height: 10px; color: white;" %>
       </center>
-			<table>
-			<thead>
+			<table border="1" width="100%">
+			<!-- <thead> -->
         <tr>
-          <th><center><b>№</b></center></th>
-          <th><center><b>Наименование</b></center></th>
+          <th border="1"><center><b>№</b></center></th>
+          <th border="1"><center><b>Наименование</b></center></th>
         </tr>
-      </thead>
+      <!-- </thead> -->
       <% @tr.each do |f|  %>
       	<tr>
-      		<td><center><%= f.id %>.</center></td>
-      		<td><center><%= f.name %></center></td>
-          <td><center>
+      		<td border="1"><center><%= f.id %>.</center></td>
+      		<td border="1"><center><%= f.name %></center></td>
+          <td border="1"><center>
             <%= link_to( "Редактировать", :controller => 'tr', :action=>'edit',:id => f.id ) %></center>
           </td>
       	</tr>
