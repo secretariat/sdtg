@@ -2,16 +2,16 @@
 
 one:
   id: 1
-  unit: Отдел гарантирования
+  unit: Отдел развития
   rank: Начальник отдела
-  fio: Дехтяренко Галина Владимировна
+  fio: Карташова Екатерина Александровна
   phone_g1: 
   phone_g2: 
-  mobile1: +380673321040
-  mobile2: +380674027352
-  skype: Korol_galyna
-  email1: dtg@dtg.kiev.ua
-  email2: 
+  mobile1: +380674813235
+  mobile2: 
+  skype: dtg_kartesheva
+  email1: garant@dtg.kiev.ua
+  email2: ek@dtg.kiev.ua
   visible: 1
 
 two:
