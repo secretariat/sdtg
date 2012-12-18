@@ -3,7 +3,7 @@
 class TransportController < ApplicationController
   layout 'admin'
   
-  # before_filter :confirm_logged_in
+  before_filter :confirm_logged_in
   
   def new
   	@transport = Tr.new

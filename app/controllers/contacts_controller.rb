@@ -1,6 +1,6 @@
 # -*- encoding : utf-8 -*-
 class ContactsController < ApplicationController
-  # before_filter :confirm_logged_in
+  before_filter :confirm_logged_in
   
   layout 'admin'
 
