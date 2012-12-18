@@ -4,25 +4,39 @@
             <%= link_to "Частые вопросы", :controller => "page", :action => 'faq' %>
         </li>
         <li class="sticker sticker-color-blue"style="font-size:10pt;"><a href="#">Нормативно-правовые акты</a></li>
-        <li class="sticker sticker-color-green" style="font-size:10pt;"><a href="#">Наши представители</a></li>
     </ul>
 </div>
 <div class="page-region">
     <div class="page-region-content">
         <div class="grid">
             <h2>Частые вопросы</h2>
-            <div class="row">
-                <div class="span7" style="align: justify;"> 
-                    
-                    <% @faqs.each do |f|%>    
-                        <b>Вопрос:</b><%= f.quest %><br/>
-                        <b>Ответ:</b><%= f.answer %><br/>
-                        <br/>
-                    <% end %>    
-                    
-                </div>   
-               
-            </div>
+            <% @faqs.each do |f|%>    
+                <div class="row">
+                    <div class="span4"> 
+                        <ul class="replies">
+                            <li class="bg-color-blue">
+                                <div class="reply">
+                                    <div class="date"><%= f.created_at %></div>
+                                    <div class="author">Вопрос:</div>
+                                    <div class="text"><%= f.quest %></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="place-right"> 
+                        <ul class="replies">
+                            <li class="bg-color-blueDark">
+                                <b class="sticker sticker-left sticker-color-blueDark"></b>
+                                <div class="reply">
+                                    <div class="date"><%= f.updated_at %></div>
+                                    <div class="author">Ответ:</div>
+                                    <div class="text"><%= f.answer%></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            <% end %>
             <br>
             <div class="row">
                 <center>
