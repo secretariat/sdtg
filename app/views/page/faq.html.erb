@@ -13,9 +13,9 @@
             <% @faqs.each do |f|%>    
                 <div class="row">
                     <div class="span4"> 
-                        <ul class="replies" style="margin:0px;">
+                        <ul class="replies">
                             <li class="bg-color-blue">
-                                <div class="reply">
+                                <div class="reply" style="margin:0px;">
                                     <div class="date"><%= f.created_at %></div>
                                     <div class="author">Вопрос:</div>
                                     <div class="text"><%= f.quest %></div>
