@@ -13,6 +13,9 @@ gem 'prawn'
 gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 gem "letter_opener", :group => :development
 
+gem 'delayed_job_active_record'
+
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

@@ -8,7 +8,7 @@ class AskController < ApplicationController
 	def create
 		@askq = Ask.new( params[:ask] )
 		if @askq.save then
-			AskMailer.ask_question( @askq ).deliver
+			AskMailer.delay.ask_question( @askq )
 			redirect_to(:controller => 'page', :action => 'index')
 		end
 

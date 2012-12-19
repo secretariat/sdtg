@@ -14,7 +14,7 @@ class ZaprosController < ApplicationController
 		if @zapros.save then
 			fname = @zapros.att_file_name
 			fpath = @zapros.att.url
-			ZaprosMailer.send_zapros( @zapros, fpath, fname ).deliver
+			ZaprosMailer.delay.send_zapros( @zapros, fpath, fname )
 			# ZaprosMailer.send_zapros( @zapros ).deliver
 			flash[:notice] = "Запрос отправлен успешно"
 			redirect_to(:controller => 'page', :action => 'index')
