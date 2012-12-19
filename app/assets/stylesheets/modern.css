@@ -2783,7 +2783,8 @@ blockquote {
   padding: 5px 20px;
   border-left: 4px #ccc solid;
   display: block;
-  background-color: rgba(204, 204, 204, 0.1);
+  /*rgba(204, 204, 204, 0.1);*/
+  background-color: rgba(150, 200, 200, 0.1);
 }
 blockquote p {
   margin-bottom: 0;
