@@ -13,7 +13,7 @@
 						<% if (c.mobile1).to_s.strip.length > 0 then  %>
 							<span class="icon-contact"></span><%= c.mobile1 %>
 							<% if (c.mobile2).to_s.strip.length > 0 then %>
-								,<%= c.mobile2 %><br>
+								<%= c.mobile2 %><br>
 							<% else %>
 								<br/>
 							<% end  %>		
@@ -22,13 +22,15 @@
 						<% if c.phone_g1 != nil then  %>
 							<span class="icon-contact"></span><%= c.phone_g1 %>
 							<% if c.phone_g2 != nil then %>
-								,<%= c.phone_g2 %><br>
+								<%= c.phone_g2 %><br>
 							<% else %>
 								<br/>
 							<% end  %>		
 						<% end  %>
 						<!-- ################################################### -->
-						<span class="icon-skype"></span><%= c.skype %><br/>
+						<% if c.skype != nil then %>
+							<span class="icon-skype"></span><%= c.skype %><br/>
+						<% end %>
 				    <!-- ################################################### -->
 				    <% if c.email1 != nil then %>
 				    	<span class="icon-mail"></span><a href="mailto:<%= c.email1 %>" class="tertiary-secondary-text"><%= c.email1 %></a><br/>
