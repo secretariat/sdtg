@@ -1,5 +1,11 @@
 # -*- encoding : utf-8 -*-
 Sdtg::Application.routes.draw do
+  get "zakon/new"
+
+  get "zakon/edit"
+
+  get "zakon/list"
+
   get "currency/new"
 
   get "currency/list"
