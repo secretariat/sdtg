@@ -13,6 +13,7 @@ gem 'prawn'
 gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 gem "letter_opener", :group => :development
 
+gem 'daemons'
 gem 'delayed_job_active_record'
 
 
