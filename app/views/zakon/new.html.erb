@@ -1,0 +1,36 @@
+<div class="page">
+  <div class="page-region-content">
+		<div class="row">
+			<center><h3>Добавление нового "Нормативно-правового акта"</h3></center>
+			<fieldset>
+			<div class="span9 offset2">
+			<%= form_for( @zakon, :url => {:action => 'create'}) do |f| %>
+			 	<div class="grid">
+					
+					<div class="row">
+						<div class="span1"><h5>Название:</h5></div>
+						<div class="input-control text span7">
+					 		<%= f.text_field :name %>
+					 	</div>
+					</div>
+					
+					<div class="row">
+						<div class="span1"><h5>Ссылка:</h5></div>
+						<div class="input-control text span7">
+					 		<%= f.text_field :link %>
+					 	</div>
+					</div>
+					<h4><%= f.check_box(:visible) %>Опубликовать</h4>
+					<div>
+						<center>
+							<%= submit_tag "Создать", class: "default" %>
+							<%= link_to "Отмена", {:controller => "zakon", :action => "list"}, :class=>"button big bg-color-blueDark", :style => "color: white;" %>
+						</center>
+					</div>
+				</div>
+			<% end %>
+			</div>
+			</fieldset>
+		</div>
+	</div>
+</div>

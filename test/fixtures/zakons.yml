@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  id: 1
+  name: "Постановление КМУ от 21 мая 2012 г. № 461"
+  link: "http://zakon1.rada.gov.ua/laws/show/461-2012-%D0%BF"
+  visible: true
+
+two:
+  id: 2
+  name: "Таможенный кодекс Украины"
+  link: "http://zakon2.rada.gov.ua/laws/show/4495-17"
+  visible: true

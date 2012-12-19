@@ -52,8 +52,12 @@ class PageController < ApplicationController
 	end
 
 	def contacts
-		# @contacts = Contacts.find( :all ) 
 		@contacts = Contacts.where( :visible => 1 ) 
+		render :layout => 'secondary'
+	end
+
+	def zakon
+		@zakon = Zakon.where( :visible => 1 ) 
 		render :layout => 'secondary'
 	end
 end

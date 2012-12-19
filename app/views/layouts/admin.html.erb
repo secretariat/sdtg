@@ -32,7 +32,7 @@
 				<li data-role="dropdown"><a href="#">Контент</a>
 					<ul class="dropdown-menu">
 						<li><%= link_to "Частые вопросы", :controller => "faq", :action => "list" %></li>
-						<li><%= link_to "Нормативно-правовая база", "#" %></li>
+						<li><%= link_to "Нормативно-правовая база", :controller => "zakon", :action => "list" %></li>
 						<li><%= link_to "Контакты", :controller => "contacts", :action => "list" %></li>
 					</ul>		
 				</li>
