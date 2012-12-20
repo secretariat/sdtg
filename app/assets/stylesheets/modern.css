@@ -830,3 +830,4 @@ button.big [class*=icon-],.button.big [class*=icon-],.tool-button.big [class*=ic
 .card.hearts .small-suit:before,.card.hearts .suit:after{content:"\2665";color:red;}
 pre.prettyprint,.listview.image li .data .static-rating.small,.listview.image li .data .progress-bar{margin-bottom:10px;}
 .rating a.rated,.rating.small a.hover{background-position:0 -26px;}
+.btn-facebook {width:16px;height:16px;background-color:#2d89ef;}
