@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class AskMailer < ActionMailer::Base
   default to: "garant@dtg.kiev.ua"
   # default to: "mixey.viti@bigmir.net"

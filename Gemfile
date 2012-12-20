@@ -4,6 +4,7 @@ gem 'rails', '3.2.8'
 gem 'execjs'
 gem 'therubyracer'
 gem 'thin'
+gem 'hirb'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -12,6 +13,7 @@ gem 'mysql2'
 gem 'prawn'
 gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 gem "letter_opener", :group => :development
+gem "simple_form"
 
 gem 'daemons'
 gem 'delayed_job_active_record'

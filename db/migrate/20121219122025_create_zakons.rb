@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class CreateZakons < ActiveRecord::Migration
   def change
     create_table :zakons do |t|

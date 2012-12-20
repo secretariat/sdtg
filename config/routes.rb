@@ -1,5 +1,7 @@
 # -*- encoding : utf-8 -*-
 Sdtg::Application.routes.draw do
+  # get "anketa/new"
+
   get "zakon/new"
 
   get "zakon/edit"
@@ -75,6 +77,7 @@ Sdtg::Application.routes.draw do
   resources :admin, only: [ :index, :list, :new, :create, :destroy]
   resources :faq, only: [ :index, :list, :new, :create, :destroy]
   resources :code, only: [ :index, :list, :new, :create, :destroy]
+  resources :anketa, only: [ :index, :list, :new, :create, :destroy]
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

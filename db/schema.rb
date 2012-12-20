@@ -1,4 +1,4 @@
-# encoding: UTF-8
+# -*- encoding : utf-8 -*-
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121219212904) do
+ActiveRecord::Schema.define(:version => 20130210123820) do
 
   create_table "admins", :force => true do |t|
     t.string   "name"
@@ -20,6 +20,20 @@ ActiveRecord::Schema.define(:version => 20121219212904) do
     t.string   "hash_pass"
     t.string   "hash_salt"
     t.integer  "priv_level"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "anketa", :force => true do |t|
+    t.integer  "quest_1"
+    t.integer  "quest_2"
+    t.integer  "quest_3"
+    t.integer  "quest_4"
+    t.integer  "quest_5"
+    t.text     "wishes"
+    t.string   "pib"
+    t.string   "uaddr"
+    t.string   "contacts"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -98,8 +112,8 @@ ActiveRecord::Schema.define(:version => 20121219212904) do
   end
 
   create_table "zakons", :force => true do |t|
-    t.string   "name"
-    t.string   "link"
+    t.text     "name"
+    t.text     "link"
     t.boolean  "visible"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
@@ -107,6 +121,7 @@ ActiveRecord::Schema.define(:version => 20121219212904) do
 
   create_table "zapros", :force => true do |t|
     t.string   "naim"
+    t.string   "code_num"
     t.string   "code"
     t.string   "tamrez"
     t.string   "typetran"
