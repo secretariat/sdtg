@@ -11,14 +11,18 @@
 <div class="page-region">
     <div class="page-region-content">
         <div class="grid">
-            <center><h3>Нормативно-правовые акты</h3></center><br/>
+            <h2>Нормативно-правовые акты</h2>
             <div class="row">
                 <div class="span6"> 
                     <% @zakon.each do |f| %>
-                        <%= f.id %>. <%= link_to f.name, f.link, :target => "_blanc"%><br/>
+                    <p class="long-text">
+                        <%= f.id %>. <%= link_to f.name, f.link, :target => "_blanc"%>
+                    </p>
                     <% end %>
                 </div>   
             </div>
+            <br>
+            <br>
             <br>
         </div>
     </div>
