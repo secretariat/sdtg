@@ -98,8 +98,8 @@ ActiveRecord::Schema.define(:version => 20121219212904) do
   end
 
   create_table "zakons", :force => true do |t|
-    t.text     "name"
-    t.text     "link"
+    t.string   "name"
+    t.string   "link"
     t.boolean  "visible"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
@@ -107,7 +107,6 @@ ActiveRecord::Schema.define(:version => 20121219212904) do
 
   create_table "zapros", :force => true do |t|
     t.string   "naim"
-    t.string   "code_num"
     t.string   "code"
     t.string   "tamrez"
     t.string   "typetran"
