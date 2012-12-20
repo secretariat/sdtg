@@ -40,7 +40,8 @@ class AdminController < ApplicationController
   end
 
   def main
-
+    @zapros_count = Zapros.find(:all).count
+    @vopros_count = Ask.find(:all).count
   end
 
   def new
