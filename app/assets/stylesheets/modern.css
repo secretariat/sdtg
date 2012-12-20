@@ -2713,13 +2713,23 @@ p {
   letter-spacing: 0.02em;
   line-height: 20px;
 }
-p.long-text {
+p.long-text{
+ 
   font-family: 'PT Serif Caption', sans-serif, serif !important;
   font-weight: 300;
   font-size: 10pt;
   letter-spacing: 0.02em;
   line-height: 20px;
 }
+
+p.long-text a {
+  color: #000;
+}
+
+p.long-text a:hover {
+text-decoration: underline;
+}
+
 p {
   margin: 0 0 10px;
 }

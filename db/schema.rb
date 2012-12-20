@@ -107,7 +107,6 @@ ActiveRecord::Schema.define(:version => 20121219212904) do
 
   create_table "zapros", :force => true do |t|
     t.string   "naim"
-    t.string   "code_num"
     t.string   "code"
     t.string   "tamrez"
     t.string   "typetran"
