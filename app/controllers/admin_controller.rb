@@ -3,8 +3,8 @@ class AdminController < ApplicationController
   
   layout 'admin'  
 
-  before_filter :confirm_logged_in, :except => [:login, :attempt_login, :logout]
-  before_filter :confirm_priveleges_admin, :except => [:login, :attempt_login, :logout]
+  # before_filter :confirm_logged_in, :except => [:login, :attempt_login, :logout]
+  # before_filter :confirm_priveleges_admin, :except => [:login, :attempt_login, :logout]
 
   def attempt_login
     authorized_user = Admin.authenticate(params[:login], params[:hash_pass])
