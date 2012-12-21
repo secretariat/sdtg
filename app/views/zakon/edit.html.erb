@@ -8,17 +8,21 @@
 			 	<div class="grid">
 					
 					<div class="row">
-						<div class="span1"><h5>Название:</h5></div>
-						<div class="input-control text span7">
-					 		<%= f.text_field :name %>
-					 	</div>
+						<h5>Название:</h5>
+						<div class="span10">
+							<div class="input-control textarea">
+								<%= f.text_area :name, :rows => "2" %>
+							</div>
+						</div>
 					</div>
 					
 					<div class="row">
-						<div class="span1"><h5>Ссылка:</h5></div>
-						<div class="input-control text span7">
-					 		<%= f.text_field :link %>
-					 	</div>
+						<h5>Ссылка:</h5>
+						<div class="span10">
+							<div class="input-control textarea">
+								<%= f.text_area :link, :rows => "5" %>
+							</div>
+						</div>
 					</div>
 					<h4><%= f.check_box(:visible) %>Опубликовать</h4>
 					<div>
