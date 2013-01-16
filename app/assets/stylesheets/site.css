@@ -176,3 +176,31 @@ table td {
     float: right !important;
     margin-right: 2px;
 }
+
+.hrf
+{
+    cursor: pointer;
+    float: left;
+    height: 16px;
+    padding: 0px 3px 5px 2px !important;
+    text-align: left;
+    height: 16px;
+    width: 20px;
+    text-decoration: none !important;
+}
+.b-share-icon {
+    background: url("b-share-icon.png") no-repeat scroll 0 0 transparent;
+    border: 0 none;
+    display: inline;
+    float: left;
+    height: 16px;
+    width: 16px;
+    /*overflow: hidden;*/
+    padding: 0 !important;
+    vertical-align: top;
+    width: 16px;
+}
+.b-share-icon_vkontakte {background-position: 0 0;}
+.b-share-icon_twitter {background-position: 0 -51px;}
+.b-share-icon_facebook {background-position: 0 -68px;}
+.b-share-icon_linkedin {background-position: 0 -255px;}
