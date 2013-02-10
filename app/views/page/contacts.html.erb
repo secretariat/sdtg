@@ -3,6 +3,12 @@
 <div class="page">
   <div class="page-region-content">
   	<div class="grid">
+  		<center>
+  			<%= link_to "Форма обратной связи", :controller => "anketa", :action => "new" %>
+			</center>
+  		<br/>
+  		<br/>
+			
   		<div class="row">
   			<% @contacts.each do |c| %>
 					<div class="span5">

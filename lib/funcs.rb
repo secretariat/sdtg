@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 
 def status( value)
 	if value == true
