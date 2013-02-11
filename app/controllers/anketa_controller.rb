@@ -11,7 +11,7 @@ class AnketaController < ApplicationController
   	if @anketa.save
   		flash[:notice] = "Опросник заполнен успешно."
   		# AnketaMailer.send_anketa( @anketa ).deliver
-  		AskMailer.delay.send_anketa( @anketa )
+  		AnketaMailer.delay.send_anketa( @anketa )
   		redirect_to '/page/contacts'
   	else
   		flash[:notice] = "Опросник заполнен с ошибками."
