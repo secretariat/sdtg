@@ -1,4 +1,4 @@
-# -*- encoding : utf-8 -*-
+# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -121,7 +121,6 @@ ActiveRecord::Schema.define(:version => 20130210123820) do
 
   create_table "zapros", :force => true do |t|
     t.string   "naim"
-    t.string   "code_num"
     t.string   "code"
     t.string   "tamrez"
     t.string   "typetran"

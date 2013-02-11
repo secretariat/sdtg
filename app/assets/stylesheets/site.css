@@ -204,3 +204,11 @@ table td {
 .b-share-icon_twitter {background-position: 0 -51px;}
 .b-share-icon_facebook {background-position: 0 -68px;}
 .b-share-icon_linkedin {background-position: 0 -255px;}
+
+.input-control.radio {
+    cursor: pointer;
+    display: inline-block;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+}

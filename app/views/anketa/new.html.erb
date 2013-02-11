@@ -1,22 +1,26 @@
+	<div class="page-region-content">
 <center>
+
+	<br>
 	<i><h3>Уважаемый партнёр!</h3></i>
+	<h4>
 	Коммандитное общество "Донтрансгарант и компания" выражает Вам своё почтение и благодарность за сотрудничество.<br/>
-	С целью улучшения работы в направлении создания комфортных условий сотрудничества для договорных партнёров просим Вас оценить работу нашей компании по указанным ниже критериям:
+	С целью улучшения работы в направлении создания комфортных условий сотрудничества для договорных партнёров просим Вас оценить работу нашей компании по указанным ниже критериям:</h4>
 </center>
 <br/>
 <%= simple_form_for @anketa, :url => {:action => 'create'} do |f| %>
-	1. Качество предоставления услуг по выдаче финансовой гарантии в виде документа:
-  <%= f.input :quest_1, :label => "", :collection => 1..5, :as => :radio, input_html: { class: '' } %>
-  2. Оперативность предоставления услуг по выдаче финансовой гарантии в виде документа:
-  <%= f.input :quest_2, :label => "", :collection => 1..5, :as => :radio %>
-  3. Компетентность персонала КО «Донтрансгарант и Компания»:
-  <%= f.input :quest_3, :label => "", :collection => 1..5, :as => :radio %>
-  4. Этика персонала КО «Донтрансгарант и Компания»:
-  <%= f.input :quest_4, :label => "", :collection => 1..5, :as => :radio %>
-  5. Качество взаимодействия с уполномоченными представителями КО «Донтрансгарант и Компания»:
-  <%= f.input :quest_5, :label => "", :collection => 1..5, :as => :radio %>
+	<h4>1. Качество предоставления услуг по выдаче финансовой гарантии в виде документа:
+  <%= f.input :quest_1, :label => "", :collection => 1..5, :as => :radio, input_html: { class: 'input-control radio' } %></h4>
+  <h4>2. Оперативность предоставления услуг по выдаче финансовой гарантии в виде документа:
+  <%= f.input :quest_2, :label => "", :collection => 1..5, :as => :radio, input_html: { class: 'input-control radio' } %></h4>
+  <h4>3. Компетентность персонала КО «Донтрансгарант и Компания»:
+  <%= f.input :quest_3, :label => "", :collection => 1..5, :as => :radio, input_html: { class: 'input-control radio' } %></h4>
+  <h4>4. Этика персонала КО «Донтрансгарант и Компания»:
+  <%= f.input :quest_4, :label => "", :collection => 1..5, :as => :radio, input_html: { class: 'input-control radio' } %></h4>
+  <h4>5. Качество взаимодействия с уполномоченными представителями КО «Донтрансгарант и Компания»:
+  <%= f.input :quest_5, :label => "", :collection => 1..5, :as => :radio, input_html: { class: 'input-control radio' } %></h4>
 	<br/>  
-  6. Ваши пожелания и замечания:
+  <h4>6. Ваши пожелания и замечания:</h4>
   <div class="row">
 		<div class="span10">
 			<div class="input-control textarea">
@@ -25,25 +29,27 @@
 		</div>
 	</div>
 	<div class="row">
-		<div class="span3">Ваше имя*:</div>
+		<div class="span3"><h4>Ваше имя*:</h4></div>
 		<div class="input-control text span5">
 	 		<%= f.text_field :pib %>
 	 	</div>
 	</div>
   <div class="row">
-		<div class="span9">Наименование юридического лица, интересы которого Вами представлены*:</div>
+		<div class="span9"><h4>Наименование юридического лица, интересы которого Вами представлены*:</h4></div>
 		<div class="input-control text span5">
 	 		<%= f.text_field :uaddr %>
 	 	</div>
 	</div>
 
 	<div class="row">
-		<div class="span7">Номер телефона и/или e-mail*:</div>
+		<div class="span7"><h4>Номер телефона и/или e-mail*:</h4></div>
 		<div class="input-control text span5">
 	 		<%= f.text_field :contacts %>
 	 	</div>
 	</div>
-  <%= submit_tag "Отправить", class: "default" %>
+	<center>
+  	<%= submit_tag "Отправить", class: "default" %>
+	</center>
 <% end %>
 <center>
 	<h3>
@@ -54,4 +60,6 @@
 	</h3>
 
 </center>
+</div>
+
 

@@ -3,13 +3,12 @@
 <div class="page">
   <div class="page-region-content">
   	<div class="grid">
-  		<center>
-  			<%= link_to "Форма обратной связи", :controller => "anketa", :action => "new" %>
-			</center>
-  		<br/>
-  		<br/>
-			
   		<div class="row">
+  			<div class="pull-right">
+  			<i class="icon-mail icon-large"></i>
+  				<%= link_to "Форма обратной связи", 
+                    {:controller => "anketa", :action => "new"}, :class=>"button big bg-color-blueDark", :style=>"color:#FFFFFF"%>
+				</div>
   			<% @contacts.each do |c| %>
 					<div class="span5">
 						<b><%= c.unit %></b><br/>
