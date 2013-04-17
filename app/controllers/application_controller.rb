@@ -2,8 +2,10 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
+  before_filter :set_user_language
+
   protected
-  
+
   def confirm_logged_in
     unless session[:user_id]
       flash[:notice] = "Please log in."
@@ -42,5 +44,9 @@ class ApplicationController < ActionController::Base
       redirect_to(:controller => 'admin', :action => 'login')
       return false
     end
+  end
+
+  def set_user_language
+    I18n.locale = session[:lang]
   end
 end

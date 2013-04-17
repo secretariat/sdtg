@@ -1,34 +1,33 @@
 <div class="page-sidebar" style="width:225px;">
     <ul style="overflow: visible;">
-        <li class="sticker sticker-color-blueDark"><a href="/page/singleg">Индивидуальная гарантия</a></li>
-        <li class="sticker sticker-color-blue"><a href="/page/multig">Многоразовая гарантия</a></li>
-        <li class="sticker sticker-color-green"><a href="/page/geng">Генеральная гарантия</a></li>
+        <li class="sticker sticker-color-blueDark"><a href="/page/singleg"><%= t 'service.menu.single' %></a></li>
+        <li class="sticker sticker-color-blue"><a href="/page/multig"><%= t 'service.menu.multi' %></a></li>
+        <li class="sticker sticker-color-green"><a href="/page/geng"><%= t 'service.menu.general' %></a></li>    
     </ul>
 </div>
 <div class="page-region">
     <div class="page-region-content">
         <div class="span9">
-            <h2>Услуги</h2>
-            <p align="justify">Финансовые гарантии являются способом обеспечения уплаты таможенных платежей. Обеспечение уплаты таможенных платежей финансовой гарантией осуществляется в таких формах:
+            <h2><%= t 'service.title' %></h2>
+            <p align="justify"><%= t 'service.p1' %>
             <ul>
-                <li>предоставление финансовой гарантии  в виде документа;</li>
-                <li>внесение денежных средств на расчётный счёт или в кассу таможенного органа.</li>
+                <li><%= t 'service.pl1' %></li>
+                <li><%= t 'service.pl2' %></li>
             </ul>
             </p>
             <p align="justify">
-                Финансовая гарантия в виде документа не предусматривает резервирования денежных средств в размере суммы таможенных платежей на счету таможенных органов.
-            </p> 
-            <p align="justify">
-                Таможенным кодексом Украины установлены такие виды финансовых гарантий в виде документа: индивидуальная (одноразовая), многоразовая и генеральная.
-            </p>   
-            <p align="justify">
-                Предоставление таможенным органам обеспечения уплаты таможенных платежей является обязательным при ввозе на таможенную территорию Украины и/или перемещении территорией Украины проходящим и внутренним транзитом товаров согласно перечня, утвержденного Кабинетом Министров Украины, а также в других случаях, установленных Таможенным кодексом Украины.
+                <%= t 'service.p2' %>
             </p>
-            
+            <p align="justify">
+                <%= t 'service.p3' %>
+            </p>
+            <p align="justify">
+                <%= t 'service.p4' %>
+            </p>
             <br>
             <div class="row">
                 <center>
-                   <%= link_to "Отправить запрос на определение стоимости финансовой гарантии", {:controller => "zapros", :action => "new"},
+                   <%= link_to "#{t 'service.send_link'}", {:controller => "zapros", :action => "new"},
                         :class=>"button big bg-color-blueDark", :style => "height: 10px; color: white;" %>
                 </center>
                 <br>

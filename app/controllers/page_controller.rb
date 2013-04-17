@@ -65,12 +65,23 @@ class PageController < ApplicationController
 	end
 
 	def contacts
-		@contacts = Contacts.where( :visible => 1 ) 
+		@contacts = Contacts.where( :visible => 1 )
 		render :layout => 'secondary'
 	end
 
 	def zakon
-		@zakon = Zakon.where( :visible => 1 ) 
+		@zakon = Zakon.where( :visible => 1 )
 		render :layout => 'secondary'
+	end
+
+	def set_en
+		session[:lang] = "en"
+		# puts "#{request.url}#{session[:lang]}"
+		redirect_to(request.env["HTTP_REFERER"])
+	end
+
+	def set_ru
+		session[:lang] = "ru"
+		redirect_to(request.env["HTTP_REFERER"])
 	end
 end

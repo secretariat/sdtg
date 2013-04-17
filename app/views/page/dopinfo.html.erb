@@ -20,11 +20,11 @@
 <div class="page-region">
     <div class="page-region-content">
         <div class="grid">
-            <h2>Дополнительная информация</h2>
+            <h2><%= t 'addinfo.title' %></h2>
             <div class="row">
                 <div class="span4">
                     <p align="justify">
-                        Предоставление таможенным орга- нам обеспечения уплаты таможенных платежей является обязательным при ввозе на таможенную территорию Украины и/или перемещении террито- рией Украины проходящим и внутренним транзитом товаров согласно перечня, утвержденного Кабинетом Министров Украины, а также в других случаях, уста- новленных Таможенным кодексом Укра- ины.
+                        <%= t 'addinfo.text' %>
                     </p>
                 </div>
                 <div class="span1">
@@ -35,7 +35,7 @@
             <br>
             <div class="row">
                 <center>
-                <%= link_to "Задать вопрос",
+                <%= link_to "#{t 'addinfo.ask_q'}",
                     {:controller => "ask", :action => "new"}, :class=>"button big bg-color-blueDark", :style => "height: 10px; color: white;" %>
                 </center>
                 <br>

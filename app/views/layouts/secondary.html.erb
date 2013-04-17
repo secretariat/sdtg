@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/html">
 <head>
-    <title>Донтрансгарант и Компания</title>
+    <title><%= t 'index.title' %></title>
     <%= stylesheet_link_tag "application", :media => "all" %>
     <%= csrf_meta_tags %>
     <script src="/js/jquery-1.8.2.min.js"></script>
@@ -14,7 +14,6 @@
                 btnNext: ".next",
                 btnPrev: ".prev",
                 visible: 5
-         
             });
         });
 
@@ -27,15 +26,15 @@
                 // speed of the mouseout effect
                 speedOut: 'normal',
                 // how long to delay the hiding of the caption after mouseout (ms)
-                hideDelay: 500, 
+                hideDelay: 500,
                 // 'fade', 'slide', 'always-on'
-                animation: 'slide',     
+                animation: 'slide',
                 // text/html to be placed at the beginning of every caption
-                prefix: '',     
+                prefix: '',
                 // opacity of the caption on mouse over
-                opacity: '0.7',                 
+                opacity: '0.7',
                 // the name of the CSS class to apply to the caption box
-                className: 'caption-bottom',    
+                className: 'caption-bottom',
                 // position of the caption (top or bottom)
                 position: 'bottom',
                 // caption span % of the image
@@ -56,7 +55,7 @@
                     <div class="span7"  style="margin:0;">
                         <div class="row">
                             <div class="place-right">
-                            г. Киев, просп. Московский 16-Б, корп.5, 2 этаж
+                                <%= t 'index.adress' %>
                             </div>
                         </div>
                         <div class="row">
@@ -65,45 +64,44 @@
                                 <i class="icon-documents-1"></i>+38 044 581 08 68<br>
                                 <i class="icon-vibrate-1"></i>+38 067 332 10 40<br>
                                 <a class ="hrf" href="http://facebook.com/dontransg" target="_blank"><i class="b-share-icon b-share-icon_facebook"></i></a>
-                                <br>
+                                <%= link_to "EN", :controller => "page", :action => "set_en" %>
+                                <%= link_to "RU", :controller => "page", :action => "set_ru" %>
                             </div>
                         </div>
                     </div>
                 <!-- </div> -->
             </div>
         </div>
-    
         <div class="navigation-bar">
             <div class="navigation-bar-inner" style="padding: 5px 0px 2px; margin: auto;">
                    <a href="/page/index"><%= image_tag "globe_w3.png", :style => "padding: 5px; height: 40px;width: 45px;float: left;"%></a>
                 <ul style="overflow: visible;">
-                    <li><a href="/page/about">О нас и наших партнерах</a></li>
-                    <li><a href="/page/services">Услуги</a></li>
-                    <li><a href="/page/dopinfo">Дополнительная информация</a></li>
-                    <li><a href="/page/contacts">Контакты</a></li>
-                      <li class="place-right"><a href="/page/partners_login" style="padding:5px;" class="fg-color-orange">Зона партнеров</a></li>
+                    <li><a href="/page/about"><%= t 'index.menu.partners' %></a></li>
+                    <li><a href="/page/services"><%= t 'index.menu.services' %></a></li>
+                    <li><a href="/page/dopinfo"><%= t 'index.menu.addinfo' %></a></li>
+                    <li><a href="/page/contacts"><%= t 'index.menu.contacts' %></a></li>
+                    <li class="place-right"><a href="/page/partners_login" style="padding:5px;" class="fg-color-orange">Зона партнеров</a></li>
                 </ul>
             </div>
         </div>
-    
     </div>
 <div class="page secondary with-sidebar">
     <div style="display: none; position: fixed; height: 100px; width: 100px; padding: 10px; z-index: 10000;" class="bottom-right bg-color-darken fg-color-white">
     </div>
-    <%= yield %>    
-</div> 
+    <%= yield %>
+</div>
 
 <div class="page-footer" >
     <br/>
     <div class="row">
         <div class="span12" style="margin:auto;">
             <ul class="footer-menu">
-                <li><b>О нас и наших партнерах</b>
+                <li><b><%= t 'index.menu.partners' %></b>
                     <ul class="footer-submenu">
-                        <li><a href="/page/presentation">Презентация</a></li><br>
-                        <li><a href="/page/partners">Наши партнеры</a></li><br>
-                        <li><a href="/page/represent">Наши представители</a></li><br>
-                        <li><a href="/page/become_partner">Как стать партнером</a></li><br>
+                        <li><a href="/page/presentation"><%= t 'secondary.menu.present' %></a></li><br>
+                        <li><a href="/page/partners"><%= t 'secondary.menu.partners' %></a></li><br>
+                        <li><a href="/page/represent"><%= t 'secondary.menu.represent' %></a></li><br>
+                        <li><a href="/page/become_partner"><%= t 'secondary.menu.bec_part' %></a></li><br>
                     </ul>
                 </li>
                 <li style="margin-left: 40px;"><b>Услуги</b>
@@ -142,7 +140,6 @@
                     <span class="icon-vibrate-1"></span>+38 067 332 10 40<br>
                     <span class="icon-mail"></span><a href="mailto:dtg@dtg.kiev.ua" class="tertiary-secondary-text">dtg@dtg.kiev.ua</a><br>
                     <a class ="hrf" href="http://facebook.com/dontransg" target="_blank"><i class="b-share-icon b-share-icon_facebook"></i></a>
-                   
                     <br>
                 </p>
             </div>

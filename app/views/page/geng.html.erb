@@ -1,8 +1,8 @@
 <div class="page-sidebar" style="width:225px;">
     <ul style="overflow: visible;">
-        <li class="sticker sticker-color-blueDark"><a href="/page/singleg">Индивидуальная гарантия</a></li>
-        <li class="sticker sticker-color-blue"><a href="/page/multig">Многоразовая гарантия</a></li>
-        <li class="sticker sticker-color-green"><a href="/page/geng">Генеральная гарантия</a></li>
+        <li class="sticker sticker-color-blueDark"><a href="/page/singleg"><%= t 'service.menu.single' %></a></li>
+        <li class="sticker sticker-color-blue"><a href="/page/multig"><%= t 'service.menu.multi' %></a></li>
+        <li class="sticker sticker-color-green"><a href="/page/geng"><%= t 'service.menu.general' %></a></li>
     </ul>
 </div>
 <div class="page-region">
@@ -19,8 +19,8 @@
             <br>
             <div class="row">
                 <center>
-                    <%= link_to "Отправить запрос на определение стоимости финансовой гарантии", 
-                            "#", 
+                    <%= link_to "#{t 'service.send_link'}",
+                            "#",
                             :class=>"button big bg-color-blueDark", :style => "height: 10px; color: white;" %>
                 </center>
                 <br>
