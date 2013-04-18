@@ -27,7 +27,7 @@
                 <div class="span8">
                     <% @zakon.each do |f| %>
                     <p class="long-text" align="justify">
-                        <%= f.id %>. <%= link_to f.name, f.link, :target => "_blanc"%>
+                        <%= link_to f.name, f.link, :target => "_blanc"%>
                     </p>
                     <% end %>
                 </div>
