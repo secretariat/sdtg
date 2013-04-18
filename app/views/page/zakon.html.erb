@@ -1,26 +1,28 @@
 <div class="page-sidebar" style="width:225px;">
     <ul style="overflow: visible;">
         <li class="sticker sticker-color-blueDark" style="font-size:10pt;">
-            <%= link_to "Частые вопросы", :controller => "page", :action => 'faq' %>
+            <%= link_to "#{ t 'addinfo.menu.faq'}", :controller => "page", :action => 'faq' %>
         </li>
         <li class="sticker sticker-color-blue"style="font-size:10pt;">
-            <%= link_to "Нормативно-правовые акты", :controller => "page", :action => 'zakon' %>
+            <%= link_to "#{ t 'addinfo.menu.rules'}", :controller => "page", :action => 'zakon' %>
         </li>
-        <li class="sticker sticker-color-blue"style="font-size:10pt;">
-            <%= link_to "Таможенный Кодекс 2012", :controller => "page", :action => 'customs_zak' %>
-        </li>
-        <li class="sticker sticker-color-blue"style="font-size:10pt;">
-            <%= link_to "Расчет таможенных платежей", :controller => "page", :action => 'cust_count' %>
-        </li>
-        <li class="sticker sticker-color-blue"style="font-size:10pt;">
-            <%= link_to "Таможенная карта", :controller => "page", :action => 'map' %>
-        </li>
+        <% if session[:lang] == "ru" %>
+            <li class="sticker sticker-color-blue"style="font-size:10pt;">
+                <%= link_to "#{ t 'addinfo.menu.c_code'}", :controller => "page", :action => 'customs_zak' %>
+            </li>
+            <li class="sticker sticker-color-blue"style="font-size:10pt;">
+                <%= link_to "Расчет таможенных платежей", :controller => "page", :action => 'cust_count' %>
+            </li>
+            <li class="sticker sticker-color-blue"style="font-size:10pt;">
+                <%= link_to "#{ t 'addinfo.menu.c_map'}", :controller => "page", :action => 'map' %>
+            </li>
+        <% end %>
     </ul>
 </div>
 <div class="page-region">
     <div class="page-region-content">
         <div class="grid">
-            <h2>Нормативно-правовые акты</h2>
+            <h2><%= t 'rules.title' %></h2>
             <div class="row">
                 <div class="span8">
                     <% @zakon.each do |f| %>

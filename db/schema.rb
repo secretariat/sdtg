@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130210123820) do
+ActiveRecord::Schema.define(:version => 20130418191108) do
 
   create_table "admins", :force => true do |t|
     t.string   "name"
@@ -67,6 +67,7 @@ ActiveRecord::Schema.define(:version => 20130210123820) do
     t.boolean  "visible"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "lang"
   end
 
   create_table "currencies", :force => true do |t|
@@ -97,6 +98,7 @@ ActiveRecord::Schema.define(:version => 20130210123820) do
     t.boolean  "visible"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "lang"
   end
 
   create_table "transps", :force => true do |t|
@@ -117,10 +119,12 @@ ActiveRecord::Schema.define(:version => 20130210123820) do
     t.boolean  "visible"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "lang"
   end
 
   create_table "zapros", :force => true do |t|
     t.string   "naim"
+    t.string   "code_num"
     t.string   "code"
     t.string   "tamrez"
     t.string   "typetran"

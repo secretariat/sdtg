@@ -96,45 +96,44 @@
     <div class="row">
         <div class="span12" style="margin:auto;">
             <ul class="footer-menu">
-                <li><b>О нас и наших партнерах</b>
+                <li><b><%= t 'index.menu.partners' %></b>
                     <ul class="footer-submenu">
-                        <li><a href="/page/presentation">Презентация</a></li><br>
-                        <li><a href="/page/partners">Наши партнеры</a></li><br>
-                        <li><a href="/page/represent">Наши представители</a></li><br>
-                        <li><a href="/page/become_partner">Как стать партнером</a></li><br>
+                        <li><a href="/page/presentation"><%= t 'secondary.menu.present' %></a></li><br>
+                        <li><a href="/page/partners"><%= t 'secondary.menu.partners' %></a></li><br>
+                        <li><a href="/page/represent"><%= t 'secondary.menu.represent' %></a></li><br>
+                        <li><a href="/page/become_partner"><%= t 'secondary.menu.bec_part' %></a></li><br>
                     </ul>
                 </li>
-                <li style="margin-left: 40px;"><b>Услуги</b>
+                <li style="margin-left: 40px;"><b><%= t 'service.title' %></b>
                     <ul class="footer-submenu">
-                        <li><a href="/page/singleg">Индивидуальная гарантия</a></li><br>
-                        <li><a href="/page/multig">Многоразовая гарантия</a></li><br>
-                        <li><a href="/page/geng">Генеральная гарантия</a></li><br>
+                        <li><a href="/page/singleg"><%= t 'service.menu.single' %></a></li><br>
+                        <li><a href="/page/multig"><%= t 'service.menu.multi' %></a></li><br>
+                        <li><a href="/page/geng"><%= t 'service.menu.general' %></a></li><br>
                     </ul>
                 </li>
-                <li style="margin-left: 40px;"><b>Дополнительная информация</b>
+                <li style="margin-left: 40px;"><b><%= t 'addinfo.title' %></b>
                     <ul class="footer-submenu">
-                        <li><%= link_to "Частые вопросы", :controller => "page", :action => 'faq' %></li><br>
-                        <li><%= link_to "Нормативно-правовые акты", "/page/zakon"%></li><br>
-                        <li><%= link_to "Наши представители", "/page/represent"%></li><br>
-                        <li><%= link_to "Задать вопрос", "/ask/new"%></li><br>
+                        <li><%= link_to "#{t 'addinfo.menu.faq'}", :controller => "page", :action => 'faq' %></li><br>
+                        <li><%= link_to "#{t 'addinfo.menu.rules'}", "/page/zakon"%></li><br>
+                        <li><%= link_to "#{t 'addinfo.menu.repr'}", "/page/represent"%></li><br>
+                        <li><%= link_to "#{t 'addinfo.menu.ask'}", "/ask/new"%></li><br>
                     </ul>
                 </li>
-                <li class="place-right fg-color-orange"><b>Зона партнеров</b>
+                <li class="place-right fg-color-orange"><b><%= t 'index.menu.part_zone' %></b>
                     <ul class="footer-submenu">
-                        <li><a href="/page/partners_login">Вход для партнеров</a></li><br>
+                        <li><a href="/page/partners_login"><%= t 'part_zone.title' %></a></li><br>
                     </ul>
                 </li>
             </ul>
-     
             <br><br><br><br><br><br>
             <hr width="100%">
             <div class="place-left">
-                <p class="tertiary-secondary-text">Коммандитное общество  <b>ДОНТРАНСГАРАНТ и компания &copy; </b>2012</p>
+                <p class="tertiary-secondary-text"><%= t 'index.footer_title' %> &copy; </b>2012</p>
             </div>
             <div class="place-right">
-                <p class="tertiary-secondary-text" align="left"><b><u>КОНТАКТЫ:</u></b>
-                    <br>04073, Украина г. Киев<br>
-                    просп. Московский, 16-Б, корп.5, 2-й этаж<br>
+                <p class="tertiary-secondary-text" align="left"><b><u><%= t 'index.footer_contacts' %>:</u></b>
+                    <br><%= t 'index.sub_adress' %><br>
+                    <%= t 'index.adress' %><br>
                     <span class="icon-contact"></span>+38 044 500 92 68<br>
                     <span class="icon-documents-1"></span>+38 044 581 08 68<br>
                     <span class="icon-vibrate-1"></span>+38 067 332 10 40<br>

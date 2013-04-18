@@ -83,6 +83,7 @@
 								</div>
 							</div>
 								<!-- ############################################################# -->
+							<%= f.select :lang, { "RU" => "ru", "EN" => "en"} %>
 							<h4><%= f.check_box(:visible) %>Опубликовать</h4>
 							<div class="place-right" style="margin-right: 70px;">
 								<%= submit_tag "Создать", class: "default" %>
