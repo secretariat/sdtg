@@ -1,46 +1,48 @@
 <div class="page-sidebar" style="width:225px;">
     <ul style="overflow: visible;">
         <li class="sticker sticker-color-blueDark" style="font-size:10pt;">
-            <%= link_to "Частые вопросы", :controller => "page", :action => 'faq' %>
+            <%= link_to "#{ t 'addinfo.menu.faq'}", :controller => "page", :action => 'faq' %>
         </li>
         <li class="sticker sticker-color-blue"style="font-size:10pt;">
-            <%= link_to "Нормативно-правовые акты", :controller => "page", :action => 'zakon' %>
+            <%= link_to "#{ t 'addinfo.menu.rules'}", :controller => "page", :action => 'zakon' %>
         </li>
-        <li class="sticker sticker-color-blue"style="font-size:10pt;">
-            <%= link_to "Таможенный Кодекс 2012", :controller => "page", :action => 'customs_zak' %>
-        </li>
-        <li class="sticker sticker-color-blue"style="font-size:10pt;">
-            <%= link_to "Расчет таможенных платежей", :controller => "page", :action => 'cust_count' %>
-        </li>
-        <li class="sticker sticker-color-blue"style="font-size:10pt;">
-            <%= link_to "Таможенная карта", :controller => "page", :action => 'map' %>
-        </li>
+        <% if session[:lang] == "ru" %>
+            <li class="sticker sticker-color-blue"style="font-size:10pt;">
+                <%= link_to "#{ t 'addinfo.menu.c_code'}", :controller => "page", :action => 'customs_zak' %>
+            </li>
+            <li class="sticker sticker-color-blue"style="font-size:10pt;">
+                <%= link_to "Расчет таможенных платежей", :controller => "page", :action => 'cust_count' %>
+            </li>
+            <li class="sticker sticker-color-blue"style="font-size:10pt;">
+                <%= link_to "#{ t 'addinfo.menu.c_map'}", :controller => "page", :action => 'map' %>
+            </li>
+        <% end %>
     </ul>
 </div>
 <div class="page-region">
     <div class="page-region-content">
         <div class="grid">
-            <h2>Частые вопросы</h2>
-            <% @faqs.each do |f|%>    
+            <h2><%= t 'faq.title' %></h2>
+            <% @faqs.each do |f|%>
                 <div class="row">
-                    <div class="span4"> 
+                    <div class="span4">
                         <ul class="replies">
                             <li class="bg-color-blue">
                                 <div class="reply" style="margin:0px;">
                                     <div class="date"><%= f.created_at %></div>
-                                    <div class="author">Вопрос:</div>
+                                    <div class="author"><%= t 'faq.quest' %></div>
                                     <div class="text"><%= f.quest %></div>
                                 </div>
                             </li>
                         </ul>
                     </div>
-                    <div class="place-right"> 
+                    <div class="place-right">
                         <ul class="replies">
                             <li class="bg-color-blueDark">
                                 <b class="sticker sticker-left sticker-color-blueDark"></b>
                                 <div class="reply" style="margin:0px;">
                                     <div class="date"><%= f.updated_at %></div>
-                                    <div class="author">Ответ:</div>
+                                    <div class="author"><%= t 'faq.answ' %></div>
                                     <div class="text"><%= f.answer%></div>
                                 </div>
                             </li>

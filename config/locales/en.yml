@@ -2,12 +2,15 @@ en:
   index:
     title: "Dontransgarant&Co Limited partnership"
     adress: "Moskovskij Avenue, 16-B, building 5, 2nd floor, Kiev"
+    sub_adress: "04073, Ukraine, Kiev"
     menu:
       partners: "About us and our partners"
       services: "Services"
       addinfo: "Additional information"
       contacts: "Contacts"
       part_zone: "Area for partners"
+    footer_title: "Limited partnership 'Dontransgarant & Co'"
+    footer_contacts: "CONTACTS"
   about:
     title: "About us and our partners"
     p1: "Limited partnership 'Dontransgarant & Co' has been accredited to provide customs authorities with the financial guarantee in the document form by the State customs service of Ukraine since 2007."
@@ -17,6 +20,8 @@ en:
     p5: "We are doing everything possible to ensure that you are happy with the quality of services provided andwillbecome reliable permanent partners of our company."
   presentation:
     title: "Limited partnership 'Dontransgarant & Co' "
+  our_part:
+    title: "Our partners"
   htb:
     title: "How to become a partner"
     p1: "Limited partnership 'Dontransgarant& Co' offers cooperationbased on the contractual relationship."
@@ -35,14 +40,68 @@ en:
     p2: "Financial guarantee in the document form does not provide reservation of fundsin the amount of customs duties on the account of customs authorities."
     p3: "The Customs Code of Ukraine stipulates the following types of financial guarantees in the document form: individual (one-time), reusable and general."
     p4: "Provision of customs duties payment security to customs authorities is required for import into the customs territory of Ukraine and /or moving through the territory of Ukraine and extending in land transit of goods according to the list approved by the Cabinetof Ministers of Ukraine, and in other cases by the Customs Code of Ukraine."
-    send_link: "Send arequest for defining the cost of the financial guarantee"
+    send_link: "Send a request for defining the cost of the financial guarantee"
+  singleg:
+    title: "Individual financial guarantee"
+    subtitle: "Provision of individual financial guarantee"
+    p1: "Individual (one-time) financial guarantee in the form of the document is provided for the amount of customs duties on:"
+    pl1: "one customs declaration within one foreign trade operation;"
+    pl2: "one customs declaration within one transit operation;"
+    pl3: "one customs declaration within one transit operation;"
+    pl4: "one operation of movement of goods across the customs border of Ukraine by citizens in cases under Section XII of the Customs Code of Ukraine."
+  multig:
+    title: "Reusable financial guarantee"
+    subtitle: "Provision of reusable financial guarantee"
+    p1: "Reusable financial guarantee is provided for the security of customs duties payment on a number of customs declarations or documents controlling the movement of goods during the  import of goods into the customs territory of Ukraine with the aim of transit or for free circulation on this territory for one owner within the framework of a single foreign economic contract:"
+    pl1: "one customs declaration within one foreign trade operation;"
+    pl2: "one customs declaration within one transit operation;"
+    pl3: "one customs declaration within one transit operation;"
+    pl4: "one operation of movement of goods across the customs border of Ukraine by citizens in cases under Section XII of the Customs Code of Ukraine."
+  geng:
+    title: "General financial guarantee"
+    subtitle: "Provision of general financial guarantee"
+    p1: "General financial guarantee is provided for the payment of customs duties on customs declarations or documents controlling the movement of goods, which can be planned to submit by declarant or his authorized representative within one year."
   addinfo:
     title: "Additional information"
     text: "Provision of security of customs duty payment to customs authorities is required for the import into the customs territory of Ukraine and / or moving throughout the territory of Ukraine in the form of passing and internal transit of goods according to the list approved by the Cabinet of Ministers of Ukraine, and in other cases setting by the Customs Code of Ukraine."
     ask_q: "Ask a question"
+    menu:
+      faq: "FAQ"
+      rules: "Regulatory acts"
+      c_code: "Customs Code 2012"
+      c_map: "Customs map"
+      repr: "Our representatives"
+      ask: "Ask a question"
+  rules:
+    title: "Regulatory acts"
+  faq:
+    title: "Frequently asked questions and answers to them"
+    quest: "Question:"
+    answ: "Answer:"
+  part_zone:
+    title: "Login for partners"
+    login: "Login:"
+    pass: "Password:"
+    button_text: "Enter"
   secondary:
     menu:
       present: "Presentation"
       partners: "Our partners"
       represent: "Our representatives"
       bec_part: "How to become a partner"
+  op:
+    bless1: "Thank you for the information, "
+    bless2: "Your opinion is very important to us!"
+    but_send: "Send"
+    naim: "Name of the legal entity interests of which are represented by you:"
+    name: "Your name*:"
+    p1: "Limited partnership 'Dontransgarant & Co' expresses its respect and appreciation for cooperation with you."
+    p2: "In order to improve our work towards the creation of favorable conditions for cooperation for treaty partners we ask you to evaluate the performance of our company on the following criteria:"
+    phone: "Phone number and/or e-mail*:"
+    q1: "1. Quality of services in issuing financial guarantees in the document form:"
+    q2: "2.	Efficiency of services provided in issuing financial guarantees in the document form:"
+    q3: "3. Competence of the staffof LP 'Dontransgarant & Co':"
+    q4: "4.	Ethics of the staff of  LP 'Dontransgarant & Co':"
+    q5: "5. Quality of interaction with the authorized representatives of LP 'Dontransgarant & Co':"
+    q6: "6. Your feedback and comments:"
+    title: "Dear Partner!"

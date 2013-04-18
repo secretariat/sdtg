@@ -4,6 +4,7 @@
 			<center><h3>Просмотр</h3></center>
       <b>В: </b><%= @faq.quest %><br/>
 			<b>О: </b><%= @faq.answer %><br/>
+			<b>Язык: </b><%= @faq.lang %><br/>
       <center>
         <%= link_to "Назад", {:controller => "faq", :action => "list"} %>
       </center>

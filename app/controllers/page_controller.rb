@@ -12,7 +12,7 @@ class PageController < ApplicationController
 	end
 
 	def faq
-		@faqs = Faq.where( :visible => 1 )
+		@faqs = Faq.where( :lang => I18n.locale )
 		render :layout => 'secondary'
 	end
 
@@ -65,18 +65,17 @@ class PageController < ApplicationController
 	end
 
 	def contacts
-		@contacts = Contacts.where( :visible => 1 )
+		@contacts = Contacts.where( :lang => I18n.locale )
 		render :layout => 'secondary'
 	end
 
 	def zakon
-		@zakon = Zakon.where( :visible => 1 )
+		@zakon = Zakon.where( :lang => I18n.locale )
 		render :layout => 'secondary'
 	end
 
 	def set_en
 		session[:lang] = "en"
-		# puts "#{request.url}#{session[:lang]}"
 		redirect_to(request.env["HTTP_REFERER"])
 	end
 

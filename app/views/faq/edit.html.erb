@@ -5,7 +5,6 @@
 			<fieldset>
 			<%= form_for(:faq, :url => {:controller => 'faq', :action => 'update', :id => @faq.id }) do |f| %>
 			 	<div class="grid">
-					
 						<div class="row">
 								<h5>Вопрос:</h5>
 								<div class="span10">
@@ -14,7 +13,6 @@
 									</div>
 								</div>
 							</div>
-					
 						<div class="row">
 							<h5>Ответ:</h5>
 							<div class="span10">
@@ -23,6 +21,7 @@
 								</div>
 							</div>
 						</div>
+						<%= f.select :lang, { "RU" => "ru", "EN" => "en"} %>
 						<h4><%= f.check_box(:visible) %>Опубликовать</h4>
 						<div class="place-right" style="margin-right: 122px;">
 							<%= submit_tag "Сохранить", class: "default" %>
