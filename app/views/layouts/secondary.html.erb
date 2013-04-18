@@ -48,6 +48,16 @@
     <div class="page">
         <div class="grid" style="margin: 0;">
             <div class="row">
+                <div class="row">
+                    <div id="lang">
+                        <div class="place-right">
+                            
+                            <%= link_to "Русский", :controller => "page", :action => "set_ru" %>
+                            <%= link_to "English", :controller => "page", :action => "set_en"%>
+                            
+                        </div>
+                    </div>
+                </div>
                 <!-- <div class="span12"> -->
                     <div class="span5">
                        <a href="/page/index"><%= image_tag "banner_up.png" ,:height =>"85px;"%></a>
@@ -64,8 +74,6 @@
                                 <i class="icon-documents-1"></i>+38 044 581 08 68<br>
                                 <i class="icon-vibrate-1"></i>+38 067 332 10 40<br>
                                 <a class ="hrf" href="http://facebook.com/dontransg" target="_blank"><i class="b-share-icon b-share-icon_facebook"></i></a>
-                                <%= link_to "EN", :controller => "page", :action => "set_en" %>
-                                <%= link_to "RU", :controller => "page", :action => "set_ru" %>
                             </div>
                         </div>
                     </div>
