@@ -1,98 +1,96 @@
 en:
-  index:
-    title: "Dontransgarant&Co Limited partnership"
-    adress: "Moskovskij Avenue, 16-B, building 5, 2nd floor, Kiev"
-    sub_adress: "04073, Ukraine, Kiev"
-    menu:
-      partners: "About us and our partners"
-      services: "Services"
-      addinfo: "Additional information"
-      contacts: "Contacts"
-      part_zone: "Area for partners"
-    footer_title: "Limited partnership 'Dontransgarant & Co'"
-    footer_contacts: "CONTACTS"
   about:
-    title: "About us and our partners"
     p1: "Limited partnership 'Dontransgarant & Co' has been accredited to provide customs authorities with the financial guarantee in the document form by the State customs service of Ukraine since 2007."
     p2: "Today, our company is one of the largest and most efficient independent financial intermediaries that provide financial guarantees in the document form for the customs authorities of Ukraine."
     p3: "The work of our highly qualified staff and authorized representatives of an LP “Dontransgarant & Co” in the international crossing points on the state border of Ukraine is aimed at providing financial guarantees in the document form whenever it is convenient for you throughout all the territory of Ukraine."
     p4: "Our cooperation is based on the principles of trust, responsibility and respect. Experience and recognition earned during more than 5 years of successful operation in provision of servicesin issuing financial guarantees, allow us to create and develop fruitful cooperation with our partners. The fact that among our partners there are well-known names, suggests that we understand the needs of this group of partners, and our services meet their standards."
     p5: "We are doing everything possible to ensure that you are happy with the quality of services provided andwillbecome reliable permanent partners of our company."
-  presentation:
-    title: "Limited partnership 'Dontransgarant & Co' "
-  our_part:
-    title: "Our partners"
+    title: "About us and our partners"
+  addinfo:
+    ask_q: "Ask a question"
+    menu:
+      ask: "Ask a question"
+      c_code: "Customs Code 2012"
+      c_map: "Customs map"
+      faq: FAQ
+      repr: "Our representatives"
+      rules: "Regulatory acts"
+    text: "Provision of security of customs duty payment to customs authorities is required for the import into the customs territory of Ukraine and / or moving throughout the territory of Ukraine in the form of passing and internal transit of goods according to the list approved by the Cabinet of Ministers of Ukraine, and in other cases setting by the Customs Code of Ukraine."
+    title: "Additional information"
+  faq:
+    answ: "Answer:"
+    quest: "Question:"
+    title: "Frequently asked questions and answers to them"
+  geng:
+    p1: "General financial guarantee is provided for the payment of customs duties on customs declarations or documents controlling the movement of goods, which can be planned to submit by declarant or his authorized representative within one year."
+    subtitle: "Provision of general financial guarantee"
+    title: "General financial guarantee"
   htb:
-    title: "How to become a partner"
+    footer: "We respect the interests of our partners and we strive for your comfortable cooperation with us!"
     p1: "Limited partnership 'Dontransgarant& Co' offers cooperationbased on the contractual relationship."
     p2: "To conclude a contract to provide services in issuing financial guaranteesin the document form in order tosecure payment of customspayments andfinancial guaranteesin the document form it is necessary tofill out and submitthe request form on defining the cost offinancial guarantee."
     p3: "Upon reviewing the request with a potential partnerrate of payment forthe provision of financialguarantees in thedocument form is agreed taking into consideration discountsin case of increasingscope of supply. After agreeingthe rate on mutually beneficial conditions a contract for provision of servicesin issuingfinancial guaranteesin the document form isconcluded withpotential partner.Thus,our potential partnersbecome permanenttreatypartners of an LP 'Dontransgarant and the company & Co'"
-    footer: "We respect the interests of our partners and we strive for your comfortable cooperation with us!"
-  service:
-    title: "Services"
+    title: "How to become a partner"
+  index:
+    partners_slider: "Our partners:"
+    button: "Defining the price of the financial guarantee"
+    adress: "Moskovskij Avenue, 16-B, building 5, 2nd floor, Kiev"
+    blue_block:
+      text: "at international checkpoints across the state border of Ukraine provide stand-by supply of financial guarantees in the form of a document"
+      title: "Our representatives"
+    footer_contacts: CONTACTS
+    footer_title: "Limited partnership 'Dontransgarant & Co'"
+    green_block:
+      text: "is supplied to the customs authorities of Ukraine as a security for the payment of customs duties in the cases stipulated by the Customs Code of Ukraine."
+      title: "Financial guarantee"
+    left_block:
+      link_to_press: "View demo"
+      p1: "since 2007 has been an independent financial intermediary authorized by the State customs service of Ukraine to provide financial guarantees in the form of a document as a security for payment of customs duties."
+      p2: "According to the decision of the State customs service of Ukraine of 22.11.2012, the limited partnership 'Dontransgarant & Co' meets the criteria and requirements of the Customs Code of Ukraine and is entered in the register of guarantors authorized to supply financial guarantees to the customs authorities to secure the payment of customs duties."
+      p3: "Limited partnership 'Dontransgarant & Co' has more than 200 authorized representatives, including at checkpoints across the state border of Ukraine, which allows to provide prompt supply of the financial guarantee in the form of a document on the territory of Ukraine in the stand-by regime. We are always glad to cooperate!"
+      subtitle1: "Limited partnership 'Dontransgarant & Co'"
+      title1: "Briefly about us"
+      title2: "Services"
+      p21: "The main activity of the limited partnership 'Dontransgarant & Co' is  provision of the financial guarantees in the form of a document to the customs authorities as a security for the payment of customs duties."
+      p22: "Limited partnership 'Dontransgarant & Co' provides services of issuing financial guarantees in the form of a document of the following types: individual (one-time), reusable and general."
+      p23: "Submitting to customs authorities a provision of customs duties payment is required for import into the customs territory of Ukraine and / or movement through the territory of Ukraine in a form of pass-through and internal transit of goods according to the list, approved by the Cabinet of Ministers of Ukraine, as well as in other cases stipulated by the Customs Code of Ukraine."
+      title3: "Advantages of working with us are"
+      p31: "individual approach to each treaty partner;"
+      p32: "affordable price;"
+      p33: "high quality and efficiency of providing the financial guarantee in the form of a document;"
+      p34: "stand-by services;"
+      p35: "presence of representatives at all the checkpoints on the state border of Ukraine."
+    right_block:
+      title1: "Welcome to the official website of the limited partnership"
+      title2: "Dontransgarant & Co"
+      p1: "Limited partnership 'Dontransgarant & Co' has been accredited to supply customs authorities with the financial guarantee in the form of a document by the State customs service of Ukraine since 2007."
+      p2: "Competence and experience of highly qualified personnel and authorized representatives of the limited partnership 'Dontransgarant & Co' at international checkpoints across the state border of Ukraine provide successful operation, leadership position and active development of the company in the market of provision of financial guarantees."
+      p3: "We are pleased to offer you a personalized approach to each treaty partner, the best value for money and stand-by services to provide financial guarantees on the territory of Ukraine at the highest level."
+      p4: "Limited partnership 'Dontransgarant & Co' increases the competitiveness of its partners by optimizing the time spent on customs procedures and financial resources. We are always glad to cooperate on conditions that are favourable for you!"
     menu:
-      single: "Individual guarantee"
-      multi: "Reusable guarantee"
-      general: "General guarantee"
-    p1: "Financial guarantees are a way of securing the payment of customs duties. Security for payment of customs duties by the financial guarantee is madein the following forms:"
-    pl1: "provision of financial guarantees in the document form;"
-    pl2: "entering a sum against account or cash register of customs authority."
-    p2: "Financial guarantee in the document form does not provide reservation of fundsin the amount of customs duties on the account of customs authorities."
-    p3: "The Customs Code of Ukraine stipulates the following types of financial guarantees in the document form: individual (one-time), reusable and general."
-    p4: "Provision of customs duties payment security to customs authorities is required for import into the customs territory of Ukraine and /or moving through the territory of Ukraine and extending in land transit of goods according to the list approved by the Cabinetof Ministers of Ukraine, and in other cases by the Customs Code of Ukraine."
-    send_link: "Send a request for defining the cost of the financial guarantee"
-  singleg:
-    title: "Individual financial guarantee"
-    subtitle: "Provision of individual financial guarantee"
-    p1: "Individual (one-time) financial guarantee in the form of the document is provided for the amount of customs duties on:"
-    pl1: "one customs declaration within one foreign trade operation;"
-    pl2: "one customs declaration within one transit operation;"
-    pl3: "one customs declaration within one transit operation;"
-    pl4: "one operation of movement of goods across the customs border of Ukraine by citizens in cases under Section XII of the Customs Code of Ukraine."
+      addinfo: "Additional information"
+      contacts: Contacts
+      part_zone: "Area for partners"
+      partners: "About us and our partners"
+      services: Services
+    slider1: "Since 2007 we have been an independent financial intermediary authorized by the State customs service of Ukraine to supply a financial guarantee in the form of a document to customs authorities of Ukraine."
+    slider2: "Our cooperation is formed on the principles of trust, responsibility and respect."
+    slider3: "We are pleased to offer you a personalized approach to each treaty partner, affordable price and services of provision of  financial guarantees on the territory of Ukraine at the highest level."
+    slider4: "We are doing everything possible to ensure that you are satisfied with the quality of provided services and become reliable permanent partners of our company."
+    sub_adress: "04073, Ukraine, Kiev"
+    title: "Dontransgarant&Co Limited partnership"
   multig:
-    title: "Reusable financial guarantee"
-    subtitle: "Provision of reusable financial guarantee"
     p1: "Reusable financial guarantee is provided for the security of customs duties payment on a number of customs declarations or documents controlling the movement of goods during the  import of goods into the customs territory of Ukraine with the aim of transit or for free circulation on this territory for one owner within the framework of a single foreign economic contract:"
     pl1: "one customs declaration within one foreign trade operation;"
     pl2: "one customs declaration within one transit operation;"
     pl3: "one customs declaration within one transit operation;"
     pl4: "one operation of movement of goods across the customs border of Ukraine by citizens in cases under Section XII of the Customs Code of Ukraine."
-  geng:
-    title: "General financial guarantee"
-    subtitle: "Provision of general financial guarantee"
-    p1: "General financial guarantee is provided for the payment of customs duties on customs declarations or documents controlling the movement of goods, which can be planned to submit by declarant or his authorized representative within one year."
-  addinfo:
-    title: "Additional information"
-    text: "Provision of security of customs duty payment to customs authorities is required for the import into the customs territory of Ukraine and / or moving throughout the territory of Ukraine in the form of passing and internal transit of goods according to the list approved by the Cabinet of Ministers of Ukraine, and in other cases setting by the Customs Code of Ukraine."
-    ask_q: "Ask a question"
-    menu:
-      faq: "FAQ"
-      rules: "Regulatory acts"
-      c_code: "Customs Code 2012"
-      c_map: "Customs map"
-      repr: "Our representatives"
-      ask: "Ask a question"
-  rules:
-    title: "Regulatory acts"
-  faq:
-    title: "Frequently asked questions and answers to them"
-    quest: "Question:"
-    answ: "Answer:"
-  part_zone:
-    title: "Login for partners"
-    login: "Login:"
-    pass: "Password:"
-    button_text: "Enter"
-  secondary:
-    menu:
-      present: "Presentation"
-      partners: "Our partners"
-      represent: "Our representatives"
-      bec_part: "How to become a partner"
+    subtitle: "Provision of reusable financial guarantee"
+    title: "Reusable financial guarantee"
   op:
     bless1: "Thank you for the information, "
     bless2: "Your opinion is very important to us!"
-    but_send: "Send"
+    but_send: Send
     naim: "Name of the legal entity interests of which are represented by you:"
     name: "Your name*:"
     p1: "Limited partnership 'Dontransgarant & Co' expresses its respect and appreciation for cooperation with you."
@@ -105,3 +103,41 @@ en:
     q5: "5. Quality of interaction with the authorized representatives of LP 'Dontransgarant & Co':"
     q6: "6. Your feedback and comments:"
     title: "Dear Partner!"
+  our_part:
+    title: "Our partners"
+  part_zone:
+    button_text: Enter
+    login: "Login:"
+    pass: "Password:"
+    title: "Login for partners"
+  presentation:
+    title: "Limited partnership 'Dontransgarant & Co' "
+  rules:
+    title: "Regulatory acts"
+  secondary:
+    menu:
+      bec_part: "How to become a partner"
+      partners: "Our partners"
+      present: Presentation
+      represent: "Our representatives"
+  service:
+    menu:
+      general: "General guarantee"
+      multi: "Reusable guarantee"
+      single: "Individual guarantee"
+    p1: "Financial guarantees are a way of securing the payment of customs duties. Security for payment of customs duties by the financial guarantee is madein the following forms:"
+    p2: "Financial guarantee in the document form does not provide reservation of fundsin the amount of customs duties on the account of customs authorities."
+    p3: "The Customs Code of Ukraine stipulates the following types of financial guarantees in the document form: individual (one-time), reusable and general."
+    p4: "Provision of customs duties payment security to customs authorities is required for import into the customs territory of Ukraine and /or moving through the territory of Ukraine and extending in land transit of goods according to the list approved by the Cabinetof Ministers of Ukraine, and in other cases by the Customs Code of Ukraine."
+    pl1: "provision of financial guarantees in the document form;"
+    pl2: "entering a sum against account or cash register of customs authority."
+    send_link: "Send a request for defining the cost of the financial guarantee"
+    title: Services
+  singleg:
+    p1: "Individual (one-time) financial guarantee in the form of the document is provided for the amount of customs duties on:"
+    pl1: "one customs declaration within one foreign trade operation;"
+    pl2: "one customs declaration within one transit operation;"
+    pl3: "one customs declaration within one transit operation;"
+    pl4: "one operation of movement of goods across the customs border of Ukraine by citizens in cases under Section XII of the Customs Code of Ukraine."
+    subtitle: "Provision of individual financial guarantee"
+    title: "Individual financial guarantee"
