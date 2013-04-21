@@ -50,17 +50,15 @@
             <div class="row">
                 <div id="lang">
                     <div class="place-right">
-                        
                         <%= link_to "Русский", :controller => "page", :action => "set_ru" %>
                         <%= link_to "English", :controller => "page", :action => "set_en"%>
-                        
                     </div>
                 </div>
             </div>
             <div class="row">
                 <!-- <div class="span12 bg-color-orange"> -->
                     <div class="span5">
-                       <a href="/page/index"><%= image_tag "banner_up.png" ,:height =>"85"%></a>
+                       <a href="/page/index"><%= image_tag "#{t 'index.banner'}" ,:height =>"85"%></a>
                     </div>
                     <div class="span7" style="margin:0;">
                         <div class="row">
