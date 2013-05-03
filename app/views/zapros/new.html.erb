@@ -11,57 +11,58 @@
 									<h5 style="margin-left: 20px;"><%= Time.now %></h5>
 									<center>
 										<h2>
-											Запрос<br>на определение стоимости финансовой гарантии
+											<%= t 'zapros.title1' %><br>
+											<%= t 'zapros.title2' %>
 										</h2>
 									</center>
 							</div>
 							<div class="row">
-								<div class="span3"><h5>Наименование товара*:</h5></div>
+								<div class="span3"><h5><%= t 'zapros.prod_name' %>*:</h5></div>
 								<div class="input-control text span5">
 							 		<%= f.text_field :naim %>
 							 	</div>
 							</div>
 
 							<div class="row">
-								<div class="span3"><h5>Код товара*:</h5></div>
+								<div class="span3"><h5><%= t 'zapros.prod_code' %>*:</h5></div>
 								<div class="input-control text span3">
 							 		<%= f.text_field :code_num %>
 							 	</div>
 							 	<div class="input-control select span2" style="margin-left: 20px;">
-							 		<%= f.select( :code, Code.find(:all).collect{ |u| [u.name] }, :class => "input-control select") %>
-							 	</div>
-						 	</div>
-						
-							<div class="row">
-								<div class="span3"><h5>Таможенный режим*:</h5></div>
-						
-								<div class="input-control select span5">
-							 		<%= f.select( :tamrez, Tr.find(:all).collect{ |u| [u.name] }, :class => "input-control select") %>
+							 		<%= f.select( :code, Code.where(:lang => session[:lang]).collect{ |u| [u.name] }, :class => "input-control select") %>
 							 	</div>
 						 	</div>
 
 							<div class="row">
-								<div class="span3"><h5>Вид транспорта*:</h5></div>
+								<div class="span3"><h5><%= t 'zapros.cust_reg' %>*:</h5></div>
+
 								<div class="input-control select span5">
-							 		<%= f.select(:typetran, Transp.find(:all).collect{ |u| [u.name] }, :class => "input-control select")%>
+							 		<%= f.select( :tamrez, Tr.where(:lang => session[:lang]).collect{ |u| [u.name] }, :class => "input-control select") %>
 							 	</div>
 						 	</div>
 
 							<div class="row">
-								<div class="span5"><h5>Количество товара*:</h5></div>
+								<div class="span3"><h5><%= t 'zapros.type_tran' %>*:</h5></div>
+								<div class="input-control select span5">
+							 		<%= f.select( :typetran, Transp.where(:lang => session[:lang]).collect{ |u| [u.name] }, :class => "input-control select")%>
+							 	</div>
+						 	</div>
+
+							<div class="row">
+								<div class="span5"><h5><%= t 'zapros.kol_tov' %></h5></div>
 								<div class="input-control text span3">
 							 		<%= f.text_field :koltov %>
 							 	</div>
 						 	</div>
 						 	<div class="row">
-								<div class="span5">1) Основные единицы измерения:</h4></div>
+								<div class="span5">1) <%= t 'zapros.basic' %>:</h4></div>
 								<div class="input-control text span3">
 							 		<%= f.text_field :base_ed %>
 							 	</div>
 						 	</div>
 
 							<div class="row">
-								<div class="span5">2) Дополнительные единицы измерения:</div>
+								<div class="span5">2) <%= t 'zapros.addit' %>:</div>
 								<div class="input-control text span3">
 							 		<%= f.text_field :dop_ed %>
 							 	</div>
@@ -69,56 +70,56 @@
 
 							<div class="row">
 									<ul>
-										<h4><li>Для алкоголя -  количество бутылок, емкость.</li></h4>
-										<h4><li>Для автомобилей – марка, дата выпуска, объем двигателя.</li></h4>
-										<h4><li>Табачные изделия – сигары, сигареты – количество штук.</li></h4>
+										<h4><li><%= t 'zapros.alcoh' %>.</li></h4>
+										<h4><li><%= t 'zapros.auto' %>.</li></h4>
+										<h4><li><%= t 'zapros.sigi' %>.</li></h4>
 									</ul>
 							</div>
 							<div class="row">
-								<div class="span3"><h5>Стоимость товара*:</h5></div>
+								<div class="span3"><h5><%= t 'zapros.price' %>*:</h5></div>
 								<div class="input-control select span2">
-							 		<%= f.select(:stoim, Currency.find(:all).collect{ |u| [u.name] }, :class => "input-control select")%>
+							 		<%= f.select(:stoim, Currency.where(:lang => session[:lang]).collect{ |u| [u.name] }, :class => "input-control select")%>
 							 	</div>
 						  </div>
 						 	<div class="row">
-							 	<div class="span3">1) За единицу товара:</div>
+							 	<div class="span3">1) <%= t 'zapros.price_per_one' %>:</div>
 							 	<div class="input-control text span2">
 							 		<%= f.text_field :ed %>
 							 	</div>
 						 	</div>
 						 	<div class="row">
-							 	<div class="span3">2) Всего:</div>
+							 	<div class="span3">2) <%= t 'zapros.price_all' %>:</div>
 							 	<div class="input-control text span2">
 							 		<%= f.text_field :total %>
 							 	</div>
 						 	</div>
 							<div class="row">
-								<h5>Маршрут движения (таможенный орган отправления Украины - таможенный орган назначения Украины):</h5>
+								<h5><%= t 'zapros.route' %>:</h5>
 								<div class="input-control text span10">
 							 		<%= f.text_field :path_ryhy %>
 							 	</div>
 							</div>
-						
+
 							<div class="row">
-								<h5>Частота перевозок и объемы(в месяц, в квартал):</h5>
+								<h5><%= t 'zapros.chastota' %>:</h5>
 								<div class="input-control text span10">
 							 		<%= f.text_field :chastota %>
 							 	</div>
 							</div>
-					 		
+
 					 		<div class="row">
-								<div class="span2" style="width: 150px;"><h5>Контактное лицо*:</h5></div>
+								<div class="span2" style="width: 150px;"><h5><%= t 'zapros.contact' %>*:</h5></div>
 								<div class="input-control text span3" style="margin-right: 50px;">
 							 		<%= f.text_field :fio %>
 							 	</div>
-							 	<div class="span1" style="width: 100px;"><h5>Должность*:</h5></div>
+							 	<div class="span1" style="width: 100px;"><h5><%= t 'zapros.rank' %>*:</h5></div>
 								<div class="input-control text span3" >
 							 		<%= f.text_field :rank %>
 							 	</div>
 						 	</div>
 
 						 	<div class="row">
-								<div class="span2" style="width: 150px;"><h5>Телефон*:</h5></div>
+								<div class="span2" style="width: 150px;"><h5><%= t 'zapros.phone' %>*:</h5></div>
 								<div class="input-control text span3" style="margin-right: 50px;">
 							 		<%= f.text_field :phone %>
 							 	</div>
@@ -129,26 +130,26 @@
 						 	</div>
 
 						 	</div>
-							<h5>Прикрепить файл</h5>
+							<h5><%= t 'zapros.file' %></h5>
 							<%= f.file_field :att %>
 							( .doc, docx, txt, xls, xlsx, pdf, jpg )
 								<br/>
 								<br/>
 								<div class="row">
-									<h5>Дополнительная информация, коментарии:</h5>
+									<h5><%= t 'zapros.addinfocomm' %>:</h5>
 									<div class="span10">
 										<div class="input-control textarea">
 											<%= f.text_area :dopinfo, :rows => "5" %>
 										</div>
 									</div>
 								</div>
-								<center>(* - поля обязательные для заполнения)</center>
+								<center>(* - <%= t 'zapros.req_fields' %>)</center>
 								<br/>
 								<br/>
 
 								<div class="place-right" style="margin-right: 70px;">
-									<%= submit_tag "Отправить", class: "default" %>
-									<button>Отмена</button>
+									<%= submit_tag t 'zapros.send_but', class: "default" %>
+									<button><%= t 'zapros.cancel_but' %></button>
 								</div>
 							<% end  %>
 				</div>

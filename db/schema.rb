@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130418191108) do
+ActiveRecord::Schema.define(:version => 20130503133859) do
 
   create_table "admins", :force => true do |t|
     t.string   "name"
@@ -49,8 +49,9 @@ ActiveRecord::Schema.define(:version => 20130418191108) do
 
   create_table "codes", :force => true do |t|
     t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",                   :null => false
+    t.datetime "updated_at",                   :null => false
+    t.string   "lang",       :default => "ru"
   end
 
   create_table "contacts", :force => true do |t|
@@ -72,8 +73,9 @@ ActiveRecord::Schema.define(:version => 20130418191108) do
 
   create_table "currencies", :force => true do |t|
     t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",                   :null => false
+    t.datetime "updated_at",                   :null => false
+    t.string   "lang",       :default => "ru"
   end
 
   create_table "delayed_jobs", :force => true do |t|
@@ -103,14 +105,16 @@ ActiveRecord::Schema.define(:version => 20130418191108) do
 
   create_table "transps", :force => true do |t|
     t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",                   :null => false
+    t.datetime "updated_at",                   :null => false
+    t.string   "lang",       :default => "ru"
   end
 
   create_table "trs", :force => true do |t|
     t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",                   :null => false
+    t.datetime "updated_at",                   :null => false
+    t.string   "lang",       :default => "ru"
   end
 
   create_table "zakons", :force => true do |t|

@@ -8,15 +8,17 @@
 			</center>
 			<div class="row">
 				<div class="span11">
-					<br/>						
-					<br/>						
+					<br/>
+					<br/>
 					<center>
 						<%= form_for( @currency, :url => {:action => 'update', :id => @currency.id} ) do |f| %>
 							<div class="input-control text span4">
 						 		<%= f.text_field :name %>
-						 		<br/>
-						 		<br/>
 						 	</div>
+						 	<br/>
+						 	<%= f.select :lang, { "RU" => "ru", "EN" => "en"} %>
+					 		<br/>
+					 		<br/>
 							<%= submit_tag "Сохранить", class: "default" %>
               <%= link_to "Отмена", {:controller => "currency", :action => "list"}, :class=>"button big bg-color-blueDark", :style => "color: white;" %>
 						<% end  %>
