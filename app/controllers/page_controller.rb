@@ -12,7 +12,7 @@ class PageController < ApplicationController
 	end
 
 	def faq
-		@faqs = Faq.where( :lang => I18n.locale )
+		@faqs = Faq.where( :lang => I18n.locale, :visible => true )
 		render :layout => 'secondary'
 	end
 
