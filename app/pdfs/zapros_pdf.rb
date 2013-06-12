@@ -52,13 +52,13 @@ class ZaprosPdf < Prawn::Document
                      ]
     move_down 5
     #################################################
-    formatted_text [ { :text =>"Основные еденицы имзерения:   ", :style => :bold},
+    formatted_text [ { :text =>"Основные единицы имзерения:   ", :style => :bold},
                      { :text => "#{@zapros.base_ed}",:styles => [:underline]},
                      ]
     move_down 5
 
     #################################################
-    formatted_text [ { :text =>"Дополнительные еденицы измерения: ", :style => :bold},
+    formatted_text [ { :text =>"Дополнительные единицы измерения: ", :style => :bold},
                      { :text => "#{@zapros.dop_ed}",:styles => [:underline]},
                      ]
     move_down 5
@@ -68,7 +68,7 @@ class ZaprosPdf < Prawn::Document
                      ]
     move_down 5
     #################################################
-    formatted_text [ { :text =>"За еденицу товара:   ", :style => :bold},
+    formatted_text [ { :text =>"За единицу товара:   ", :style => :bold},
                      { :text => "#{@zapros.ed}",:styles => [:underline]},
                      ]
     move_down 5
