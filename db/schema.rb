@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130503133859) do
+ActiveRecord::Schema.define(:version => 20130613200616) do
 
   create_table "admins", :force => true do |t|
     t.string   "name"
@@ -148,8 +148,10 @@ ActiveRecord::Schema.define(:version => 20130503133859) do
     t.string   "att"
     t.string   "att_file_name"
     t.text     "dopinfo"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+    t.string   "sum_cust_payment"
+    t.string   "company_name"
   end
 
 end

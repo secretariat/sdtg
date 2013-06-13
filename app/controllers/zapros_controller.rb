@@ -1,6 +1,6 @@
 # -*- encoding : utf-8 -*-
 class ZaprosController < ApplicationController
-	
+
 	def show
 
 	end
@@ -15,13 +15,13 @@ class ZaprosController < ApplicationController
 			fname = @zapros.att_file_name
 			fpath = @zapros.att.url
 			ZaprosMailer.delay.send_zapros( @zapros, fpath, fname )
-			# ZaprosMailer.send_zapros( @zapros ).deliver
+			# ZaprosMailer.send_zapros( @zapros, fpath, fname ).deliver
 			flash[:notice] = "Запрос отправлен успешно"
 			redirect_to(:controller => 'page', :action => 'index')
 		else
 			flash[:notice] = "Ошибка при отправке Запроса"
 			# redirect_to(:controller => 'user', :action => 'new')
-		end 
+		end
 
 	end
 
@@ -30,7 +30,7 @@ class ZaprosController < ApplicationController
 	end
 
 	def update
-  
+
   end
 end
 

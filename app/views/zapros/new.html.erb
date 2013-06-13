@@ -93,6 +93,12 @@
 							 		<%= f.text_field :total %>
 							 	</div>
 						 	</div>
+						 	<div class="row">
+							 	<div class="span3"><%= t 'zapros.sum_cust_payment' %>*:</div>
+							 	<div class="input-control text span2">
+							 		<%= f.text_field :sum_cust_payment %>
+							 	</div>
+						 	</div>
 							<div class="row">
 								<h5><%= t 'zapros.route' %>:</h5>
 								<div class="input-control text span10">
@@ -104,6 +110,13 @@
 								<h5><%= t 'zapros.chastota' %>:</h5>
 								<div class="input-control text span10">
 							 		<%= f.text_field :chastota %>
+							 	</div>
+							</div>
+
+							<div class="row">
+								<h5><%= t 'zapros.company_name' %>:</h5>
+								<div class="input-control text span10">
+							 		<%= f.text_field :company_name %>
 							 	</div>
 							</div>
 

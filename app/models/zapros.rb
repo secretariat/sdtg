@@ -12,6 +12,7 @@ class Zapros < ActiveRecord::Base
     				:stoim,
     				:ed,
     				:total,
+                    :sum_cust_payment,
     				:path_ryhy,
     				:chastota,
     				:fio,
@@ -22,5 +23,6 @@ class Zapros < ActiveRecord::Base
                     :att,
                     :att_file_name,
     				:dopinfo,
-                    :code_num
+                    :code_num,
+                    :company_name
     end

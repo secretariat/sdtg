@@ -12,12 +12,12 @@ class ZaprosPdf < Prawn::Document
       :bold => "prawn_fonts/verdanab.ttf",
       :italic => "prawn_fonts/verdanai.ttf",
       :normal  => "prawn_fonts/verdana.ttf" })
-    
+
     font "Verdana", :size => 11
-    
+
     image "app/assets/images/logo.png", :width => 75, :height => 40
     text "#{Time.now}", :size => 7
-    
+
     move_down 15
     text "Запрос на определение стоимости финансовой гарантии", :align => :center, :style => :bold
     move_down 15
@@ -78,6 +78,11 @@ class ZaprosPdf < Prawn::Document
                      ]
     move_down 5
     #################################################
+    formatted_text [ { :text =>"Сумма таможенных платежей:   ", :style => :bold},
+                     { :text => "#{@zapros.sum_cust_payment}",:styles => [:underline]},
+                     ]
+    move_down 5
+    #################################################
     formatted_text [ { :text =>"Маршрут движения (таможенный орган отправления Украины - таможенный орган назначения Украины):   ", :style => :bold},
                      { :text => "#{@zapros.path_ryhy}",:styles => [:underline]},
                      ]
@@ -85,6 +90,11 @@ class ZaprosPdf < Prawn::Document
     #################################################
     formatted_text [ { :text =>"Частота перевозок и объемы(в месяц, в квартал):   ", :style => :bold},
                      { :text => "#{@zapros.chastota}",:styles => [:underline]},
+                     ]
+    move_down 5
+    #################################################
+    formatted_text [ { :text =>"Наименование организации:   ", :style => :bold},
+                     { :text => "#{@zapros.company_name}",:styles => [:underline]},
                      ]
     move_down 5
     #################################################
