@@ -2,7 +2,7 @@
 class PageController < ApplicationController
 
 	def index
-
+		session[:lang] = "ru" if session[:lang].nil?
 	end
 
 	def about

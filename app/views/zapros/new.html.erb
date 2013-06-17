@@ -30,7 +30,7 @@
 							 	</div>
 							 	<div class="input-control select span2" style="margin-left: 20px;">
 							 		<%#= f.select( :code, Code.where(:lang => session[:lang]).collect{ |u| [u.name] }, :class => "input-control select") %>
-							 		<%= f.select( :code, Code.all.collect{ |u| [u.name] }, :class => "input-control select") %>
+							 		<%= f.select( :code, @code.collect{ |u| [u.name] }, :class => "input-control select") %>
 							 	</div>
 						 	</div>
 
@@ -39,7 +39,7 @@
 
 								<div class="input-control select span5">
 							 		<%#= f.select( :tamrez, Tr.where(:lang => session[:lang]).collect{ |u| [u.name] }, :class => "input-control select") %>
-							 		<%= f.select( :tamrez, Tr.all.collect{ |u| [u.name] }, :class => "input-control select") %>
+							 		<%= f.select( :tamrez, @tr.collect{ |u| [u.name] }, :class => "input-control select") %>
 							 	</div>
 						 	</div>
 
@@ -47,7 +47,7 @@
 								<div class="span3"><h5><%= t 'zapros.type_tran' %>*:</h5></div>
 								<div class="input-control select span5">
 							 		<%#= f.select( :typetran, Transp.where(:lang => session[:lang]).collect{ |u| [u.name] }, :class => "input-control select")%>
-							 		<%= f.select( :typetran, Transp.all.collect{ |u| [u.name] }, :class => "input-control select")%>
+							 		<%= f.select( :typetran, @transp.collect{ |u| [u.name] }, :class => "input-control select")%>
 							 	</div>
 						 	</div>
 
