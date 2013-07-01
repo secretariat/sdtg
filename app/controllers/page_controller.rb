@@ -2,7 +2,7 @@
 class PageController < ApplicationController
 	def index
 	end
-	
+
 	def about
 		render :layout => 'secondary'
 	end
@@ -47,7 +47,16 @@ class PageController < ApplicationController
 	def represent
 		render :layout => 'secondary'
 	end
+
 	def dopinfo
+		render :layout => 'secondary'
+	end
+
+	def customs_zak
+		render :layout => 'secondary'
+	end
+
+	def cust_count
 		render :layout => 'secondary'
 	end
 
