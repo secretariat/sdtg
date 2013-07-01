@@ -20,6 +20,10 @@ class PageController < ApplicationController
 		render :layout => 'secondary'
 	end
 
+	def map
+		render :layout => 'secondary'
+	end
+
 	def services
 		render :layout => 'secondary'
 	end
