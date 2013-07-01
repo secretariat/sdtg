@@ -3,7 +3,6 @@
 <div class="page">
   <div class="page-region-content">
   	<div class="grid">
-  		
 			<div class="row">
 				<div class="span9">
   			<% @contacts.each do |c| %>
@@ -12,44 +11,38 @@
 						<h4><%= c.rank %></h4>
 						<em><%= c.fio %></em><br/><br/>
 						<!-- ################################################### -->
-						<% if (c.mobile1).to_s.strip.length > 0 then  %>
-							<span class="icon-contact"></span><%= c.mobile1 %>
-							<% if (c.mobile2).to_s.strip.length > 0 then %>
-								<%= c.mobile2 %><br>
-							<% else %>
-								<br/>
-							<% end  %>		
+						<% if c.mobile1.present? then  %>
+							<span class="icon-contact"></span><%= c.mobile1 %><br/>
 						<% end  %>
-						<!-- ################################################### -->
-						<% if c.phone_g1 != nil then  %>
-							<span class="icon-contact"></span><%= c.phone_g1 %>
-							<% if c.phone_g2 != nil then %>
-								<%= c.phone_g2 %><br>
-							<% else %>
-								<br/>
-							<% end  %>		
+						<% if c.mobile2.present? then  %>
+							<span class="icon-contact"></span><%= c.mobile2 %><br/>
 						<% end  %>
-						<!-- ################################################### -->
-						<% if c.skype != nil then %>
+						<% if c.phone_g1.present? then  %>
+							<span class="icon-contact"></span><%= c.phone_g1 %><br/>
+						<% end  %>
+						<% if c.phone_g2.present? then  %>
+							<span class="icon-contact"></span><%= c.phone_g2 %><br/>
+						<% end  %>
+						<% if c.skype.present? then %>
 							<span class="icon-skype"></span><%= c.skype %><br/>
 						<% end %>
 				    <!-- ################################################### -->
-				    <% if c.email1 != nil then %>
+				    <% if c.email1.present? then %>
 				    	<span class="icon-mail"></span><a href="mailto:<%= c.email1 %>" class="tertiary-secondary-text"><%= c.email1 %></a><br/>
 				    <% end %>
 				    <!-- ################################################### -->
-				    <% if c.email2 != nil then  %>
+				    <% if c.email2.present? then  %>
 				    	<span class="icon-mail"></span><a href="mailto:<%= c.email2 %>" class="tertiary-secondary-text"><%= c.email2 %></a>
 				    <% else %>
 				    	<br/>
 				    	<br/>
 				   	<% end %>
 					</div>
-				<% end  %>	
+				<% end  %>
 
 				</div>
   			<div class="pull-right" style="width:210px;">
-  				<%= link_to "Форма обратной связи", 
+  				<%= link_to "Форма обратной связи",
                     {:controller => "anketa", :action => "new"}, :class=>"button big bg-color-blueDark", :style=>"padding-right: 20px; margin-right: 0px;color:#FFFFFF"%>
 				</div>
 			</div>

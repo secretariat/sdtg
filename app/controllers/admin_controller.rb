@@ -1,7 +1,7 @@
 # -*- encoding : utf-8 -*-
 class AdminController < ApplicationController
-  
-  layout 'admin'  
+
+  layout 'admin'
 
   before_filter :confirm_logged_in, :except => [:login, :attempt_login, :logout]
   before_filter :confirm_priveleges_admin, :except => [:login, :attempt_login, :logout]
@@ -25,7 +25,7 @@ class AdminController < ApplicationController
       flash[:notice] = "Invalid username/password combination."
       redirect_to( :action => 'login')
     end
-    
+
   end
 
   def login
@@ -58,7 +58,7 @@ class AdminController < ApplicationController
     else
       flash[:notice] = "##{@admin.errors.full_messages.to_sentence}" 
       redirect_to( :controller => 'admin', :action => 'new')
-    end   
+    end
   end
 
   def destroy

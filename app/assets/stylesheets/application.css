@@ -17,20 +17,20 @@ p {
 }
 
 /************************************************
-           JCAROUSEL LITE          
+           JCAROUSEL LITE
 ************************************************/
 .list {
      height:65px;
      width: 710px;
-     margin:auto; 
+     margin:auto;
 }
 
 .part {
      float:left;
-     left: -5000px; 
-     margin:15px; 
-     position:relative; 
-     visibility:hidden;  
+     left: -5000px;
+     margin:15px;
+     position:relative;
+     visibility:hidden;
 }
      
 .part ul {
