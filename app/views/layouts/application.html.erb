@@ -7,7 +7,25 @@
     <script src="/js/jquery-1.8.2.min.js"></script>
     <script type="text/javascript" src="/js/jcarousellite_1.0.1.pack.js"></script>
     <script type="text/javascript" src="/js/captify.tiny.js"></script>
-
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#yes").click(function(){
+                if ($("#yes").is(":checked")){
+                    document.getElementById("no").checked = false;
+                    $("#contract_numder").show();
+                }
+                else{
+                    $("#contract_numder").hide();
+                }
+            });
+            $("#no").click(function(){
+                if ($("#no").is(":checked")){
+                    document.getElementById("yes").checked = false;
+                    $("#contract_numder").hide();
+                }
+            });
+        });
+    </script>
     <script type="text/javascript">
         $(function() {
             $(".part").jCarouselLite({
