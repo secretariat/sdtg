@@ -7,6 +7,9 @@
     <center>
       <h3>Запрос на определение стоимости финансовой гарантии от <%= @zapros.created_at %></h3>
     </center>
+    <%if !@zapros.dog_num.blank? %>
+        <b>Номер договора:</b> <%= @zapros.dog_num %> от <%= @zapros.dog_date %> г.<br/>
+    <% end %>
     <b>Наименование товара:</b> <%= @zapros.naim %><br/>
     <b>Код товара:</b> <%= @zapros.code_num %>, <%= @zapros.code %><br/>
     <b>Таможенный режим:</b> <%= @zapros.tamrez %><br/>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130613200616) do
+ActiveRecord::Schema.define(:version => 20130717162255) do
 
   create_table "admins", :force => true do |t|
     t.string   "name"
@@ -152,6 +152,8 @@ ActiveRecord::Schema.define(:version => 20130613200616) do
     t.datetime "updated_at",       :null => false
     t.string   "sum_cust_payment"
     t.string   "company_name"
+    t.string   "dog_num"
+    t.datetime "dog_date"
   end
 
 end

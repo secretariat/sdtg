@@ -22,6 +22,13 @@ class ZaprosPdf < Prawn::Document
     text "Запрос на определение стоимости финансовой гарантии", :align => :center, :style => :bold
     move_down 15
     #################################################
+    if !@zapros.dog_num.blank?
+        formatted_text [ { :text =>"Номер договора: ", :style => [:bold]},
+                         { :text => "#{@zapros.dog_num} от #{@zapros.dog_date.to_s} г.",:styles => [:underline]},
+                         ]
+        move_down 5
+    end
+    #################################################
     formatted_text [ { :text =>"Наименование товара: ", :style => [:bold]},
                      { :text => "#{@zapros.naim}",:styles => [:underline]},
                      ]

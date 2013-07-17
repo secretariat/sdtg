@@ -3,7 +3,7 @@ class ZakonController < ApplicationController
   before_filter :confirm_logged_in
 
   layout 'admin'
-  
+
   def new
   	@zakon = Zakon.new
   end
@@ -14,9 +14,9 @@ class ZakonController < ApplicationController
   	flash[:notice] = "Таможенный режим создан успешно"
       redirect_to( :controller => 'zakon', :action => 'list')
     else
-      flash[:notice] = "#{@zakon.errors.full_messages.to_sentence}" 
+      flash[:notice] = "#{@zakon.errors.full_messages.to_sentence}"
       redirect_to( :controller => 'zakon', :action => 'new')
-    end   
+    end
   end
 
   def list
@@ -34,6 +34,6 @@ class ZakonController < ApplicationController
       redirect_to( :controller => 'zakon', :action => 'list')
     else
       render('edit')
-    end   
+    end
   end
 end

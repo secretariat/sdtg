@@ -172,3 +172,12 @@ en:
     send_but: "Send"
     cancel_but: "Cancel"
     req_fields: "Required fields"
+  date:
+    formats:
+      default: ""
+      long: ""
+      short: ""
+    order:
+      - :year
+      - :month
+      - :day

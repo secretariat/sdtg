@@ -172,3 +172,12 @@ ru:
     send_but: "Отправить"
     cancel_but: "Омена"
     req_fields: "поля обязательные для заполнения"
+  date:
+    formats:
+      default: ""
+      long: ""
+      short: ""
+    order:
+      - :year
+      - :month
+      - :day

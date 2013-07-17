@@ -24,5 +24,7 @@ class Zapros < ActiveRecord::Base
                     :att_file_name,
     				:dopinfo,
                     :code_num,
-                    :company_name
+                    :company_name,
+                    :dog_num,
+                    :dog_date
     end
