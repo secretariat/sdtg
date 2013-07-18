@@ -27,4 +27,11 @@ class Zapros < ActiveRecord::Base
                     :company_name,
                     :dog_num,
                     :dog_date
-    end
+
+    # validates_presence_of :naim, :message => "Поле не может быть пустым"
+    validates_presence_of :code_num, :message => "Поле не может быть пустым"
+    validates_presence_of :email, :message => "Поле не может быть пустым"
+    validates_presence_of :fio, :message => "Поле не может быть пустым"
+    validates_presence_of :rank, :message => "Поле не может быть пустым"
+    validates_presence_of :phone, :message => "Поле не может быть пустым"
+end

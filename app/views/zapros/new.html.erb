@@ -3,7 +3,7 @@
 		<fieldset >
 			<div class="row">
 				<div class="span11">
-					<%= form_for( @zapros, :url => {:action => 'create'}, :multipart => true) do |f| %>
+					<%= form_for( @zapros, :url => {:action => 'create'}, :validate => true, :multipart => true) do |f| %>
 						<div class="grid">
 							<div class="row">
 								<br>
