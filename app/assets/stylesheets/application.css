@@ -103,6 +103,7 @@ p {
 }*/
 /* DatePicker Container */
 .ui-datepicker {
+     position: relative;
      z-index: 20;
      width: 216px;
      height: auto;
@@ -118,6 +119,7 @@ p {
 /* DatePicker Table */
 .ui-datepicker table {
      width: 100%;
+     background: none repeat scroll 0 0 #FFFFFF;
      z-index: 20;
 }
 .ui-datepicker-header {
