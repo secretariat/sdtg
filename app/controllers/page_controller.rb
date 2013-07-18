@@ -1,6 +1,8 @@
 # -*- encoding : utf-8 -*-
 class PageController < ApplicationController
+
 	def index
+		session[:lang] = "ru" if session[:lang].nil?
 	end
 
 	def about
@@ -12,7 +14,7 @@ class PageController < ApplicationController
 	end
 
 	def faq
-		@faqs = Faq.where( :lang => I18n.locale )
+		@faqs = Faq.where( :lang => I18n.locale, :visible => true )
 		render :layout => 'secondary'
 	end
 

@@ -12,15 +12,22 @@ class ZaprosPdf < Prawn::Document
       :bold => "prawn_fonts/verdanab.ttf",
       :italic => "prawn_fonts/verdanai.ttf",
       :normal  => "prawn_fonts/verdana.ttf" })
-    
+
     font "Verdana", :size => 11
-    
+
     image "app/assets/images/logo.png", :width => 75, :height => 40
     text "#{Time.now}", :size => 7
-    
+
     move_down 15
     text "Запрос на определение стоимости финансовой гарантии", :align => :center, :style => :bold
     move_down 15
+    #################################################
+    if !@zapros.dog_num.blank?
+        formatted_text [ { :text =>"Номер договора: ", :style => [:bold]},
+                         { :text => "#{@zapros.dog_num} от #{@zapros.dog_date.to_s} г.",:styles => [:underline]},
+                         ]
+        move_down 5
+    end
     #################################################
     formatted_text [ { :text =>"Наименование товара: ", :style => [:bold]},
                      { :text => "#{@zapros.naim}",:styles => [:underline]},
@@ -52,13 +59,13 @@ class ZaprosPdf < Prawn::Document
                      ]
     move_down 5
     #################################################
-    formatted_text [ { :text =>"Основные еденицы имзерения:   ", :style => :bold},
+    formatted_text [ { :text =>"Основные единицы имзерения:   ", :style => :bold},
                      { :text => "#{@zapros.base_ed}",:styles => [:underline]},
                      ]
     move_down 5
 
     #################################################
-    formatted_text [ { :text =>"Дополнительные еденицы измерения: ", :style => :bold},
+    formatted_text [ { :text =>"Дополнительные единицы измерения: ", :style => :bold},
                      { :text => "#{@zapros.dop_ed}",:styles => [:underline]},
                      ]
     move_down 5
@@ -68,13 +75,18 @@ class ZaprosPdf < Prawn::Document
                      ]
     move_down 5
     #################################################
-    formatted_text [ { :text =>"За еденицу товара:   ", :style => :bold},
+    formatted_text [ { :text =>"За единицу товара:   ", :style => :bold},
                      { :text => "#{@zapros.ed}",:styles => [:underline]},
                      ]
     move_down 5
     #################################################
     formatted_text [ { :text =>"Всего:   ", :style => :bold},
                      { :text => "#{@zapros.total}",:styles => [:underline]},
+                     ]
+    move_down 5
+    #################################################
+    formatted_text [ { :text =>"Сумма таможенных платежей:   ", :style => :bold},
+                     { :text => "#{@zapros.sum_cust_payment}",:styles => [:underline]},
                      ]
     move_down 5
     #################################################
@@ -85,6 +97,11 @@ class ZaprosPdf < Prawn::Document
     #################################################
     formatted_text [ { :text =>"Частота перевозок и объемы(в месяц, в квартал):   ", :style => :bold},
                      { :text => "#{@zapros.chastota}",:styles => [:underline]},
+                     ]
+    move_down 5
+    #################################################
+    formatted_text [ { :text =>"Наименование организации:   ", :style => :bold},
+                     { :text => "#{@zapros.company_name}",:styles => [:underline]},
                      ]
     move_down 5
     #################################################

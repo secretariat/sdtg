@@ -3,11 +3,36 @@
 <head>
     <title><%= t 'index.title' %></title>
     <%= stylesheet_link_tag "application", :media => "all" %>
+    <%= javascript_include_tag "application", "rails.validations" %>
     <%= csrf_meta_tags %>
     <script src="/js/jquery-1.8.2.min.js"></script>
+    <script src="/js/jquery-ui.js"></script>
     <script type="text/javascript" src="/js/jcarousellite_1.0.1.pack.js"></script>
     <script type="text/javascript" src="/js/captify.tiny.js"></script>
-
+    <script>
+        $(function() {
+            $( "#datepicker" ).datepicker( { dateFormat: 'dd-mm-yy' } );
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#yes").click(function(){
+                if ($("#yes").is(":checked")){
+                    document.getElementById("no").checked = false;
+                    $("#contract_numder").show();
+                }
+                else{
+                    $("#contract_numder").hide();
+                }
+            });
+            $("#no").click(function(){
+                if ($("#no").is(":checked")){
+                    document.getElementById("yes").checked = false;
+                    $("#contract_numder").hide();
+                }
+            });
+        });
+    </script>
     <script type="text/javascript">
         $(function() {
             $(".part").jCarouselLite({
@@ -50,17 +75,15 @@
             <div class="row">
                 <div id="lang">
                     <div class="place-right">
-                        
                         <%= link_to "Русский", :controller => "page", :action => "set_ru" %>
                         <%= link_to "English", :controller => "page", :action => "set_en"%>
-                        
                     </div>
                 </div>
             </div>
             <div class="row">
                 <!-- <div class="span12 bg-color-orange"> -->
                     <div class="span5">
-                       <a href="/page/index"><%= image_tag "banner_up.png" ,:height =>"85"%></a>
+                       <a href="/page/index"><%= image_tag "#{t 'index.banner'}", :height =>"85"%></a>
                     </div>
                     <div class="span7" style="margin:0;">
                         <div class="row">
@@ -76,7 +99,6 @@
                                 <a class ="hrf" href="http://facebook.com/dontransg" target="_blank">
                                     <i class="b-share-icon b-share-icon_facebook"></i>
                                 </a>
-                                
                             </div>
                         </div>
                     </div>
@@ -111,7 +133,7 @@
                     <ul class="footer-submenu">
                         <li><a href="/page/presentation"><%= t 'secondary.menu.present' %></a></li><br>
                         <li><a href="/page/partners"><%= t 'secondary.menu.partners' %></a></li><br>
-                        <li><a href="/page/represent"><%= t 'secondary.menu.represent' %></a></li><br>
+                        <!-- <li><a href="/page/represent"><%#= t 'secondary.menu.represent' %></a></li><br> -->
                         <li><a href="/page/become_partner"><%= t 'secondary.menu.bec_part' %></a></li><br>
                     </ul>
                 </li>

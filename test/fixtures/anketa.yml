@@ -1,23 +1,23 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  quest_1: 1
-  quest_2: 1
-  quest_3: 1
-  quest_4: 1
-  quest_5: 1
-  wishes: MyText
-  pib: MyString
-  uaddr: MyString
-  contacts: MyString
+# one:
+#   quest_1: 1
+#   quest_2: 1
+#   quest_3: 1
+#   quest_4: 1
+#   quest_5: 1
+#   wishes: MyText
+#   pib: MyString
+#   uaddr: MyString
+#   contacts: MyString
 
-two:
-  quest_1: 1
-  quest_2: 1
-  quest_3: 1
-  quest_4: 1
-  quest_5: 1
-  wishes: MyText
-  pib: MyString
-  uaddr: MyString
-  contacts: MyString
+# two:
+#   quest_1: 1
+#   quest_2: 1
+#   quest_3: 1
+#   quest_4: 1
+#   quest_5: 1
+#   wishes: MyText
+#   pib: MyString
+#   uaddr: MyString
+#   contacts: MyString

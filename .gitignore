@@ -16,3 +16,6 @@
 
 # Ignore all uploaded files
 /public/system
+
+# Ignore database config files
+/config/database.yml
