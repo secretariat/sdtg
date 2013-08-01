@@ -154,6 +154,7 @@ en:
     type_tran: "Vehicle type"
     kol_tov: "Quantity of goods"
     basic: "Вasic units of measurement (kg, ton, piece, etc.)"
+    weight: "kg"
     addit: "Additional units of measurement"
     alcoh: "For alcohol - number of bottles, volume."
     auto: "For vehicles - brand, release date, engine size."

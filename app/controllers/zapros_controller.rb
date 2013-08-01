@@ -10,6 +10,7 @@ class ZaprosController < ApplicationController
 		@code = Code.where( :lang => session[:lang] )
 		@tr = Tr.where( :lang => session[:lang] )
 		@transp = Transp.where( :lang => session[:lang] )
+		@edizms = Edizm.where( :lang => session[:lang] )
 		@zapros = Zapros.new
 	end
 

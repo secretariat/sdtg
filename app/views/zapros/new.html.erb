@@ -69,28 +69,33 @@
 							<div class="row">
 								<div class="span3"><h5><%= t 'zapros.type_tran' %>*:</h5></div>
 								<div class="input-control select span5">
-							 		<%#= f.select( :typetran, Transp.where(:lang => session[:lang]).collect{ |u| [u.name] }, :class => "input-control select")%>
 							 		<%= f.select( :typetran, @transp.collect{ |u| [u.name] }, :class => "input-control select")%>
 							 	</div>
 						 	</div>
 
 							<div class="row">
-								<div class="span5"><h5><%= t 'zapros.kol_tov' %></h5></div>
+								<div class="span5"><h5><%= t 'zapros.kol_tov' %>*:</h5></div>
 								<div class="input-control text span3">
 							 		<%= f.text_field :koltov %>
 							 	</div>
 						 	</div>
 						 	<div class="row">
 								<div class="span5">1) <%= t 'zapros.basic' %>:</h4></div>
-								<div class="input-control text span3">
+								<div class="input-control text span3" style="width: 160px;">
 							 		<%= f.text_field :base_ed %>
+							 	</div>
+								<div class="input-control select span1">
+							 		<%= f.select :base_ed_name, { "кг" => "кг" }, :height => "5" %>
 							 	</div>
 						 	</div>
 
 							<div class="row">
 								<div class="span5">2) <%= t 'zapros.addit' %>:</div>
-								<div class="input-control text span3">
+								<div class="input-control text span3" style="width: 160px;">
 							 		<%= f.text_field :dop_ed %>
+							 	</div>
+								<div class="input-control select span1", style="height:10px;margin: 0;">
+							 		<%= f.select( :dop_ed_name, @edizms.collect{ |u| [u.name] } )%>
 							 	</div>
 						 	</div>
 
@@ -103,25 +108,25 @@
 							</div>
 							<div class="row">
 								<div class="span3"><h5><%= t 'zapros.price' %>*:</h5></div>
-								<div class="input-control select span2">
+								<div class="input-control select span3">
 							 		<%= f.select(:stoim, Currency.where(:lang => session[:lang]).collect{ |u| [u.name] }, :class => "input-control select")%>
 							 	</div>
 						  </div>
 						 	<div class="row">
 							 	<div class="span3">1) <%= t 'zapros.price_per_one' %>:</div>
-							 	<div class="input-control text span2">
+							 	<div class="input-control text span3">
 							 		<%= f.text_field :ed %>
 							 	</div>
 						 	</div>
 						 	<div class="row">
 							 	<div class="span3">2) <%= t 'zapros.price_all' %>:</div>
-							 	<div class="input-control text span2">
+							 	<div class="input-control text span3">
 							 		<%= f.text_field :total %>
 							 	</div>
 						 	</div>
 						 	<div class="row">
-							 	<div class="span3"><%= t 'zapros.sum_cust_payment' %>*:</div>
-							 	<div class="input-control text span2">
+							 	<div class="span3"><%= t 'zapros.sum_cust_payment' %>:</div>
+							 	<div class="input-control text span3">
 							 		<%= f.text_field :sum_cust_payment %>
 							 	</div>
 						 	</div>

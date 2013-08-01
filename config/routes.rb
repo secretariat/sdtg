@@ -73,7 +73,7 @@ Sdtg::Application.routes.draw do
 
 
   root :to => 'page#index'
-
+  resources :edizms
   resources :admin, only: [ :index, :list, :new, :create, :destroy]
   resources :faq, only: [ :index, :list, :new, :create, :destroy]
   resources :code, only: [ :index, :list, :new, :create, :destroy]
