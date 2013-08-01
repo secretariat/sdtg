@@ -1,5 +1,6 @@
 body {
     background-color: #fff;
+    height: 100%;
 }
 
 .top-shadow {
@@ -8,8 +9,8 @@ body {
     position: relative;
 }
 
-.page-footer {
-    /*background: url("/assets/footer.gif") repeat-x scroll left top transparent;*/
+.page-footer .push {
+height: 4em;
 background: #1e7145; /* Old browsers */
 background: -moz-linear-gradient(top,  #1e7145 0%, #80af92 38%, #ffffff 100%); /* FF3.6+ */
 background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1e7145), color-stop(38%,#80af92), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */

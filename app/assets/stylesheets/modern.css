@@ -622,7 +622,7 @@ button.big,.button.big,.tool-button.big{min-height:30px;height:30px;font-size:12
 .input-control > input[type=text],.input-control > input[type=email],.input-control > input[type=url],.input-control > input[type=phone],.input-control > input[type=password],.input-control > select,.input-control > textarea{border:2px #bababa solid;position:relative;background-color:#fff;outline:0;margin-right:32px;width:100%;padding:4px 32px 6px 5px;}
 .input-control > input[type=text]:disabled,.input-control > input[type=email]:disabled,.input-control > input[type=url]:disabled,.input-control > input[type=phone]:disabled,.input-control > input[type=password]:disabled,.input-control > select:disabled,.input-control > textarea:disabled{background-color:#eaeaea;}
 .input-control > input[type=text]:focus,.input-control > input[type=email]:focus,.input-control > input[type=url]:focus,.input-control > input[type=phone]:focus,.input-control > input[type=password]:focus,.input-control > select:focus,.input-control > textarea:focus{border-color:#000;}
-.input-control > select{padding-right:5px;}
+.input-control > select{padding-right:5px;height:32px;}
 .input-control > textarea{padding-right:5px;min-height:100px;}
 .input-control{margin-right:0;margin-bottom:10px;position:relative;}
 .input-control.text .helper,.input-control.password .helper{background:#fff;right:3px;top:2px;width:26px;height:26px;cursor:pointer;color:#000;position:absolute;}
