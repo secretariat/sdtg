@@ -45,114 +45,17 @@
     </script>
 </head>
 <body class="modern-ui bloc">
-    <div class="page">
-        <div class="grid" style="margin: 0;">
-            <div class="row">
-                <div class="row">
-                    <div id="lang">
-                        <div class="place-right">
-                            <%= link_to "Русский", :controller => "page", :action => "set_ru" %>
-                            <%= link_to "English", :controller => "page", :action => "set_en"%>
-                        </div>
-                    </div>
-                </div>
-                <!-- <div class="span12"> -->
-                    <div class="span5">
-                       <a href="/page/index"><%= image_tag "#{t 'index.banner'}", :height =>"85"%></a>
-                    </div>
-                    <div class="span7"  style="margin:0;">
-                        <div class="row">
-                            <div class="place-right">
-                                <%= t 'index.adress' %>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="place-right">
-                                <i class="icon-contact"></i>+38 044 500 92 68<br>
-                                <i class="icon-documents-1"></i>+38 044 581 08 68<br>
-                                <i class="icon-vibrate-1"></i>+38 067 332 10 40<br>
-                                <a class ="hrf" href="http://facebook.com/dontransg" target="_blank"><i class="b-share-icon b-share-icon_facebook"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                <!-- </div> -->
-            </div>
-        </div>
-        <div class="navigation-bar">
-            <div class="navigation-bar-inner" style="padding: 5px 0px 2px; margin: auto;">
-                   <a href="/page/index"><%= image_tag "globe_w3.png", :style => "padding: 5px; height: 40px;width: 45px;float: left;"%></a>
-                <ul style="overflow: visible;">
-                    <li><a href="/page/about"><%= t 'index.menu.partners' %></a></li>
-                    <li><a href="/page/services"><%= t 'index.menu.services' %></a></li>
-                    <li><a href="/page/dopinfo"><%= t 'index.menu.addinfo' %></a></li>
-                    <li><a href="/page/contacts"><%= t 'index.menu.contacts' %></a></li>
-                    <li class="place-right"><a href="/page/partners_login" style="padding:5px;" class="fg-color-orange"><%= t 'index.menu.part_zone' %></a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-<div class="page secondary with-sidebar">
-    <div style="display: none; position: fixed; height: 100px; width: 100px; padding: 10px; z-index: 10000;" class="bottom-right bg-color-darken fg-color-white">
-    </div>
-    <%= yield %>
-</div>
+    <div class="wrapper">
+        <%=render "shared/header"%>
 
-<div class="page-footer" >
-    <br/>
-    <div class="row">
-        <div class="span12" style="margin:auto;">
-           <ul class="footer-menu">
-                <li><b><%= t 'index.menu.partners' %></b>
-                    <ul class="footer-submenu">
-                        <li><a href="/page/presentation"><%= t 'secondary.menu.present' %></a></li><br>
-                        <li><a href="/page/partners"><%= t 'secondary.menu.partners' %></a></li><br>
-                        <!-- <li><a href="/page/represent"><%#= t 'secondary.menu.represent' %></a></li><br> -->
-                        <li><a href="/page/become_partner"><%= t 'secondary.menu.bec_part' %></a></li><br>
-                    </ul>
-                </li>
-                <li style="margin-left: 40px;"><b><%= t 'service.title' %></b>
-                    <ul class="footer-submenu">
-                        <li><a href="/page/singleg"><%= t 'service.menu.single' %></a></li><br>
-                        <li><a href="/page/multig"><%= t 'service.menu.multi' %></a></li><br>
-                        <li><a href="/page/geng"><%= t 'service.menu.general' %></a></li><br>
-                    </ul>
-                </li>
-                <li style="margin-left: 40px;"><b><%= t 'addinfo.title' %></b>
-                    <ul class="footer-submenu">
-                        <li><%= link_to "#{t 'addinfo.menu.faq'}", :controller => "page", :action => 'faq' %></li><br>
-                        <li><%= link_to "#{t 'addinfo.menu.rules'}", "/page/zakon"%></li><br>
-                        <li><%= link_to "#{t 'addinfo.menu.repr'}", "/page/represent"%></li><br>
-                        <li><%= link_to "#{t 'addinfo.menu.ask'}", "/ask/new"%></li><br>
-                    </ul>
-                </li>
-                <li class="place-right fg-color-orange">
-                    <a href="/page/partners_login" style="font-weight: bold;">
-                        <%= t 'part_zone.title' %>
-                    </a>
-                </li>
-            </ul>
-            <br><br><br><br><br><br>
-            <hr width="100%">
-            <div class="place-left">
-                <p class="tertiary-secondary-text"><%= t 'index.footer_title' %>&copy; </b>2012</p>
-            </div>
-            <div class="place-right">
-                <p class="tertiary-secondary-text" align="left"><b><u><%= t 'index.footer_contacts' %>:</u></b>
-                    <br><%= t 'index.sub_adress' %><br>
-                    <%= t 'index.adress' %><br>
-                    <span class="icon-contact"></span>+38 044 500 92 68<br>
-                    <span class="icon-documents-1"></span>+38 044 581 08 68<br>
-                    <span class="icon-vibrate-1"></span>+38 067 332 10 40<br>
-                    <span class="icon-mail"></span><a href="mailto:dtg@dtg.kiev.ua" class="tertiary-secondary-text">dtg@dtg.kiev.ua</a><br>
-                    <a class ="hrf" href="http://facebook.com/dontransg" target="_blank"><i class="b-share-icon b-share-icon_facebook"></i></a>
-                    <br>
-                </p>
-            </div>
+        <div class="page secondary with-sidebar">
+            <%= yield %>
         </div>
+        <div class="push"></div>
     </div>
-</div>
-<script src="/js/dropdown.js"></script>
-<script src="/js/carousel.js"></script>
-<!-- <script src="/js/accordion.js"></script> -->
+    <%=render "shared/footer"%>
+
+    <script src="/js/dropdown.js"></script>
+    <script src="/js/carousel.js"></script>
 </body>
 </html>
