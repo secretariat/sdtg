@@ -5,27 +5,25 @@
 </div>
 <div class="page-region">
     <div class="page-region-content">
-        <div class="grid">
-            <h2><%= t 'addinfo.title' %></h2>
-            <div class="row">
-                <div class="span4">
-                    <p align="justify">
-                        <%= t 'addinfo.text' %>
-                    </p>
-                </div>
-                <div class="span1">
-                    <%= link_to (image_tag "railroad.jpg"), "/images/railroad_big.jpg", :target => "_blank" %>
-                    <%= link_to (image_tag "tpp.jpg"), "/images/autoroad_big.jpg", :target => "_blank" %>
-                </div>
+        <h2><%= t 'addinfo.title' %></h2>
+        <div class="row">
+            <div class="span4">
+                <p align="justify">
+                    <%= t 'addinfo.text' %>
+                </p>
             </div>
+            <div class="span1">
+                <%= link_to (image_tag "railroad.jpg"), "/images/railroad_big.jpg", :target => "_blank" %>
+                <%= link_to (image_tag "tpp.jpg"), "/images/autoroad_big.jpg", :target => "_blank" %>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <center>
+            <%= link_to "#{t 'addinfo.ask_q'}",
+                {:controller => "ask", :action => "new"}, :class=>"button big bg-color-blueDark", :style => "height: 10px; color: white;" %>
+            </center>
             <br>
-            <div class="row">
-                <center>
-                <%= link_to "#{t 'addinfo.ask_q'}",
-                    {:controller => "ask", :action => "new"}, :class=>"button big bg-color-blueDark", :style => "height: 10px; color: white;" %>
-                </center>
-                <br>
-            </div>
         </div>
     </div>
 </div>

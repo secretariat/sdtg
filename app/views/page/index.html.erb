@@ -1,163 +1,154 @@
-<br>
-<div class="page secondary">
-        <div>
-            <%= image_tag "banner2.jpg", :style =>"padding-bottom:15px;" %>
-        </div>
-        <div class="page-region">
-            <div class="grid">
-                <div class="row">
-                    <div data-param-duration="300" data-param-markers="no" data-role="carousel" class="carousel">
-                            <div class="slides" style="height:80px;">
-                                <div id="slide1" class="slide" style="left: 0px; padding " >
-                                    <p class="bg-color-blueDark padding20 fg-color-white" align="center">
-                                        <%= t 'index.slider1' %>
-                                    </p>
-                                </div>
-
-                                <div id="slide2" class="slide" style="display: block; left: -580px;">
-                                    <p class="bg-color-blueDark padding20 fg-color-white" align="center">
-                                       <%= t 'index.slider2' %>
-                                    </p>
-                                </div>
-
-                                <div id="slide3" class="slide" style="display: block; left: -580px;">
-                                    <p class="bg-color-blueDark padding20 fg-color-white" align="center">
-                                        <%= t 'index.slider3' %>
-                                    </p>
-                                </div>
-
-                                <div id="slide4" class="slide" style="display: block; left: -580px;">
-                                    <p class="bg-color-blueDark padding20 fg-color-white" align="center">
-                                        <%= t 'index.slider4' %>
-                                    </p>
-                                </div>
-                            </div>
-                    </div>
+<div class="row">
+    <%= image_tag "banner2.jpg", :style =>"padding-bottom:15px;" %>
+</div>
+<div class="row">
+    <div data-param-duration="300" data-param-markers="no" data-role="carousel" class="carousel">
+            <div class="slides" style="height:80px;">
+                <div id="slide1" class="slide" style="left: 0px; padding " >
+                    <p class="bg-color-blueDark padding20 fg-color-white" align="center">
+                        <%= t 'index.slider1' %>
+                    </p>
                 </div>
 
-                <div class="row">
-                    <div class="span6">
-                        <ul class="replies" style="margin-left:0">
-                            <li class="bg-color-greenDark"  style="width:100%; height:100px;">
-                                <%= image_tag "armor.png" %>
-                                <div class="reply">
-                                    <div class="long-text">
-                                        <%= @test %>
-                                        <b><%= t 'index.green_block.title' %> </b>
-                                    </div>
-                                    <div class="text">
-                                        <%= t 'index.green_block.text' %>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="span6" style="margin:0;">
-                        <ul class="replies"  style="margin-left:0">
-                            <li class="bg-color-blueDark" style="width:100%; height:100px;">
-                                <%= image_tag "shield-user.png" %>
-                                <div class="reply">
-                                    <div class="long-text">
-                                        <b><%= t 'index.blue_block.title' %></b>
-                                    </div>
-                                    <div class="text"><%= t 'index.blue_block.text' %></div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
+                <div id="slide2" class="slide" style="display: block; left: -580px;">
+                    <p class="bg-color-blueDark padding20 fg-color-white" align="center">
+                       <%= t 'index.slider2' %>
+                    </p>
                 </div>
 
-                <div class="row">
-                    <div class="span6">
-                        <ul style="margin-left:0" class="accordion" data-role="accordion">
-                                <li class="active">
-                                    <a href="#" style="color: #fff;"><%= t 'index.left_block.title1' %></a>
-                                    <div align="justify">
-                                        <center><h4><%= t 'index.left_block.subtitle1' %></h4>
-                                        </center>
-                                        <%= t 'index.left_block.p1' %>
-                                        <p><%= t 'index.left_block.p2' %></p>
-                                        <p><%= t 'index.left_block.p3' %></p>
-                                        <%= link_to "#{t 'index.left_block.link_to_press'}", "/page/presentation" %>
-                                    </div>
-                                </li>
-                                <li>
-                                    <a href="#" style="color: #fff;"><%= t 'index.left_block.title2' %></a>
-                                    <div align="justify">
-                                        <p><%= t 'index.left_block.p21' %></p>
-                                        <p><%= t 'index.left_block.p22' %></p>
-                                        <p><%= t 'index.left_block.p23' %></p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <a href="#" style="color: #fff;"><%=  t 'index.left_block.title3' %></a>
-                                    <div>
-                                        <ul>
-                                            <li><%= t 'index.left_block.p31' %></li>
-                                            <li><%= t 'index.left_block.p32' %></li>
-                                            <li><%= t 'index.left_block.p33' %></li>
-                                            <li><%= t 'index.left_block.p34' %></li>
-                                            <li><%= t 'index.left_block.p35' %></li>
-                                        </ul>
-                                    </div>
-                                </li>
-                            </ul>
-                    </div>
-                    <div class="span6"  style="margin:0;" align="justify">
-                        <h3 align="center"><%= t 'index.right_block.title1' %><br/>«<%= t 'index.right_block.title2' %>»!</h3>
-                            <p><i><%= t 'index.right_block.p1' %></i></p>
-                            <p><i><%= t 'index.right_block.p2' %></i></p>
-                            <p><i><%= t 'index.right_block.p3' %></i></p>
-                            <p><i><%= t 'index.right_block.p4' %></i></p>
-                    </div>
+                <div id="slide3" class="slide" style="display: block; left: -580px;">
+                    <p class="bg-color-blueDark padding20 fg-color-white" align="center">
+                        <%= t 'index.slider3' %>
+                    </p>
                 </div>
-                <div class="row">
-                    <center>
-                        <%= link_to "#{t 'index.button'}",
-                            {:controller => "zapros", :action => "new"}, :class=>"button big bg-color-blueDark", :style => "height: 10px; color: white;" %>
-                    </center>
-                    <br>
-                </div>
-                <div class="row">
-                    <div class="span2">
-                       <h4 style="margin-top:35px;"><%= t 'index.partners_slider' %></h4>
-                    </div>
-                    <div class="span8">
-                        <div class="list">
-                            <div class="prev"><%= (image_tag "prev.png")%></div>
-                                <div class="part">
-                                    <ul>
-                                        <li>
-                                            <%= link_to( (image_tag "uta_logo.jpg"), "http://www.ukrtransagent.com.ua/", :target => "_blank" ) %>
-                                        </li>
-                                        <li>
-                                            <%= link_to( (image_tag "brok_logo.jpg"), "http://www.bbs.ua", :target => "_blank" )%>
-                                        </li>
-                                        <li>
-                                            <%= link_to( (image_tag "providna_logos.gif"), "http://www.providna.ua", :target => "_blank" )%>
-                                        </li>
-                                        <li>
-                                            <%= link_to( (image_tag "sv_logo.jpg"), "http://www.transfer-sv.md/", :target => "_blank" )%>
-                                        </li>
-                                        <li>
-                                            <%= link_to( (image_tag "red_logos.gif"), "http://www.plaske.ua", :target => "_blank" )%>
-                                        </li>
-                                        <li>
-                                            <%= link_to( (image_tag "bsss_logo.gif"), "http://www.bsss-group.com.ua/", :target => "_blank" )%>
-                                        </li>
-                                        <li>
 
-                                            <%= link_to( (image_tag "navibull_logo.gif"), "http://www.navibul.md/", :target=> "_blank" )%>
-                                        </li>
-                                        <li>
-                                            <%= link_to( (image_tag "transgarant_logos.gif"), "http://www.transgarant.com.ua/", :target => "_blank" )%>
-                                        </li>
-                                    </ul>
-                                </div>
-                            <div class="next"> <%= (image_tag "next.png")%></div>
-                        </div>
-                    </div>
+                <div id="slide4" class="slide" style="display: block; left: -580px;">
+                    <p class="bg-color-blueDark padding20 fg-color-white" align="center">
+                        <%= t 'index.slider4' %>
+                    </p>
                 </div>
             </div>
+    </div>
+</div>
+<div class="row">
+    <div class="span6">
+        <ul class="replies" style="margin-left:0">
+            <li class="bg-color-greenDark"  style="width:100%; height:100px;">
+                <%= image_tag "armor.png" %>
+                <div class="reply">
+                    <div class="long-text">
+                        <%= @test %>
+                        <b><%= t 'index.green_block.title' %> </b>
+                    </div>
+                    <div class="text">
+                        <%= t 'index.green_block.text' %>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="span6" style="margin:0;">
+        <ul class="replies"  style="margin-left:0">
+            <li class="bg-color-blueDark" style="width:100%; height:100px;">
+                <%= image_tag "shield-user.png" %>
+                <div class="reply">
+                    <div class="long-text">
+                        <b><%= t 'index.blue_block.title' %></b>
+                    </div>
+                    <div class="text"><%= t 'index.blue_block.text' %></div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="row">
+    <div class="span6">
+        <ul style="margin-left:0" class="accordion" data-role="accordion">
+                <li class="active">
+                    <a href="#" style="color: #fff;"><%= t 'index.left_block.title1' %></a>
+                    <div align="justify">
+                        <center><h4><%= t 'index.left_block.subtitle1' %></h4>
+                        </center>
+                        <%= t 'index.left_block.p1' %>
+                        <p><%= t 'index.left_block.p2' %></p>
+                        <p><%= t 'index.left_block.p3' %></p>
+                        <%= link_to "#{t 'index.left_block.link_to_press'}", "/page/presentation" %>
+                    </div>
+                </li>
+                <li>
+                    <a href="#" style="color: #fff;"><%= t 'index.left_block.title2' %></a>
+                    <div align="justify">
+                        <p><%= t 'index.left_block.p21' %></p>
+                        <p><%= t 'index.left_block.p22' %></p>
+                        <p><%= t 'index.left_block.p23' %></p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#" style="color: #fff;"><%=  t 'index.left_block.title3' %></a>
+                    <div>
+                        <ul>
+                            <li><%= t 'index.left_block.p31' %></li>
+                            <li><%= t 'index.left_block.p32' %></li>
+                            <li><%= t 'index.left_block.p33' %></li>
+                            <li><%= t 'index.left_block.p34' %></li>
+                            <li><%= t 'index.left_block.p35' %></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+    </div>
+    <div class="span6"  style="margin:0;" align="justify">
+        <h3 align="center"><%= t 'index.right_block.title1' %><br/>«<%= t 'index.right_block.title2' %>»!</h3>
+            <p><i><%= t 'index.right_block.p1' %></i></p>
+            <p><i><%= t 'index.right_block.p2' %></i></p>
+            <p><i><%= t 'index.right_block.p3' %></i></p>
+            <p><i><%= t 'index.right_block.p4' %></i></p>
+    </div>
+</div>
+<div class="row">
+    <center>
+        <%= link_to "#{t 'index.button'}",
+            {:controller => "zapros", :action => "new"}, :class=>"button big bg-color-blueDark", :style => "height: 10px; color: white;" %>
+    </center>
+    <br>
+</div>
+<div class="row">
+    <div class="span2">
+       <h4 style="margin-top:35px;"><%= t 'index.partners_slider' %></h4>
+    </div>
+    <div class="span8">
+        <div class="list">
+            <div class="prev"><%= (image_tag "prev.png")%></div>
+                <div class="part">
+                    <ul>
+                        <li>
+                            <%= link_to( (image_tag "uta_logo.jpg"), "http://www.ukrtransagent.com.ua/", :target => "_blank" ) %>
+                        </li>
+                        <li>
+                            <%= link_to( (image_tag "brok_logo.jpg"), "http://www.bbs.ua", :target => "_blank" )%>
+                        </li>
+                        <li>
+                            <%= link_to( (image_tag "providna_logos.gif"), "http://www.providna.ua", :target => "_blank" )%>
+                        </li>
+                        <li>
+                            <%= link_to( (image_tag "sv_logo.jpg"), "http://www.transfer-sv.md/", :target => "_blank" )%>
+                        </li>
+                        <li>
+                            <%= link_to( (image_tag "red_logos.gif"), "http://www.plaske.ua", :target => "_blank" )%>
+                        </li>
+                        <li>
+                            <%= link_to( (image_tag "bsss_logo.gif"), "http://www.bsss-group.com.ua/", :target => "_blank" )%>
+                        </li>
+                        <li>
+
+                            <%= link_to( (image_tag "navibull_logo.gif"), "http://www.navibul.md/", :target=> "_blank" )%>
+                        </li>
+                        <li>
+                            <%= link_to( (image_tag "transgarant_logos.gif"), "http://www.transgarant.com.ua/", :target => "_blank" )%>
+                        </li>
+                    </ul>
+                </div>
+            <div class="next"> <%= (image_tag "next.png")%></div>
         </div>
+    </div>
 </div>

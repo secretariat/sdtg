@@ -8,20 +8,6 @@ body {
     padding-top: 21px;
     position: relative;
 }
-
-.page-footer .push {
-height: 4em;
-background: #1e7145; /* Old browsers */
-background: -moz-linear-gradient(top,  #1e7145 0%, #80af92 38%, #ffffff 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1e7145), color-stop(38%,#80af92), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top,  #1e7145 0%,#80af92 38%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top,  #1e7145 0%,#80af92 38%,#ffffff 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top,  #1e7145 0%,#80af92 38%,#ffffff 100%); /* IE10+ */
-background: linear-gradient(to bottom,  #1e7145 0%,#80af92 38%,#ffffff 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e7145', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
-
-}
-
 .hr {
   -moz-border-bottom-colors: none;
   -moz-border-image: none;
@@ -34,23 +20,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e7145', end
   margin: 18px 0;
 }
 
-.bloc {
-background: #c6e8ff; /* Old browsers */
-background: -moz-linear-gradient(top,  #c6e8ff 0%, #c6e8ff 12%, #ffffff 72%, #f9fdff 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c6e8ff), color-stop(12%,#c6e8ff), color-stop(72%,#ffffff), color-stop(100%,#f9fdff)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top,  #c6e8ff 0%,#c6e8ff 12%,#ffffff 72%,#f9fdff 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top,  #c6e8ff 0%,#c6e8ff 12%,#ffffff 72%,#f9fdff 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top,  #c6e8ff 0%,#c6e8ff 12%,#ffffff 72%,#f9fdff 100%); /* IE10+ */
-background: linear-gradient(to bottom,  #c6e8ff 0%,#c6e8ff 12%,#ffffff 72%,#f9fdff 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c6e8ff', endColorstr='#f9fdff',GradientType=0 ); /* IE6-9 */
-
-
-}
-.page {
-    width: 940px ;
-    margin: auto;
-    /*background-color: #fff;*/
-}
 .browsers-icons img {
     float: left;
     margin-right: 20px;
@@ -76,7 +45,7 @@ ul.footer-submenu {
 
 ul.footer-submenu li a {
  float:none;
- color: rgba(0, 0, 0, 0.65);
+ color: #FFF;
  font-size: 12px;
  line-height: 10px;
 }
