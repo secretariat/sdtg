@@ -66,7 +66,7 @@ class ZaprosPdf < Prawn::Document
 
     #################################################
     formatted_text [ { :text =>"Дополнительные единицы измерения: ", :style => :bold},
-                     { :text => "#{@zapros.dop_ed} #{@zapros.base_ed_name}",:styles => [:underline]},
+                     { :text => "#{@zapros.dop_ed} #{@zapros.dop_ed_name}",:styles => [:underline]},
                      ]
     move_down 5
     #################################################
