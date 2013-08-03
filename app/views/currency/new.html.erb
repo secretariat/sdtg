@@ -12,11 +12,13 @@
 					<br/>
 					<center>
 						<%= form_for( @currency, :url => {:action => 'create'} ) do |f| %>
-							<div class="input-control text span4">
+							<div class="input-control text span4 offset2">
 						 		<%= f.text_field :name %>
 						 	</div>
-						 	<br/>
+						 	
 						 	<%= f.select :lang, { "RU" => "ru", "EN" => "en"} %>
+					 		<br/>
+					 		<br/>
 					 		<br/>
 					 		<br/>
 							<%= submit_tag "Создать", class: "default" %>

@@ -12,11 +12,12 @@
 					<br/>
 					<center>
 						<%= form_for( @transport, :url => {:action => 'update', :id => @transport.id} ) do |f| %>
-							<div class="input-control text span4">
+							<div class="input-control text span4 offset2">
 						 		<%= f.text_field :name %>
 						 	</div>
-						 	<br/>
 						 	<%= f.select :lang, { "RU" => "ru", "EN" => "en"} %>
+					 		<br/>
+					 		<br/>
 					 		<br/>
 					 		<br/>
 							<%= submit_tag "Сохранить", class: "default" %>
