@@ -1,0 +1,45 @@
+<div class="row">
+    <div id="lang">
+        <div class="place-right">
+            <%= link_to "Русский", :controller => "page", :action => "set_ru" %>
+            <%= link_to "English", :controller => "page", :action => "set_en"%>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <!-- <div class="span12 bg-color-orange"> -->
+        <div class="span5">
+           <a href="/page/index"><%= image_tag "#{t 'index.banner'}", :height =>"85"%></a>
+        </div>
+        <div class="span7" style="margin:0;">
+            <div class="row">
+                <div class="place-right">
+                    <%= t 'index.adress' %>
+                </div>
+            </div>
+            <div class="row">
+                <div class="place-right">
+                    <i class="icon-contact"></i>+38 044 500 92 68<br>
+                    <i class="icon-documents-1"></i>+38 044 581 08 68<br>
+                    <i class="icon-vibrate-1"></i>+38 067 332 10 40<br>
+                    <a class ="hrf" href="http://facebook.com/dontransg" target="_blank">
+                        <i class="b-share-icon b-share-icon_facebook"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    <!-- </div> -->
+</div>
+<div class="navigation-bar">
+    <div class="navigation-bar-inner" style="padding: 5px 0px 2px; margin: auto;">
+           <a href="/page/index"><%= image_tag "globe_w3.png", :style => "padding: 5px; height: 40px;width: 45px;float: left;"%></a>
+        <ul style="overflow: visible;">
+            <li><a href="/page/about"><%= t 'index.menu.partners' %></a></li>
+            <li><a href="/page/services"><%= t 'index.menu.services' %></a></li>
+            <li><a href="/page/dopinfo"><%= t 'index.menu.addinfo' %></a></li>
+            <li><a href="/page/contacts"><%= t 'index.menu.contacts' %></a></li>
+            <li class="place-right"><a href="/page/partners_login" style="padding:5px;" class="fg-color-orange"><%= t 'index.menu.part_zone' %></a></li>
+        </ul>
+
+    </div>
+</div>
