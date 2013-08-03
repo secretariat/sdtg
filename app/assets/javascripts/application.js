@@ -15,3 +15,14 @@
 //= require rails.validations
 //= require_tree .
 
+jQuery(function() {
+  return $('form').on('change', $('select[id*=zapros_stoim]'), function(event) {
+    if ($('select[id*=zapros_stoim]').val() === "другая валюта") {
+      $('input[id*=zapros_another_currency]').show();
+      // return $('label[for*=zayavka_]').show();
+    } else {
+      $('input[id*=zapros_another_currency]').hide();
+      // return $('label[for*=zayavka_]').hide();
+    }
+  });
+});

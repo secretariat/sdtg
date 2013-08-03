@@ -17,7 +17,7 @@
     <b>Количество товара:</b> <%= @zapros.koltov %><br/>
     <b>основные единицы измерения:</b> <%= @zapros.base_ed %> <%= @zapros.base_ed_name %><br/>
     <b>дополнительные единицы измерения:</b> <%= @zapros.dop_ed %> <%= @zapros.dop_ed_name %> <br/>
-    <b>Стоимость товара:</b> <%= @zapros.stoim %><br/>
+    <b>Стоимость товара:</b> <%= @zapros.stoim %> <%= @zapros.another_currency if !@zapros.another_currency.blank?%><br/>
     <b>за единицу товара:</b> <%= @zapros.dop_ed %><br/>
     <b>всего:</b> <%= @zapros.total %><br/>
     <b>Сумма таможенных платежей:</b> <%= @zapros.sum_cust_payment %><br/>

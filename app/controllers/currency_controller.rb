@@ -2,9 +2,9 @@
 
 class CurrencyController < ApplicationController
 	before_filter :confirm_logged_in
-	
+
   layout 'admin'
-  
+
   def new
   	@currency = Currency.new
   end
@@ -15,9 +15,9 @@ class CurrencyController < ApplicationController
   	flash[:notice] = "Таможенный режим создан успешно"
       redirect_to( :controller => 'currency', :action => 'list')
     else
-      flash[:notice] = "#{@currency.errors.full_messages.to_sentence}" 
+      flash[:notice] = "#{@currency.errors.full_messages.to_sentence}"
       redirect_to( :controller => 'currency', :action => 'new')
-    end   
+    end
   end
 
   def list
@@ -35,6 +35,6 @@ class CurrencyController < ApplicationController
       redirect_to( :controller => 'currency', :action => 'list')
     else
       render('edit')
-    end   
+    end
   end
 end

@@ -28,7 +28,8 @@ class Zapros < ActiveRecord::Base
                     :dog_num,
                     :dog_date,
                     :dop_ed_name,
-                    :base_ed_name
+                    :base_ed_name,
+                    :another_currency
 
     # validates_presence_of :naim, :message => "Поле не может быть пустым"
     validates_presence_of :code_num, :message => "Поле не может быть пустым"

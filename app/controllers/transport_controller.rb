@@ -2,9 +2,9 @@
 
 class TransportController < ApplicationController
   layout 'admin'
-  
+
   before_filter :confirm_logged_in
-  
+
   def new
   	@transport = Tr.new
   end
@@ -15,9 +15,9 @@ class TransportController < ApplicationController
   	flash[:notice] = "Таможенный режим создан успешно"
       redirect_to( :controller => 'transport', :action => 'list')
     else
-      flash[:notice] = "#{@transport.errors.full_messages.to_sentence}" 
+      flash[:notice] = "#{@transport.errors.full_messages.to_sentence}"
       redirect_to( :controller => 'transport', :action => 'new')
-    end   
+    end
   end
 
   def list
@@ -35,6 +35,6 @@ class TransportController < ApplicationController
       redirect_to( :controller => 'transport', :action => 'list')
     else
       render('edit')
-    end   
+    end
   end
 end

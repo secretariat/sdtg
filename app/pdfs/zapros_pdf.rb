@@ -71,7 +71,7 @@ class ZaprosPdf < Prawn::Document
     move_down 5
     #################################################
     formatted_text [ { :text =>"Стоимость товара:   ", :style => :bold},
-                     { :text => "#{@zapros.stoim}",:styles => [:underline]},
+                     { :text => "#{@zapros.stoim}, #{@zapros.another_currency}", :styles => [:underline]},
                      ]
     move_down 5
     #################################################
