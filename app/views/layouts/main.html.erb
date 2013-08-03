@@ -7,12 +7,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	
-	<% if !flash[:notice].blank? %>
-      <%= flash[:notice] %>
+  <div class="wrapper gradient">
+      <div class="grid">
+    	<% if !flash[:notice].blank? %>
+          <%= flash[:notice] %>
+      <% end %>
+      <%= yield %>
     </div>
-  <% end %>
-	<%= yield %>
-
+    <div class="push"></div>
+  </div>
 </body>
 </html>

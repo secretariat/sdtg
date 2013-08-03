@@ -10,79 +10,77 @@
 				<div class="row">
 					<div class="span11">
 						<%= form_for( @contact, :url => {:controller => 'contacts', :action => 'update', :id => @contact.id } ) do |f| %>
-							<div class="grid">
-								<!-- ############################################################# -->
-								<div class="row">
-									<div class="span3"><h5>Наименование подразделения:</h5></div>
-									<div class="input-control text span3">
-								 		<%= f.text_field :unit %>
-								 	</div>
-								</div>
-								<!-- ############################################################# -->
-								<div class="row">
-									<div class="span3"><h5>Должность:</h5></div>
-									<div class="input-control text span3">
-								 		<%= f.text_field :rank %>
-								 	</div>
-								</div>
-								<!-- ############################################################# -->
-								<div class="row">
-									<div class="span3"><h5>ФИО:</h5></div>
-									<div class="input-control text span3">
-								 		<%= f.text_field :fio %>
-								 	</div>
-								</div>
-								<!-- ############################################################# -->
-								<div class="row">
-									<div class="span3"><h5>Городской телефон 1:</h5></div>
-									<div class="input-control text span3">
-								 		<%= f.text_field :phone_g1 %>
-								 	</div>
-								</div>
-								<!-- ############################################################# -->
-								<div class="row">
-									<div class="span3"><h5>Городской телефон 2:</h5></div>
-									<div class="input-control text span3">
-								 		<%= f.text_field :phone_g2 %>
-								 	</div>
-								</div>
-								<!-- ############################################################# -->
-								<div class="row">
-									<div class="span3"><h5>Мобильный телефон 1:</h5></div>
-									<div class="input-control text span3">
-								 		<%= f.text_field :mobile1 %>
-								 	</div>
-								</div>
-								<!-- ############################################################# -->
-								<div class="row">
-									<div class="span3"><h5>Мобильный телефон 2:</h5></div>
-									<div class="input-control text span3">
-								 		<%= f.text_field :mobile2 %>
-								 	</div>
-								</div>
-								<!-- ############################################################# -->
-								<div class="row">
-									<div class="span3"><h5>Email - основной:</h5></div>
-									<div class="input-control text span3">
-								 		<%= f.text_field :email1 %>
-								 	</div>
-								</div>
-								<!-- ############################################################# -->
-								<div class="row">
-									<div class="span3"><h5>Email - дополнительный:</h5></div>
-									<div class="input-control text span3">
-								 		<%= f.text_field :email2 %>
-								 	</div>
-								</div>
-								<!-- ############################################################# -->
-								<div class="row">
-									<div class="span3"><h5>Skype:</h5></div>
-									<div class="input-control text span3">
-								 		<%= f.text_field :skype %>
-								 	</div>
-								</div>
+							<!-- ############################################################# -->
+							<div class="row">
+								<div class="span3"><h5>Наименование подразделения:</h5></div>
+								<div class="input-control text span3">
+							 		<%= f.text_field :unit %>
+							 	</div>
 							</div>
-								<!-- ############################################################# -->
+							<!-- ############################################################# -->
+							<div class="row">
+								<div class="span3"><h5>Должность:</h5></div>
+								<div class="input-control text span3">
+							 		<%= f.text_field :rank %>
+							 	</div>
+							</div>
+							<!-- ############################################################# -->
+							<div class="row">
+								<div class="span3"><h5>ФИО:</h5></div>
+								<div class="input-control text span3">
+							 		<%= f.text_field :fio %>
+							 	</div>
+							</div>
+							<!-- ############################################################# -->
+							<div class="row">
+								<div class="span3"><h5>Городской телефон 1:</h5></div>
+								<div class="input-control text span3">
+							 		<%= f.text_field :phone_g1 %>
+							 	</div>
+							</div>
+							<!-- ############################################################# -->
+							<div class="row">
+								<div class="span3"><h5>Городской телефон 2:</h5></div>
+								<div class="input-control text span3">
+							 		<%= f.text_field :phone_g2 %>
+							 	</div>
+							</div>
+							<!-- ############################################################# -->
+							<div class="row">
+								<div class="span3"><h5>Мобильный телефон 1:</h5></div>
+								<div class="input-control text span3">
+							 		<%= f.text_field :mobile1 %>
+							 	</div>
+							</div>
+							<!-- ############################################################# -->
+							<div class="row">
+								<div class="span3"><h5>Мобильный телефон 2:</h5></div>
+								<div class="input-control text span3">
+							 		<%= f.text_field :mobile2 %>
+							 	</div>
+							</div>
+							<!-- ############################################################# -->
+							<div class="row">
+								<div class="span3"><h5>Email - основной:</h5></div>
+								<div class="input-control text span3">
+							 		<%= f.text_field :email1 %>
+							 	</div>
+							</div>
+							<!-- ############################################################# -->
+							<div class="row">
+								<div class="span3"><h5>Email - дополнительный:</h5></div>
+								<div class="input-control text span3">
+							 		<%= f.text_field :email2 %>
+							 	</div>
+							</div>
+							<!-- ############################################################# -->
+							<div class="row">
+								<div class="span3"><h5>Skype:</h5></div>
+								<div class="input-control text span3">
+							 		<%= f.text_field :skype %>
+							 	</div>
+							</div>
+							<!-- ############################################################# -->
 							<%= f.select :lang, { "RU" => "ru", "EN" => "en"} %>
 							<h4><%= f.check_box(:visible) %>Опубликовать</h4>
 							<div class="place-right" style="margin-right: 70px;">

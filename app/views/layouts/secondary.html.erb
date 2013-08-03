@@ -45,16 +45,15 @@
     </script>
 </head>
 <body>
-    <div class="grid">
-        <div class="wrapper">
-        
+    <div class="wrapper gradient">
+        <div class="grid">
             <%=render "shared/header"%>
 
             <div class="page secondary with-sidebar">
             <%= yield %>
             </div>
-            <div class="push"></div>
         </div>
+        <div class="push"></div>
     </div>
     <%=render "shared/footer"%>
 

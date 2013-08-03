@@ -1,47 +1,42 @@
-<div class="page-sidebar" style="width:225px;">
-    <ul style="overflow: visible;">
-        <%= render 'shared/add_info_menu' %>
-    </ul>
-</div>
+<%= render 'shared/add_info_menu' %>
+
 <div class="page-region">
     <div class="page-region-content">
-        <div class="grid">
-            <h2><%= t 'faq.title' %></h2>
-            <% @faqs.each do |f|%>
-                <div class="row">
-                    <div class="span4">
-                        <ul class="replies">
-                            <li class="bg-color-blue">
-                                <div class="reply" style="margin:0px;">
-                                    <div class="date"><%= f.created_at %></div>
-                                    <div class="author"><%= t 'faq.quest' %></div>
-                                    <div class="text"><%= f.quest %></div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="place-right">
-                        <ul class="replies">
-                            <li class="bg-color-blueDark">
-                                <b class="sticker sticker-left sticker-color-blueDark"></b>
-                                <div class="reply" style="margin:0px;">
-                                    <div class="date"><%= f.updated_at %></div>
-                                    <div class="author"><%= t 'faq.answ' %></div>
-                                    <div class="text"><%= f.answer%></div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            <% end %>
-            <br>
+        <h2><%= t 'faq.title' %></h2>
+        <% @faqs.each do |f|%>
             <div class="row">
-                <center>
-                <%= link_to "#{t 'addinfo.ask_q'}",
-                    {:controller => "ask", :action => "new"}, :class=>"button big bg-color-blueDark", :style => "height: 10px; color: white;" %>
-                </center>
-                <br>
+                <div class="span4">
+                    <ul class="replies">
+                        <li class="bg-color-blue">
+                            <div class="reply" style="margin:0px;">
+                                <div class="date"><%= f.created_at %></div>
+                                <div class="author"><%= t 'faq.quest' %></div>
+                                <div class="text"><%= f.quest %></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="place-right">
+                    <ul class="replies">
+                        <li class="bg-color-blueDark">
+                            <b class="sticker sticker-left sticker-color-blueDark"></b>
+                            <div class="reply" style="margin:0px;">
+                                <div class="date"><%= f.updated_at %></div>
+                                <div class="author"><%= t 'faq.answ' %></div>
+                                <div class="text"><%= f.answer%></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
+        <% end %>
+        <br>
+        <div class="row">
+            <center>
+            <%= link_to "#{t 'addinfo.ask_q'}",
+                {:controller => "ask", :action => "new"}, :class=>"button big bg-color-blueDark", :style => "height: 10px; color: white;" %>
+            </center>
+            <br>
         </div>
     </div>
 </div>

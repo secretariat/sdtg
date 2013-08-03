@@ -1,24 +1,16 @@
-<div class="page-sidebar" style="width:225px;">
-    <ul style="overflow: visible;">
-        <%= render 'shared/add_info_menu' %>
-    </ul>
-</div>
+<%= render 'shared/add_info_menu' %>
+
 <div class="page-region">
     <div class="page-region-content">
-        <div class="grid">
-            <h2><%= t 'rules.title' %></h2>
-            <div class="row">
-                <div class="span8">
-                    <% @zakon.each do |f| %>
-                    <p class="long-text" align="justify">
-                        <%= f.id %>. <%= link_to f.name, f.link, :target => "_blanc"%>
-                    </p>
-                    <% end %>
-                </div>
+        <h2><%= t 'rules.title' %></h2>
+        <div class="row">
+            <div class="span8">
+                <% @zakon.each do |f| %>
+                <p class="long-text" align="justify">
+                    <%= f.id %>. <%= link_to f.name, f.link, :target => "_blanc"%>
+                </p>
+                <% end %>
             </div>
-            <br>
-            <br>
-            <br>
         </div>
     </div>
 </div>
