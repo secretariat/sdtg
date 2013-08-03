@@ -20,8 +20,8 @@ class ZaprosController < ApplicationController
 			email_to = @zapros.dog_num.blank? ? "garant@dtg.kiev.ua" : "support@dtg.kiev.ua"
 			fname = @zapros.att_file_name
 			fpath = @zapros.att.url
-			# ZaprosMailer.delay.send_zapros( @zapros, fpath, fname, email_to )
-			ZaprosMailer.send_zapros( @zapros, fpath, fname, email_to ).deliver
+			ZaprosMailer.delay.send_zapros( @zapros, fpath, fname, email_to )
+			# ZaprosMailer.send_zapros( @zapros, fpath, fname, email_to ).deliver
 			flash[:notice] = "Запрос отправлен успешно"
 			redirect_to(:controller => 'page', :action => 'index')
 		else
