@@ -7,7 +7,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div class="wrapper gradient">
+  <div class="wrapper">
       <div class="grid">
     	<% if !flash[:notice].blank? %>
           <%= flash[:notice] %>
@@ -16,5 +16,6 @@
     </div>
     <div class="push"></div>
   </div>
+  <script src="/js/dropdown.js"></script>
 </body>
 </html>
