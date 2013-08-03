@@ -17,7 +17,7 @@
 
 jQuery(function() {
   return $('form').on('change', $('select[id*=zapros_stoim]'), function(event) {
-    if ($('select[id*=zapros_stoim]').val() === "другая валюта") {
+    if ($('select[id*=zapros_stoim]').val() === "другая валюта" || $('select[id*=zapros_stoim]').val() === "another currency") {
       $('input[id*=zapros_another_currency]').show();
       // return $('label[for*=zayavka_]').show();
     } else {
