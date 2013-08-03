@@ -1,28 +1,29 @@
-<div class="page secondary">
-		<fieldset>
-			<%= form_tag( :controller => 'admin', :action => 'attempt_login' ) do %>
-					<center><h2>Вход в систему</h2></center>
-					<div class="row">
-						<div class="span4" style="margin-left:270px;">
-							<div class="row">
-								<div class="span1"><h4>Логин:</h4></div>
-								<div class="input-control text span3">
-						 			<%= text_field_tag :login, params[:login]%>
-						 		</div>
-						 	</div>
-							<div class="row">
-								<div class="span1"><h4>Пароль:</h4></div>
-					 			<div class="input-control password span3">
-					 				<%= password_field_tag :hash_pass, params[:hash_pass] %>
-					 			</div>
+<div class="page">
+	</br></br></br></br></br>
+	<fieldset>
+		<%= form_tag( :controller => 'admin', :action => 'attempt_login' ) do %>
+				<center><h2>Вход в систему</h2></center>
+				<div class="row">
+					<div class="span4" style="margin-left:270px;">
+						<div class="row">
+							<div class="span1"><h4>Логин:</h4></div>
+							<div class="input-control text span3">
+					 			<%= text_field_tag :login, params[:login]%>
 					 		</div>
 					 	</div>
-					</div>
-			 		<div>
-			 			<center>
-						<%= submit_tag "Войти"%>
-					</center>
-					</div>
-			<% end %>
-		</div>
+						<div class="row">
+							<div class="span1"><h4>Пароль:</h4></div>
+				 			<div class="input-control password span3">
+				 				<%= password_field_tag :hash_pass, params[:hash_pass] %>
+				 			</div>
+				 		</div>
+				 	</div>
+				</div>
+		 		<div>
+		 			<center>
+					<%= submit_tag "Войти"%>
+				</center>
+				</div>
+		<% end %>
+	</div>
 </div>

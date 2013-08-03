@@ -3,36 +3,34 @@
 		<div class="row">
 			<center><h3>Редактирование "Нормативно-правового акта"</h3></center>
 			<fieldset>
-			<div class="span9 offset2">
-			<%= form_for( @zakon, :url => {:action => 'update', :id => @zakon.id}) do |f| %>
-			 	<div class="grid">
-					<div class="row">
-						<h5>Название:</h5>
-						<div class="span10">
-							<div class="input-control textarea">
-								<%= f.text_area :name, :rows => "2" %>
+				<div class="span9 offset2">
+					<%= form_for( @zakon, :url => {:action => 'update', :id => @zakon.id}) do |f| %>
+						<div class="row">
+							<h5>Название:</h5>
+							<div class="span10">
+								<div class="input-control textarea">
+									<%= f.text_area :name, :rows => "2" %>
+								</div>
 							</div>
 						</div>
-					</div>
-					<div class="row">
-						<h5>Ссылка:</h5>
-						<div class="span10">
-							<div class="input-control textarea">
-								<%= f.text_area :link, :rows => "5" %>
+						<div class="row">
+							<h5>Ссылка:</h5>
+							<div class="span10">
+								<div class="input-control textarea">
+									<%= f.text_area :link, :rows => "5" %>
+								</div>
 							</div>
 						</div>
-					</div>
-					<%= f.select :lang, { "RU" => "ru", "EN" => "en"} %>
-					<h4><%= f.check_box(:visible) %>Опубликовать</h4>
-					<div>
-						<center>
-							<%= submit_tag "Сохранить", class: "default" %>
-							<%= link_to "Отмена", {:controller => "zakon", :action => "list"}, :class=>"button big bg-color-blueDark", :style => "color: white;" %>
-						</center>
-					</div>
+						<%= f.select :lang, { "RU" => "ru", "EN" => "en"} %>
+						<h4><%= f.check_box(:visible) %>Опубликовать</h4>
+						<div>
+							<center>
+								<%= submit_tag "Сохранить", class: "default" %>
+								<%= link_to "Отмена", {:controller => "zakon", :action => "list"}, :class=>"button big bg-color-blueDark", :style => "color: white;" %>
+							</center>
+						</div>
+					<% end %>
 				</div>
-			<% end %>
-			</div>
 			</fieldset>
 		</div>
 	</div>

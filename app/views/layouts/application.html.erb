@@ -69,14 +69,14 @@
     </script>
 </head>
 <body>
-    <div class="grid">
-        <div class="wrapper">
-            <%#=render "shared/header"%>
+    <div class="wrapper gradient">
+        <div class="grid">
+            <%=render "shared/header"%>
             <%= yield %>
-            <div class="push"></div>
         </div>
-        <%#=render "shared/footer"%>
+        <div class="push"></div>
     </div>
+    <%=render "shared/footer"%>
     <script src="/js/dropdown.js"></script>
     <script src="/js/carousel.js"></script>
 

@@ -1,8 +1,5 @@
-<div class="page-sidebar" style="width:225px;">
-    <ul style="overflow: visible;">
-        <%= render 'shared/services_menu' %>
-    </ul>
-</div>
+<%= render 'shared/services_menu' %>
+
 <div class="page-region">
     <div class="page-region-content">
         <div class="span9">
@@ -14,21 +11,7 @@
             <p align="justify">
                 <%= t 'multig.p1' %>
             </p>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <!-- <ul>
-                <li><%#= t 'multig.pl1' %></li>
-                <li><%#= t 'multig.pl2' %></li>
-                <li><%#= t 'multig.pl3' %></li>
-                <li><%#= t 'multig.pl4' %></li>
-            </ul> -->
-            <br>
+
             <div class="row">
                 <center>
                     <%= link_to "#{t 'service.send_link'}", "#", :class=>"button big bg-color-blueDark", :style => "height: 10px; color: white;" %>

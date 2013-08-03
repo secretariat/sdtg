@@ -1,18 +1,18 @@
 <div class="page">
-  <div class="page-region-content">
+	<div class="page-region-content">
 		<div class="row">
 			<center><h3>Редактировать вопрос-ответ</h3></center>
 			<fieldset>
-			<%= form_for(:faq, :url => {:controller => 'faq', :action => 'update', :id => @faq.id }) do |f| %>
-			 	<div class="grid">
+				<%= form_for(:faq, :url => {:controller => 'faq', :action => 'update', :id => @faq.id }) do |f| %>
+				 	<div class="grid">
 						<div class="row">
-								<h5>Вопрос:</h5>
-								<div class="span10">
-									<div class="input-control textarea">
-										<%= f.text_area :quest, :rows => "2" %>
-									</div>
+							<h5>Вопрос:</h5>
+							<div class="span10">
+								<div class="input-control textarea">
+									<%= f.text_area :quest, :rows => "2" %>
 								</div>
 							</div>
+						</div>
 						<div class="row">
 							<h5>Ответ:</h5>
 							<div class="span10">
@@ -27,10 +27,8 @@
 							<%= submit_tag "Сохранить", class: "default" %>
 							<%= link_to "Отмена", {:controller => "faq", :action => "list"}, :class=>"button big bg-color-blueDark", :style => "height: 10px; color: white;" %>
 						</div>
-
 					</div>
-				</div>
-			<% end %>
+				<% end %>
 			</fieldset>
 		</div>
 	</div>

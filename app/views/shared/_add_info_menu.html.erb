@@ -1,17 +1,21 @@
-<li class="sticker sticker-color-blueDark" style="font-size:10pt;">
-    <%= link_to "#{ t 'addinfo.menu.faq'}", :controller => "page", :action => 'faq' %>
-</li>
-<li class="sticker sticker-color-green"style="font-size:10pt;">
-    <%= link_to "#{ t 'addinfo.menu.rules'}", :controller => "page", :action => 'zakon' %>
-</li>
-<% if session[:lang] == "ru" || session[:lang] == nil %>
-    <li class="sticker sticker-color-blueDark" style="font-size:10pt;">
-        <%= link_to "#{ t 'addinfo.menu.c_code'}", :controller => "page", :action => 'customs_zak' %>
-    </li>
-    <li class="sticker sticker-color-green" style="font-size:10pt;">
-        <%= link_to "Расчет таможенных платежей", :controller => "page", :action => 'cust_count' %>
-    </li>
-    <li class="sticker sticker-color-blueDark" style="font-size:10pt;">
-        <%= link_to "#{ t 'addinfo.menu.c_map'}", :controller => "page", :action => 'map' %>
-    </li>
-<% end %>
+<div class="page-sidebar" style="width:230px;">
+    <ul style="overflow: visible;">
+        <li class="sticker sticker-color-blueDark" style="font-size:10pt;">
+            <%= link_to "#{ t 'addinfo.menu.faq'}", :controller => "page", :action => 'faq' %>
+        </li>
+        <li class="sticker sticker-color-green"style="font-size:10pt;">
+            <%= link_to "#{ t 'addinfo.menu.rules'}", :controller => "page", :action => 'zakon' %>
+        </li>
+        <% if session[:lang] == "ru" || session[:lang] == nil %>
+            <li class="sticker sticker-color-blueDark" style="font-size:10pt;">
+                <%= link_to "#{ t 'addinfo.menu.c_code'}", :controller => "page", :action => 'customs_zak' %>
+            </li>
+            <li class="sticker sticker-color-green" style="font-size:10pt;">
+                <%= link_to "Расчет таможенных платежей", :controller => "page", :action => 'cust_count' %>
+            </li>
+            <li class="sticker sticker-color-blueDark" style="font-size:10pt;">
+                <%= link_to "#{ t 'addinfo.menu.c_map'}", :controller => "page", :action => 'map' %>
+            </li>
+        <% end %>
+    </ul>
+</div>
