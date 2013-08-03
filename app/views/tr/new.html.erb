@@ -10,19 +10,21 @@
 				<div class="span11">
 					<br/>
 					<br/>
-					<center>
+						<center>
 						<%= form_for( @tr, :url => {:action => 'create'} ) do |f| %>
-							<div class="input-control text span4">
+							<div class="input-control text span4 offset2">
 						 		<%= f.text_field :name %>
 						 	</div>
-						 	<br/>
+						 	
 						 	<%= f.select :lang, { "RU" => "ru", "EN" => "en"} %>
+					 		<br/>
+					 		<br/>
 					 		<br/>
 					 		<br/>
 							<%= submit_tag "Создать", class: "default" %>
               <%= link_to "Отмена", {:controller => "tr", :action => "list"}, :class=>"button big bg-color-blueDark", :style => "color: white;" %>
 						<% end  %>
-					</center>
+						</center>
 				</div>
 			</div>
 		</div>
