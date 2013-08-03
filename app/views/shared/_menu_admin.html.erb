@@ -1,0 +1,39 @@
+<div class="navigation-bar">
+		<div class="navigation-bar-inner">
+			<ul>
+				<li data-role="dropdown"><a href="#">Администраторы</a>
+					<ul class="dropdown-menu">
+						<li><%= link_to "Добавить Администратора", :controller => "admin", :action => "new" %></li>
+						<li><%#= link_to "Email для вопроса", "#" %></li>
+					</ul>		
+				</li> 
+
+				<li data-role="dropdown"><a href="#">Словари</a>
+					<ul class="dropdown-menu">
+						<li><%= link_to "Код товара", :controller => "code", :action => "list" %></li>
+						<li><%= link_to "Таможенный режим", :controller => "tr", :action => "list" %></li>
+						<li><%= link_to "Вид транспорта", :controller => "transport", :action => "list" %></li>
+						<li><%= link_to "Валюта", :controller => "currency", :action => "list" %></li>
+						<li><%= link_to "Единицы измерения", edizms_path %></li>
+					</ul>		
+				</li>
+				
+				<li data-role="dropdown"><a href="#">Контент</a>
+					<ul class="dropdown-menu">
+						<li><%= link_to "Частые вопросы", :controller => "faq", :action => "list" %></li>
+						<li><%= link_to "Нормативно-правовая база", :controller => "zakon", :action => "list" %></li>
+						<li><%= link_to "Контакты", :controller => "contacts", :action => "list" %></li>
+					</ul>		
+				</li>
+				<li><%= link_to "Просмотр сайта", "/", :target => "_blanc"  %>		
+				</li>
+				<li data-role="dropdown" class="place-right">
+					<a href="#" style="padding:5px;"><%= session[:login] %></a>
+					<ul class="dropdown-menu">
+						<li><a href="/admin/logout">Выйти</a></li>
+					</ul>		
+				</li>
+				
+			</ul>
+		</div>
+</div>
