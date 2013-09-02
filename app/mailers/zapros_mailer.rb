@@ -1,8 +1,8 @@
 # -*- encoding : utf-8 -*-
 class ZaprosMailer < ActionMailer::Base
   default to: "garant@dtg.kiev.ua"
-  # default to: "mixey.viti@bigmir.net"
 
+  helper :convert
 
   def send_zapros( zapros, fpath, fname, email_to )
     pdf = ZaprosPdf.new( zapros )

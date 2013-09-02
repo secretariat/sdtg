@@ -77,28 +77,25 @@
 					 	</div>
 
 						<div class="row">
-							<div class="span5"><h5><%= t 'zapros.kol_tov' %>*:</h5></div>
-							<div class="input-control text span3">
+							<div class="span5" style="width: 418px;"><h5><%= t 'zapros.kol_tov' %>*:</h5></div>
+							<div class="input-control text span3" style="width: 182px;">
 						 		<%= f.text_field :koltov %>
 						 	</div>
 					 	</div>
 					 	<div class="row">
 							<div class="span5">1) <%= t 'zapros.basic' %>:</h4></div>
-							<div class="input-control text span3" style="width: 160px;">
+							<div class="input-control text span3" style="width: 220px;">
 						 		<%= f.text_field :base_ed %>
 						 	</div>
-							<div class="input-control select span1">
-						 		<%= f.select :base_ed_name, { "кг" => "кг" }, :style => "height: 32px" %>
+							<div class="input-control select span1" style="width: 160px;">
+						 		<%= f.select(:dop_ed_name, @edizms.collect{ |u| [u.name] }) %>
 						 	</div>
 					 	</div>
 
 						<div class="row">
 							<div class="span5">2) <%= t 'zapros.addit' %>:</div>
-							<div class="input-control text span3" style="width: 160px;">
+							<div class="input-control text span3" style="width: 220px;">
 						 		<%= f.text_field :dop_ed %>
-						 	</div>
-							<div class="input-control select span1", style="height:10px;margin: 0;">
-						 		<%= f.select( :dop_ed_name, @edizms.collect{ |u| [u.name] } )%>
 						 	</div>
 					 	</div>
 

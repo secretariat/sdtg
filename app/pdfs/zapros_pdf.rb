@@ -6,6 +6,10 @@ class ZaprosPdf < Prawn::Document
     show
   end
 
+  def get_edizm_str( value )
+    return (value.split(/-/).size > 0) ? value.split(/-/)[0] : value
+  end
+
   def show
   	font_families.update(
     "Verdana" => {
@@ -54,19 +58,19 @@ class ZaprosPdf < Prawn::Document
     move_down 5
 
     #################################################
-    formatted_text [ { :text =>"Количество товара:   ", :style => :bold},
+    formatted_text [ { :text =>"Количество товара в основных единицах измерения (кг):   ", :style => :bold},
                      { :text => "#{@zapros.koltov}",:styles => [:underline]},
                      ]
     move_down 5
     #################################################
-    formatted_text [ { :text =>"Основные единицы имзерения:   ", :style => :bold},
-                     { :text => "#{@zapros.base_ed} #{@zapros.base_ed_name}",:styles => [:underline]},
+    formatted_text [ { :text =>"в дополнительных единицах измерения:   ", :style => :bold},
+                     { :text => "#{@zapros.base_ed} #{get_edizm_str(@zapros.dop_ed_name)}",:styles => [:underline]},
                      ]
     move_down 5
 
     #################################################
-    formatted_text [ { :text =>"Дополнительные единицы измерения: ", :style => :bold},
-                     { :text => "#{@zapros.dop_ed} #{@zapros.dop_ed_name}",:styles => [:underline]},
+    formatted_text [ { :text =>"дополнительная информация: ", :style => :bold},
+                     { :text => "#{@zapros.dop_ed}",:styles => [:underline]},
                      ]
     move_down 5
     #################################################

@@ -36,12 +36,13 @@ en:
     banner: "banner_up_eng.png"
     partners_slider: "Our partners:"
     button: "Define the price of financial guarantee"
-    adress: "16-B Moskovskij Avenue, building 5, floor 2-nd, Kyev"
+    adress: "16-B Moskovskij Avenue, building 5, floor 2-nd,"
+    header_adress: "16-B Moskovskij Avenue, building 5, floor 2-nd, Kiev"
     blue_block:
       title: "Our representatives"
       text: "at international checkpoints across the state border of Ukraine provide stand-by supply of financial guarantees in the form of a documentss"
     footer_contacts: CONTACTS
-    footer_title: "Limited partnership 'Dontransgarant & Co'"
+    footer_title: "'Dontransgarant & Co' Limited partnership"
     green_block:
       title: "Financial guarantee"
       text: "is supplied to the customs authorities of Ukraine to secure customs duties in cases, stipulated by the Customs code of Ukraine."
@@ -79,7 +80,7 @@ en:
     slider2: "We have been an independent financial intermediary authorized by the State customs service of Ukraine to supply financial guarantees in the form of a document to customs authorities of Ukraine since 2007."
     slider3: "We are pleased to offer an individual approach to each treaty partner, flexible tariff policy and stand-by services of the financial guarantees provision throughout the territory of Ukraine on the highest level."
     slider4: "Our partnership is formed on such principles as trust, responsibility and respect."
-    sub_adress: "04073, Ukraine, Kiev"
+    sub_adress: "Kiev, Ukraine, 04073"
     title: "Dontransgarant&Co Limited partnership"
   multig:
     title: "Reusable financial guarantee"
