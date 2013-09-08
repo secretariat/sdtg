@@ -109,6 +109,11 @@ class ZaprosPdf < Prawn::Document
                      ]
     move_down 5
     #################################################
+    formatted_text [ { :text =>"Kод ЕГРПОУ:   ", :style => :bold},
+                     { :text => "#{@zapros.code_edr}",:styles => [:underline]},
+                     ]
+    move_down 5
+    #################################################
     formatted_text [ { :text =>"Контактное лицо:   ", :style => :bold},
                      { :text => "#{@zapros.fio}",:styles => [:underline]},
                      ]
