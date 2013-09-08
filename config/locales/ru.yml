@@ -175,6 +175,7 @@ ru:
     send_but: "Отправить"
     cancel_but: "Омена"
     req_fields: "поля обязательные для заполнения"
+    code_edr: "Код ЕГРПОУ"
   date:
     formats:
       default: ""

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130803202220) do
+ActiveRecord::Schema.define(:version => 20130908115042) do
 
   create_table "admins", :force => true do |t|
     t.string   "name"
@@ -165,6 +165,7 @@ ActiveRecord::Schema.define(:version => 20130803202220) do
     t.string   "dop_ed_name"
     t.string   "base_ed_name"
     t.string   "another_currency"
+    t.string   "code_edr"
   end
 
 end
