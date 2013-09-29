@@ -24,5 +24,5 @@ end
 
 gem 'jquery-rails'
 
-# gem 'capistrano'
+gem 'capistrano'
 # gem 'debugger'
