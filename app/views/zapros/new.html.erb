@@ -9,7 +9,7 @@
 	<div class="page-region-content">
 		<fieldset >
 			<div class="span11">
-				<%= form_for( @zapros, :url => {:action => 'create'}, :multipart => true ) do |f| %>
+				<%= form_for( @zapros, :url => {:action => 'create'}, :validate => true, :multipart => true ) do |f| %>
 					<div class="row">
 						<br>
 							<%= image_tag "logo.png", :width => 115, :class => "logo"%>
@@ -62,7 +62,7 @@
 					 	</div>
 					</div>
 
-					<%= f.fields_for :products, :validate => true do |builder| %>
+					<%= f.fields_for :products do |builder| %>
 		 				<%= render "product_fields", :f => builder %>
 		 			<% end %>
 
