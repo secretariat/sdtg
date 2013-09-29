@@ -1,129 +1,164 @@
 <div class="page" style="background: #FFF;">
+<% if !flash[:notice].blank? %>
+	<div style="background: pink;">
+		<center>
+  		<%= flash[:notice] %>
+  	</center>
+  </div>
+<% end %>
 	<div class="page-region-content">
 		<fieldset >
-			<!-- <div class="row"> -->
-				<div class="span11">
-					<%= form_for( @zapros, :url => {:action => 'create'}, :multipart => true ) do |f| %>
-						<!-- <div class="grid"> -->
-						<div class="row">
-							<br>
-								<%= image_tag "logo.png", :width => 115, :class => "logo"%>
-								<h5 style="margin-left: 20px;"><%= Time.now %></h5>
-								<center>
-									<h2>
-										<%= t 'zapros.title1' %><br>
-										<%= t 'zapros.title2' %>
-									</h2>
-								</center>
-						</div>
+			<div class="span11">
+				<%= form_for( @zapros, :url => {:action => 'create'}, :multipart => true ) do |f| %>
+					<div class="row">
+						<br>
+							<%= image_tag "logo.png", :width => 115, :class => "logo"%>
+							<h5 style="margin-left: 20px;"><%= Time.now %></h5>
+							<center>
+								<h2>
+									<%= t 'zapros.title1' %><br>
+									<%= t 'zapros.title2' %>
+								</h2>
+							</center>
+					</div>
 
-						<div class="row">
-							<div class="span4" style="width: 238px"><h5><%= t 'zapros.contract_user' %>*:</h5></div>
-							<label class="input-control checkbox">
-								<input type="checkbox" id="yes">
-								<span class="helper">Да</span>
-							</label>
-							<label class="input-control checkbox">
-								<input type="checkbox" id="no">
-								<span class="helper">Нет</span>
-							</label>
-						</div>
+					<div class="row">
+						<div class="span4" style="width: 238px"><h5><%= t 'zapros.contract_user' %>*:</h5></div>
+						<label class="input-control checkbox">
+							<input type="checkbox" id="yes">
+							<span class="helper">Да</span>
+						</label>
+						<label class="input-control checkbox">
+							<input type="checkbox" id="no">
+							<span class="helper">Нет</span>
+						</label>
+					</div>
 
-						<div class="row" id="contract_numder" style="display: none;">
-							<div class="span3"><h5><%= t 'zapros.contract_num' %>*:</h5></div>
-							<div class="input-control text span2" style="margin-right: 20px; width: 160px;">
-						 		<%= f.text_field :dog_num %>
-						 	</div>
-						 	<div class="input-control text span1" style="width: 40px;">
-						 		<h5>от</h5>
-						 	</div>
-						 	<div class="input-control text span2" style=" width: 160px;">
-						 		<%= f.text_field :dog_date, :id =>"datepicker" %>
-						 	</div>
-						</div>
-
-						<%= f.fields_for :products, :validate => true do |builder| %>
-			 				<%= render "product_fields", :f => builder %>
-			 			<% end %>
-
-			 			<%= link_to_add_fields "Добавить", f, :products %>
-
-						<div class="row" id="goods">
-							<h5><%= t 'zapros.route' %>:</h5>
-							<div class="input-control text span10">
-						 		<%= f.text_field :path_ryhy %>
-						 	</div>
-						</div>
-
-						<div class="row">
-							<h5><%= t 'zapros.chastota' %>:</h5>
-							<div class="input-control text span10">
-						 		<%= f.text_field :chastota %>
-						 	</div>
-						</div>
-
-						<div class="row">
-							<h5><%= t 'zapros.company_name' %>:</h5>
-							<div class="input-control text span10">
-						 		<%= f.text_field :company_name %>
-						 	</div>
-						</div>
-
-					 	<div class="row">
-							<div class="span2" style="width: 150px;"><h5><%= t 'zapros.code_edr' %>*:</h5></div>
-							<div class="input-control text span3" style="margin-right: 50px;">
-						 		<%= f.text_field :code_edr %>
-						 	</div>
+					<div class="row" id="contract_numder" style="display: none;">
+						<div class="span3"><h5><%= t 'zapros.contract_num' %>*:</h5></div>
+						<div class="input-control text span2" style="margin-right: 20px; width: 160px;">
+					 		<%= f.text_field :dog_num %>
 					 	</div>
-
-				 		<div class="row">
-							<div class="span2" style="width: 150px;"><h5><%= t 'zapros.contact' %>*:</h5></div>
-							<div class="input-control text span3" style="margin-right: 50px;">
-						 		<%= f.text_field :fio %>
-						 	</div>
-						 	<div class="span1" style="width: 100px;"><h5><%= t 'zapros.rank' %>*:</h5></div>
-							<div class="input-control text span3" >
-						 		<%= f.text_field :rank %>
-						 	</div>
+					 	<div class="input-control text span1" style="width: 40px;">
+					 		<h5>от</h5>
 					 	</div>
-
-					 	<div class="row">
-							<div class="span2" style="width: 150px;"><h5><%= t 'zapros.phone' %>*:</h5></div>
-							<div class="input-control text span3" style="margin-right: 50px;">
-						 		<%= f.text_field :phone %>
-						 	</div>
-						 	<div class="span1" style="width: 100px;"><h5>Email*:</h5></div>
-							<div class="input-control text span3">
-						 		<%= f.text_field :email %>
-						 	</div>
+					 	<div class="input-control text span2" style=" width: 160px;">
+					 		<%= f.text_field :dog_date, :id =>"datepicker" %>
 					 	</div>
+					</div>
 
+					<div class="row">
+						<div class="span3"><h5><%= t 'zapros.cust_reg' %>*:</h5></div>
+
+						<div class="input-control select span5">
+					 		<%= f.select( :tamrez, @tr.collect{ |u| [u.name] }, :class => "input-control select") %>
 					 	</div>
-						<h5><%= t 'zapros.file' %></h5>
-						<%= f.file_field :att %>
-						( .doc, docx, txt, xls, xlsx, pdf, jpg )
-							<br/>
-							<br/>
-							<div class="row">
-								<h5><%= t 'zapros.addinfocomm' %>:</h5>
-								<div class="span10">
-									<div class="input-control textarea">
-										<%= f.text_area :dopinfo, :rows => "5" %>
-									</div>
+					</div>
+
+					<div class="row">
+						<div class="span3"><h5><%= t 'zapros.type_tran' %>*:</h5></div>
+						<div class="input-control select span5">
+					 		<%= f.select( :typetran, @transp.collect{ |u| [u.name] }, :class => "input-control select")%>
+					 	</div>
+					</div>
+
+					<%= f.fields_for :products, :validate => true do |builder| %>
+		 				<%= render "product_fields", :f => builder %>
+		 			<% end %>
+
+		 			<div class="row" style="align: right;">
+		 				<%= link_to_add_fields "Добавить", f, :products %>
+					</div>
+
+		 			<div class="row">
+						<ul>
+							<h4><li><%= t 'zapros.alcoh' %>.</li></h4>
+							<h4><li><%= t 'zapros.auto' %>.</li></h4>
+							<h4><li><%= t 'zapros.sigi' %>.</li></h4>
+						</ul>
+					</div>
+
+		 			<div class="row">
+					 	<div class="span3"><%= t 'zapros.sum_cust_payment' %>:</div>
+					 	<div class="input-control text span3">
+					 		<%= f.text_field :sum_cust_payment %>
+					 	</div>
+					</div>
+
+					<div class="row">
+						<h5><%= t 'zapros.route' %>:</h5>
+						<div class="input-control text span10">
+					 		<%= f.text_field :path_ryhy %>
+					 	</div>
+					</div>
+
+					<div class="row">
+						<h5><%= t 'zapros.chastota' %>:</h5>
+						<div class="input-control text span10">
+					 		<%= f.text_field :chastota %>
+					 	</div>
+					</div>
+
+					<div class="row">
+						<h5><%= t 'zapros.company_name' %>:</h5>
+						<div class="input-control text span10">
+					 		<%= f.text_field :company_name %>
+					 	</div>
+					</div>
+
+				 	<div class="row">
+						<div class="span2" style="width: 150px;"><h5><%= t 'zapros.code_edr' %>*:</h5></div>
+						<div class="input-control text span3" style="margin-right: 50px;">
+					 		<%= f.text_field :code_edr %>
+					 	</div>
+				 	</div>
+
+			 		<div class="row">
+						<div class="span2" style="width: 150px;"><h5><%= t 'zapros.contact' %>*:</h5></div>
+						<div class="input-control text span3" style="margin-right: 50px;">
+					 		<%= f.text_field :fio %>
+					 	</div>
+					 	<div class="span1" style="width: 100px;"><h5><%= t 'zapros.rank' %>*:</h5></div>
+						<div class="input-control text span3" >
+					 		<%= f.text_field :rank %>
+					 	</div>
+				 	</div>
+
+				 	<div class="row">
+						<div class="span2" style="width: 150px;"><h5><%= t 'zapros.phone' %>*:</h5></div>
+						<div class="input-control text span3" style="margin-right: 50px;">
+					 		<%= f.text_field :phone %>
+					 	</div>
+					 	<div class="span1" style="width: 100px;"><h5>Email*:</h5></div>
+						<div class="input-control text span3">
+					 		<%= f.text_field :email %>
+					 	</div>
+				 	</div>
+
+				 	</div>
+					<h5><%= t 'zapros.file' %></h5>
+					<%= f.file_field :att %>
+					( .doc, docx, txt, xls, xlsx, pdf, jpg )
+						<br/>
+						<br/>
+						<div class="row">
+							<h5><%= t 'zapros.addinfocomm' %>:</h5>
+							<div class="span10">
+								<div class="input-control textarea">
+									<%= f.text_area :dopinfo, :rows => "5" %>
 								</div>
 							</div>
-							<center>(* - <%= t 'zapros.req_fields' %>)</center>
-							<br/>
-							<br/>
+						</div>
+						<center>(* - <%= t 'zapros.req_fields' %>)</center>
+						<br/>
+						<br/>
 
-							<div class="place-right" style="margin-right: 70px;">
-								<%= submit_tag t 'zapros.send_but', class: "default" %>
-								<button><%= t 'zapros.cancel_but' %></button>
-							</div>
-						<!-- </div> -->
-					<% end  %>
-				</div>
-			<!-- </div> -->
+						<div class="place-right" style="margin-right: 70px;">
+							<%= submit_tag t 'zapros.send_but', class: "default" %>
+							<button><%= t 'zapros.cancel_but' %></button>
+						</div>
+				<% end  %>
+			</div>
 		</fieldset>
 	</div>
 </div>

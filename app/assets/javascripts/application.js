@@ -16,12 +16,12 @@
 //= require_tree .
 
 jQuery(function() {
-  return $('form').on('change', $('select[id*=zapros_stoim]'), function(event) {
-    if ($('select[id*=zapros_stoim]').val() === "другая валюта" || $('select[id*=zapros_stoim]').val() === "another currency") {
-      $('input[id*=zapros_another_currency]').show();
+  return $('form').on('change', $('select[id*=_stoim]'), function(event) {
+    if ($('select[id*=_stoim]').val() === "другая валюта" || $('select[id*=_stoim]').val() === "another currency") {
+      $('input[id*=another_currency]').show();
       // return $('label[for*=zayavka_]').show();
     } else {
-      $('input[id*=zapros_another_currency]').hide();
+      $('input[id*=another_currency]').hide();
       // return $('label[for*=zayavka_]').hide();
     }
   });

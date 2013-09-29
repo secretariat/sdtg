@@ -33,19 +33,6 @@ class ZaprosPdf < Prawn::Document
         move_down 5
     end
     #################################################
-    formatted_text [ { :text =>"Наименование товара: ", :style => [:bold]},
-                     { :text => "#{@zapros.naim}",:styles => [:underline]},
-                     ]
-    move_down 5
-
-    #################################################
-    formatted_text [ { :text =>"Код товара: ", :style => :bold},
-                     { :text => "#{@zapros.code_num},",:styles => [:underline]},
-                     { :text => "#{@zapros.code}",:styles => [:underline]},
-                     ]
-    move_down 5
-
-    #################################################
     formatted_text [ { :text =>"Таможенный режим: ", :style => :bold},
                      { :text => "#{@zapros.tamrez}",:styles => [:underline]},
                      ]
@@ -56,38 +43,56 @@ class ZaprosPdf < Prawn::Document
                      { :text => "#{@zapros.typetran}",:styles => [:underline]},
                      ]
     move_down 5
+    formatted_text [ { :text =>"_____________________________________________________________________________", :style => :bold}]
+    move_down 5
+    #################################################
+    @zapros.products.each do |pr|
+        formatted_text [ { :text =>"Наименование товара: ", :style => [:bold]},
+                         { :text => "#{pr.naim}",:styles => [:underline]},
+                         ]
+        move_down 5
 
-    #################################################
-    formatted_text [ { :text =>"Количество товара в основных единицах измерения (кг):   ", :style => :bold},
-                     { :text => "#{@zapros.koltov}",:styles => [:underline]},
-                     ]
-    move_down 5
-    #################################################
-    formatted_text [ { :text =>"в дополнительных единицах измерения:   ", :style => :bold},
-                     { :text => "#{@zapros.base_ed} #{get_edizm_str(@zapros.dop_ed_name)}",:styles => [:underline]},
-                     ]
-    move_down 5
+        #################################################
+        formatted_text [ { :text =>"Код товара: ", :style => :bold},
+                         { :text => "#{pr.code_num},",:styles => [:underline]},
+                         { :text => "#{pr.code}",:styles => [:underline]},
+                         ]
+        move_down 5
 
-    #################################################
-    formatted_text [ { :text =>"дополнительная информация: ", :style => :bold},
-                     { :text => "#{@zapros.dop_ed}",:styles => [:underline]},
-                     ]
-    move_down 5
-    #################################################
-    formatted_text [ { :text =>"Стоимость товара:   ", :style => :bold},
-                     { :text => "#{@zapros.stoim}, #{@zapros.another_currency}", :styles => [:underline]},
-                     ]
-    move_down 5
-    #################################################
-    formatted_text [ { :text =>"За единицу товара:   ", :style => :bold},
-                     { :text => "#{@zapros.ed}",:styles => [:underline]},
-                     ]
-    move_down 5
-    #################################################
-    formatted_text [ { :text =>"Всего:   ", :style => :bold},
-                     { :text => "#{@zapros.total}",:styles => [:underline]},
-                     ]
-    move_down 5
+
+        #################################################
+        formatted_text [ { :text =>"Количество товара в основных единицах измерения (кг):   ", :style => :bold},
+                         { :text => "#{pr.koltov}",:styles => [:underline]},
+                         ]
+        move_down 5
+        #################################################
+        formatted_text [ { :text =>"в дополнительных единицах измерения:   ", :style => :bold},
+                         { :text => "#{pr.base_ed} #{get_edizm_str(pr.dop_ed_name)}",:styles => [:underline]},
+                         ]
+        move_down 5
+
+        #################################################
+        formatted_text [ { :text =>"дополнительная информация: ", :style => :bold},
+                         { :text => "#{pr.dop_ed}",:styles => [:underline]},
+                         ]
+        move_down 5
+        #################################################
+        formatted_text [ { :text =>"Стоимость товара:   ", :style => :bold},
+                         { :text => "#{pr.stoim}, #{pr.another_currency}", :styles => [:underline]},
+                         ]
+        move_down 5
+        #################################################
+        formatted_text [ { :text =>"За единицу товара:   ", :style => :bold},
+                         { :text => "#{pr.ed}",:styles => [:underline]},
+                         ]
+        move_down 5
+        #################################################
+        formatted_text [ { :text =>"Всего:   ", :style => :bold},
+                         { :text => "#{@zapros.total}",:styles => [:underline]},
+                         ]
+        formatted_text [ { :text =>"_____________________________________________________________________________", :style => :bold}]
+        move_down 5
+    end
     #################################################
     formatted_text [ { :text =>"Сумма таможенных платежей:   ", :style => :bold},
                      { :text => "#{@zapros.sum_cust_payment}",:styles => [:underline]},

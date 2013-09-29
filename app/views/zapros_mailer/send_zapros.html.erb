@@ -10,21 +10,25 @@
     <%if !@zapros.dog_num.blank? %>
         <b>Номер договора:</b> <%= @zapros.dog_num %> от <%= @zapros.dog_date %> г.<br/>
     <% end %>
-    <b>Наименование товара:</b> <%= @zapros.naim %><br/>
-    <b>Код товара:</b> <%= @zapros.code_num %>, <%= @zapros.code %><br/>
     <b>Таможенный режим:</b> <%= @zapros.tamrez %><br/>
     <b>Вид транспорта:</b> <%= @zapros.typetran %><br/>
-    <b>Количество товара в основных единицах измерения (кг):</b> <%= @zapros.koltov %><br/>
-    <b>в дополнительных единицах измерения:</b> <%= @zapros.base_ed %> <%= get_edizm_str( @zapros.dop_ed_name )%><br/>
-    <b>дополнительная информация:</b> <%= @zapros.dop_ed %><br/>
-    <b>Стоимость товара:</b> <%= @zapros.stoim %> <%= @zapros.another_currency if !@zapros.another_currency.blank?%><br/>
-    <b>за единицу товара:</b> <%= @zapros.dop_ed %><br/>
-    <b>всего:</b> <%= @zapros.total %><br/>
+    ______________________________________________________________________________________<br/><br/>
+    <% @zapros.products.each do |pr| %>
+        <b>Наименование товара:</b> <%= pr.naim %><br/>
+        <b>Код товара:</b> <%= pr.code_num %>, <%= pr.code %><br/>
+        <b>Количество товара в основных единицах измерения (кг):</b> <%= pr.koltov %><br/>
+        <b>в дополнительных единицах измерения:</b> <%= pr.base_ed %> <%= get_edizm_str( pr.dop_ed_name )%><br/>
+        <b>дополнительная информация:</b> <%= pr.dop_ed %><br/>
+        <b>Стоимость товара:</b> <%= pr.stoim %> <%= pr.another_currency if !pr.another_currency.blank?%><br/>
+        <b>за единицу товара:</b> <%= pr.dop_ed %><br/>
+        <b>всего:</b> <%= pr.total %><br/>
+    ______________________________________________________________________________________<br/><br/>
+    <% end %>
     <b>Сумма таможенных платежей:</b> <%= @zapros.sum_cust_payment %><br/>
     <b>Маршрут движения (таможенный орган отправления Украины - таможенный орган назначения Украины):</b><%= @zapros.path_ryhy %><br/>
     <b>Частота перевозок и объемы(в месяц, в квартал):</b> <%= @zapros.chastota %><br/>
     <b>Наименование организации:</b><%= @zapros.company_name %><br/>
-    <b>Kод ЕГРПОУ:</b><%= @zapros.company_name %><br/>
+    <b>Kод ЕГРПОУ:</b><%= @zapros.code_edr %><br/>
     <b>Контактное лицо:</b><%= @zapros.fio %><br/>
     <b>Должность:</b><%= @zapros.rank %><br/>
     <b>Телефон:</b><%= @zapros.phone %><br/>
