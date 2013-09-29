@@ -1,4 +1,5 @@
 # -*- encoding : utf-8 -*-
+require 'capistrano/ext/multistage'
 
 set :application, "balloons"
 set :scm, :git
@@ -27,7 +28,7 @@ ssh_options[:keys] = ["#{ENV['HOME']}/install/ruby/amazon/vps.pem"]
 set :stages, ["staging", "production"]
 set :default_stage, "production"
 
-after "deploy", "deploy:bundle"
+after "deploy:update_code","deploy:bundle"
 after "deploy:bundle", "deploy:assets"
 after "deploy:assets", "deploy:migrations"
 after "deploy:migrations", "deploy:restart"
