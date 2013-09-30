@@ -1,9 +1,12 @@
 # -*- encoding : utf-8 -*-
 require 'capistrano/ext/multistage'
+require "bundler/capistrano"
 
-set :application, "balloons"
+set :application, "sdtg"
 set :scm, :git
 set :scm_verbose, true
+
+set :default_shell, '/bin/bash -l'
 
 set :repository,  "git@github.com:secretariat/sdtg.git"
 set :deploy_to, "/home/user/www/sites/sdtg"
@@ -28,7 +31,7 @@ ssh_options[:keys] = ["#{ENV['HOME']}/install/ruby/amazon/vps.pem"]
 set :stages, ["staging", "production"]
 set :default_stage, "production"
 
-after "deploy:update_code","deploy:bundle"
+after "deploy","deploy:bundle"
 after "deploy:bundle", "deploy:assets"
 after "deploy:assets", "deploy:migrations"
 after "deploy:migrations", "deploy:restart"
