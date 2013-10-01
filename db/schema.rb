@@ -116,8 +116,6 @@ ActiveRecord::Schema.define(:version => 20130926082759) do
     t.string   "naim"
     t.string   "code_num"
     t.string   "code"
-    t.string   "tamrez"
-    t.string   "typetran"
     t.string   "koltov"
     t.string   "base_ed"
     t.string   "dop_ed"
