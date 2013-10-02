@@ -5,13 +5,13 @@ Sdtg::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
   config.action_mailer.smtp_settings = {
     :address              => "smtp.yandex.ru",
-    :port                 => 465,
-    :domain               => "smtp.yandex.ru",
-    :user_name            => 'info@citrusdev.com.ua',
-    :password             => 'info123!@#',
+    :port                 => 25,
+    :domain               => "yandex.ru",
+    :user_name            => 'dtg.admin@citrusdev.com.ua',
+    :password             => 'dtg123!@#',
     :authentication       => 'login',
-    :openssl_verify_mode  => true,
-    :enable_starttls_auto => true
+    :openssl_verify_mode  => 'none',
+    # :enable_starttls_auto => true
   }
   # Code is not reloaded between requests
   config.cache_classes = true

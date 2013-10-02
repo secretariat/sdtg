@@ -16,7 +16,7 @@ class ZaprosMailer < ActionMailer::Base
     attachments["zapros_#{zapros.id}.pdf"] = { :mime_type => "application/pdf", :content => pdf.render }
 
     @zapros = zapros
-    mail( :to => email_to, :from => @zapros.email, :subject =>"Запрос на определение стоимости финансовой гарантии", :bcc => "mixey.viti@bigmir.net" )
+    mail( :to => email_to, :from => "dtg.admin@citrusdev.com.ua", :subject =>"Запрос на определение стоимости финансовой гарантии", :bcc => "mixey.viti@bigmir.net" )
    	if( fd ) then
       fd.close
     end
