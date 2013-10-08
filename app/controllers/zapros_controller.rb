@@ -22,6 +22,7 @@ class ZaprosController < ApplicationController
 		@zapros = Zapros.new( params[:zapros] )
 		if @zapros.save then
 			email_to = @zapros.dog_num.blank? ? "garant@dtg.kiev.ua" : "support@dtg.kiev.ua"
+			# email_to = @zapros.dog_num.blank? ? "info@citrusdev.com.ua" : "info@citrusdev.com.ua"
 			fname = @zapros.att_file_name
 			fpath = @zapros.att.url
 			ZaprosMailer.delay.send_zapros( @zapros, fpath, fname, email_to )
